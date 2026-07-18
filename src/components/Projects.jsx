@@ -30,7 +30,7 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <h2>Projects</h2>
+      <h2><strong>Projects</strong></h2>
       <div className="grid md:grid-cols-2 gap-8 mt-6">
         {projects.map((proj, index) => (
           <div

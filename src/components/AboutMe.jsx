@@ -10,7 +10,7 @@ const AboutMe = () => {
       />
       <h2>About Me</h2>
       <p className="text-lg max-w-xl mx-auto">
-        Hi, I'm Ranjith Michael — a Full‑Stack MERN Developer based in Vellore, India.
+        Hi, I'm <strong>Ranjith Michael</strong> — a Full‑Stack MERN Developer based in Vellore, India.
         I specialize in building scalable web applications and love automating workflows.
       </p>
     </section>
