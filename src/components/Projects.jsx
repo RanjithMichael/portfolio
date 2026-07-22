@@ -22,9 +22,9 @@ const Projects = () => {
       title: "Kanban Board",
       description: "Drag-and-drop task management board with persistence.",
       tech: "React, TailwindCSS, Context API, LocalStorage",
-      frontend: "https://github.com/RanjithMichael/kanbanboard",
-      backend: "#",
-      demo: "https://kan-boardtask.netlify.app/"
+      frontend: "https://github.com/RanjithMichael/kb-frontend",
+      backend: "https://github.com/RanjithMichael/kb-backend",
+      demo: "https://kan-ban1.netlify.app/"
     }
   ];
 
