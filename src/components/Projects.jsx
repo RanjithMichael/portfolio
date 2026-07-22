@@ -14,9 +14,9 @@ const Projects = () => {
       title: "Recipe App",
       description: "Dynamic recipe search and filter app using TheMealDB API.",
       tech: "React, TailwindCSS, Axios",
-      frontend: "https://github.com/RanjithMichael/recipetask",
-      backend: "#", // not needed if API only
-      demo: "https://recipetas.netlify.app/"
+      frontend: "https://github.com/RanjithMichael/reci-frontend",
+      backend: "https://github.com/RanjithMichael/reci-backend", 
+      demo: "https://reci1.netlify.app/"
     },
     {
       title: "Kanban Board",
