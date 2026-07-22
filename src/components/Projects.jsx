@@ -13,7 +13,7 @@ const Projects = () => {
     {
       title: "Recipe App",
       description: "Dynamic recipe search and filter app using TheMealDB API.",
-      tech: "React, TailwindCSS, Axios",
+      tech: "MongoDB, Express, React, Node.js, TailwindCSS, Axios",
       frontend: "https://github.com/RanjithMichael/reci-frontend",
       backend: "https://github.com/RanjithMichael/reci-backend", 
       demo: "https://reci1.netlify.app/"
@@ -21,7 +21,7 @@ const Projects = () => {
     {
       title: "Kanban Board",
       description: "Drag-and-drop task management board with persistence.",
-      tech: "React, TailwindCSS, Context API, LocalStorage",
+      tech: "",
       frontend: "https://github.com/RanjithMichael/kb-frontend",
       backend: "https://github.com/RanjithMichael/kb-backend",
       demo: "https://kan-ban1.netlify.app/"
