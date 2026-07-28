@@ -29,10 +29,10 @@
    - [Backend Repo](https://github.com/RanjithMichael/cb-backend)
    - [Live Demo](https://aicb1.netlify.app/)
 
-3. Kanban Board
-   - [Frontend Repo](https://github.com/RanjithMichael/kb-frontend)
-   - [Backend Repo](https://github.com/RanjithMichael/kb-backend)
-   - [Live Demo](https://kan-ban1.netlify.app/)
+3. Weather Dashboard
+   - [Frontend Repo](https://github.com/RanjithMichael/wd-frontend)
+   - [Backend Repo](https://github.com/RanjithMichael/wd-backend)
+   - [Live Demo](https://wdashboar.netlify.app/)
 
 ## 📧 Contact
 - LinkedIn: [https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]

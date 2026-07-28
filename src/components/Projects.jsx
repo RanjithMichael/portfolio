@@ -19,12 +19,12 @@ const Projects = () => {
       demo: "https://aicb1.netlify.app/"
     },
     {
-      title: "Kanban Board",
-      description: "Drag-and-drop task management board with persistence.",
-      tech: "MongoDB, Express, React, Node.js, TailwindCSS, React DnD",
-      frontend: "https://github.com/RanjithMichael/kb-frontend",
-      backend: "https://github.com/RanjithMichael/kb-backend",
-      demo: "https://kan-ban1.netlify.app/"
+      title: "Weather Dashboard",
+      description: "The Weather Dashboard is a full‑stack MERN application that enables users to search for real‑time weather information by city. It integrates with the OpenWeather API to fetch live data, stores search history in MongoDB for persistence, and displays results in a clean, responsive React frontend.",
+      tech: "MongoDB, Express, React, Node.js, TailwindCSS, openWeather API",
+      frontend: "https://github.com/RanjithMichael/wd-frontend",
+      backend: "https://github.com/RanjithMichael/wd-backend",
+      demo: "https://wdashboar.netlify.app/"
     }
   ];
 
