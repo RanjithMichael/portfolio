@@ -24,10 +24,10 @@
    - [Backend Repo](https://github.com/RanjithMichael/bp-server)
    - [Live Demo](https://bpclient.netlify.app/)
 
-2. Recipe App
-   - [Frontend Repo](https://github.com/RanjithMichael/reci-frontend)
-   - [Backend Repo](https://github.com/RanjithMichael/reci-backend)
-   - [Live Demo](https://reci1.netlify.app/)
+2. AI Chatbot
+   - [Frontend Repo](https://github.com/RanjithMichael/cb-frontend)
+   - [Backend Repo](https://github.com/RanjithMichael/cb-backend)
+   - [Live Demo](https://aicb1.netlify.app/)
 
 3. Kanban Board
    - [Frontend Repo](https://github.com/RanjithMichael/kb-frontend)

@@ -11,12 +11,12 @@ const Projects = () => {
       demo: "https://bpclient.netlify.app/"
     },
     {
-      title: "Recipe App",
-      description: "Dynamic recipe search and filter app using TheMealDB API.",
-      tech: "MongoDB, Express, React, Node.js, TailwindCSS, Axios",
-      frontend: "https://github.com/RanjithMichael/reci-frontend",
-      backend: "https://github.com/RanjithMichael/reci-backend", 
-      demo: "https://reci1.netlify.app/"
+      title: "AI Chatbot",
+      description: "The AI Chatbot is a full‑stack MERN application integrated with Cohere’s Command‑R+ model to provide natural language conversations. It allows users to interact with an intelligent assistant, receive instant replies, and maintain a persistent chat history stored in MongoDB.",
+      tech: "MongoDB, Express, React, Node.js, TailwindCSS, Cohere API",
+      frontend: "https://github.com/RanjithMichael/cb-frontend",
+      backend: "https://github.com/RanjithMichael/cb-backend", 
+      demo: "https://aicb1.netlify.app/"
     },
     {
       title: "Kanban Board",
