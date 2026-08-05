@@ -6,26 +6,56 @@ const AboutMe = () => {
       id="about"
       className="py-16 bg-gradient-to-r from-blue-50 to-purple-100 text-center"
     >
-      <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
-        <img
-          src="/Ranjith.jpeg"
-          alt="Profile"
-          className="w-32 h-32 rounded-full mx-auto mb-6 shadow-md border-4 border-blue-400"
-        />
-        <h2 className="text-3xl font-bold text-blue-600 mb-4">About Me</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          Hi, I'm <span className="font-semibold text-purple-600">Ranjith Michael</span> — a
-          <span className="font-semibold"> Full‑Stack MERN Developer</span> based in Vellore, India.
-          I specialize in building scalable web applications and love automating workflows.
+      <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-10">
+        {/* Profile Image */}
+       <img
+  src="/Ranjith.jpeg"
+  alt="Ranjith Michael"
+  loading="lazy"
+  className="
+    w-24 h-24
+    sm:w-32 sm:h-32
+    md:w-40 md:h-40
+    lg:w-48 lg:h-48
+    rounded-full
+    mx-auto
+    mb-6
+    shadow-md
+    border-4 border-blue-400
+    transition
+    transform
+    hover:scale-105
+    relative
+    top-4
+  "
+/>
+
+        {/* Heading */}
+        <h2 className="text-4xl font-extrabold text-blue-600 mb-4">
+          Hi, I’m Ranjith 👋
+        </h2>
+
+        {/* Description */}
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
+          I’m a <span className="font-semibold text-purple-600">Full‑Stack MERN Developer</span> based in Vellore, India. I specialize in building scalable web applications, 
+          crafting clean UI with TailwindCSS, and love automating workflows to make 
+          development faster and smarter.
         </p>
-        <div className="mt-6 flex justify-center gap-4">
+
+        {/* Call-to-Action Buttons */}
+        <div className="mt-8 flex justify-center gap-6 flex-wrap">
           <a
             href="#projects"
             className="px-6 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
           >
             🚀 View Projects
           </a>
-          
+          <a
+            href="#contact"
+            className="px-6 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition"
+          >
+            📬 Contact Me
+          </a>
         </div>
       </div>
     </section>
@@ -33,5 +63,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-
