@@ -32,7 +32,7 @@ const AboutMe = () => {
 
         {/* Heading */}
         <h2 className="text-4xl font-extrabold text-blue-600 mb-4">
-          Hi, I’m Ranjith 👋
+          Hi, I’m Ranjith Michael 👋
         </h2>
 
         {/* Description */}
