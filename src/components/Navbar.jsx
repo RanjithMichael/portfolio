@@ -11,7 +11,7 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <ul className="hidden md:flex gap-6 text-white font-medium">
-          {["about", "skills", "projects", "certifications", "contact"].map((item) => (
+          {["about", "skills", "projects", "certification", "contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item}`}
