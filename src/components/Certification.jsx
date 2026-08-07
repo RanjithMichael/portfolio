@@ -1,8 +1,8 @@
 import React from "react";
 
-const Certifications = () => {
+const Certification = () => {
   return (
-    <section id="certifications" className="py-16 bg-gray-50">
+    <section id="certification" className="py-16 bg-gray-50">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-blue-600 mb-8">
           📜 Certification
@@ -36,5 +36,5 @@ const Certifications = () => {
   );
 };
 
-export default Certifications;
+export default Certification;
 

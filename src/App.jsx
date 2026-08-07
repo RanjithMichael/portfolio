@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Certifications from "./components/Certifications";
+import Certification from "./components/Certification";
 import Contact from "./components/Contact";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <AboutMe />
         <Skills />
         <Projects />
-        <Certifications />
+        <Certification />
         <Contact />
       </div>
     </div>
