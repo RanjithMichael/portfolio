@@ -39,7 +39,7 @@ const Projects = () => {
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2"
+              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col"
             >
               {/* Project Image */}
               <img
@@ -49,9 +49,9 @@ const Projects = () => {
               />
 
               {/* Project Content */}
-              <div className="p-6 text-left">
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold mb-2 text-gray-800">{proj.title}</h3>
-                <p className="text-gray-600 mb-4">{proj.description}</p>
+                <p className="text-gray-600 mb-4 flex-grow">{proj.description}</p>
 
                 {/* Tech Stack Badges */}
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -66,10 +66,12 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-3">
+                <div className="flex justify-center gap-3 mt-4">
                   {proj.frontend && (
                     <a
                       href={proj.frontend}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
                     >
                       Frontend
@@ -78,6 +80,8 @@ const Projects = () => {
                   {proj.backend && (
                     <a
                       href={proj.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
                     >
                       Backend
@@ -85,6 +89,8 @@ const Projects = () => {
                   )}
                   <a
                     href={proj.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="px-4 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition"
                   >
                     Live Demo
@@ -100,4 +106,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
