@@ -36,9 +36,10 @@ const AboutMe = () => {
         </h2>
 
         {/* Description */}
-        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-          I’m a <span className="font-semibold text-purple-600">Full‑Stack MERN Developer</span> based in Vellore, India. I specialize in building scalable web applications, 
-          crafting clean UI with TailwindCSS, and love automating workflows to make development faster and smarter.
+         <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
+          I’m a <span className="font-semibold text-purple-600">Full‑Stack MERN Developer</span> based in Vellore, India. 
+          I specialize in building scalable web applications, crafting clean UI with TailwindCSS, and love automating workflows 
+          to make development faster and smarter. With a background in logistics and leadership, I bring both technical and organizational strengths to projects.
         </p>
 
         {/* Call-to-Action Buttons */}
