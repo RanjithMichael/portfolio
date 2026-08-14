@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Certification from "./components/Certification";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Contact />
       </div>
       <Footer />
+      <BackToTop />
     </div>
   );
 }
