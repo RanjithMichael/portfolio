@@ -15,7 +15,7 @@
 - Resume
 - Skills
 - Projects
-- Certifications
+- Certification
 - Contact
 
 ## 🚀 Projects

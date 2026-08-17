@@ -4,8 +4,12 @@ const Projects = () => {
   const projects = [
     {
       title: "Blogging Platform",
-      description:
+      description: [
         "Full MERN blogging app with authentication, rich text editor, and analytics.",
+        "Implemented JWT authentication and role‑based access control.",
+        "Integrated rich text editor with image upload support.",
+        "Built analytics dashboard to track user engagement."
+      ],
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS"],
       image: "/BloggingPlatform.png",
       frontend: "https://github.com/RanjithMichael/bp-client",
@@ -14,16 +18,13 @@ const Projects = () => {
     },
     {
       title: "AI Chatbot",
-      description:
+      description: [
         "Full‑stack MERN app integrated with Cohere’s Command‑R+ model for natural language conversations with persistent chat history.",
-      tech: [
-        "MongoDB",
-        "Express",
-        "React",
-        "Node.js",
-        "TailwindCSS",
-        "Cohere API",
+        "Integrated Cohere Command‑R+ API for natural language processing.",
+        "Designed persistent chat history with MongoDB for user sessions.",
+        "Developed responsive UI with TailwindCSS for seamless user experience."
       ],
+      tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "Cohere API"],
       image: "/ChatBot.png",
       frontend: "https://github.com/RanjithMichael/cb-frontend",
       backend: "https://github.com/RanjithMichael/cb-backend",
@@ -31,16 +32,13 @@ const Projects = () => {
     },
     {
       title: "Weather Dashboard",
-      description:
+      description: [
         "MERN app that fetches real‑time weather data via OpenWeather API, stores search history in MongoDB, and displays results in a responsive UI.",
-      tech: [
-        "MongoDB",
-        "Express",
-        "React",
-        "Node.js",
-        "TailwindCSS",
-        "OpenWeather API",
+        "Connected OpenWeather API for real‑time weather data.",
+        "Built search history persistence with MongoDB.",
+        "Designed responsive dashboard with charts and icons for clarity."
       ],
+      tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "OpenWeather API"],
       image: "/weatherDashboard.png",
       frontend: "https://github.com/RanjithMichael/wd-frontend",
       backend: "https://github.com/RanjithMichael/wd-backend",
@@ -70,9 +68,13 @@ const Projects = () => {
                 <h3 className="text-2xl font-semibold mb-3 text-gray-800">
                   {proj.title}
                 </h3>
-                <p className="text-gray-600 mb-4 flex-grow text-base leading-relaxed">
-                  {proj.description}
-                </p>
+
+                {/* Description with bullet points */}
+                <ul className="text-gray-600 mb-4 flex-grow text-base leading-relaxed list-disc list-inside text-left">
+                  {proj.description.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
 
                 {/* Tech Stack Badges */}
                 <div className="flex flex-wrap gap-2 mb-6">
