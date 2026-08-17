@@ -74,14 +74,7 @@ const AboutMe = () => {
           >
             💻 GitHub
           </a>
-          <a
-            href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
-          >
-            🔗 LinkedIn
-          </a>
+          
         </div>
       </div>
     </section>
