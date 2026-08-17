@@ -4,9 +4,9 @@ const AboutMe = () => {
   return (
     <section
       id="about"
-      className="py-16 bg-gradient-to-r from-blue-50 to-purple-100 text-center"
+      className="py-20 bg-gradient-to-r from-blue-50 to-purple-100"
     >
-      <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-10">
+      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-10 flex flex-col items-center text-center">
         {/* Profile Image */}
         <img
           src="/Ranjith.jpeg"
@@ -18,15 +18,12 @@ const AboutMe = () => {
             md:w-40 md:h-40
             lg:w-48 lg:h-48
             rounded-full
-            mx-auto
             mb-6
             shadow-md
             border-4 border-blue-400
             transition
             transform
             hover:scale-105
-            relative
-            top-4
           "
         />
 
@@ -36,14 +33,24 @@ const AboutMe = () => {
         </h2>
 
         {/* Description */}
-         <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-          I’m a <span className="font-semibold text-purple-600">Full‑Stack MERN Developer</span> based in Vellore, India. 
-          I specialize in building scalable web applications, crafting clean UI with TailwindCSS, and love automating workflows 
-          to make development faster and smarter. With a background in logistics and leadership, I bring both technical and organizational strengths to projects.
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-6">
+          Full‑Stack MERN Developer based in Vellore, India. I specialize in
+          building scalable web applications, crafting clean UI with TailwindCSS,
+          and automating workflows to make development faster and smarter. With a
+          background in logistics and leadership, I bring both technical and
+          organizational strengths to projects.
         </p>
 
+        {/* Strengths as bullet points */}
+        <ul className="text-gray-700 mb-8 list-disc list-inside text-left max-w-md mx-auto">
+          <li>🚀 Full‑Stack MERN Developer (MongoDB, Express, React, Node.js)</li>
+          <li>🎨 Clean UI with TailwindCSS</li>
+          <li>⚡ Workflow automation for faster development</li>
+          <li>📦 Logistics & leadership background</li>
+        </ul>
+
         {/* Call-to-Action Buttons */}
-        <div className="mt-8 flex justify-center gap-6 flex-wrap">
+        <div className="flex justify-center gap-6 flex-wrap">
           <a
             href="/Ranjith_Michael_B_Resume.pdf"
             className="px-6 py-2 bg-yellow-400 text-black rounded-lg shadow hover:bg-yellow-500 transition"
@@ -66,6 +73,14 @@ const AboutMe = () => {
             className="px-6 py-2 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-900 transition"
           >
             💻 GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+          >
+            🔗 LinkedIn
           </a>
         </div>
       </div>
