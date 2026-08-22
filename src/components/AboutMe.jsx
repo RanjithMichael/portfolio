@@ -6,7 +6,8 @@ const AboutMe = () => {
       id="about"
       className="py-20 bg-gradient-to-r from-blue-50 to-purple-100"
     >
-      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-10 flex flex-col items-center text-center">
+      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-10 flex flex-col items-center text-center animate-fadeIn">
+        
         {/* Profile Image */}
         <img
           src="/Ranjith.jpeg"
@@ -24,16 +25,17 @@ const AboutMe = () => {
             transition
             transform
             hover:scale-105
+            animate-slideUp
           "
         />
 
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-blue-600 mb-4">
+        <h2 className="text-4xl font-extrabold text-blue-600 mb-4 animate-slideUp delay-100">
           Hi, I’m Ranjith Michael 👋
         </h2>
 
         {/* Description */}
-        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-6">
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-6 animate-fadeIn delay-200">
           Full‑Stack MERN Developer based in Vellore, India. I specialize in
           building scalable web applications, crafting clean UI with TailwindCSS,
           and automating workflows to make development faster and smarter. With a
@@ -42,7 +44,7 @@ const AboutMe = () => {
         </p>
 
         {/* Strengths as bullet points */}
-        <ul className="text-gray-700 mb-8 list-disc list-inside text-left max-w-md mx-auto">
+        <ul className="text-gray-700 mb-8 list-disc list-inside text-left max-w-md mx-auto animate-fadeIn delay-300">
           <li>🚀 Full‑Stack MERN Developer (MongoDB, Express, React, Node.js)</li>
           <li>🎨 Clean UI with TailwindCSS</li>
           <li>⚡ Workflow automation for faster development</li>
@@ -50,7 +52,7 @@ const AboutMe = () => {
         </ul>
 
         {/* Call-to-Action Buttons */}
-        <div className="flex justify-center gap-6 flex-wrap">
+        <div className="flex justify-center gap-6 flex-wrap animate-slideUp delay-400">
           <a
             href="/Ranjith_Michael_B_Resume.pdf"
             className="px-6 py-2 bg-yellow-400 text-black rounded-lg shadow hover:bg-yellow-500 transition"
@@ -80,5 +82,5 @@ const AboutMe = () => {
     </section>
   );
 };
-
 export default AboutMe;
+
