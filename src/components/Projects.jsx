@@ -4,12 +4,11 @@ const Projects = () => {
   const projects = [
     {
       title: "Blogging Platform",
-      description: [
-        "Full MERN blogging app with authentication, rich text editor, and analytics.",
-        "Implemented JWT authentication and role‑based access control.",
-        "Integrated rich text editor with image upload support.",
-        "Built analytics dashboard to track user engagement."
-      ],
+      caseStudy: {
+        problem: "Users needed a secure blogging platform with rich content editing and analytics.",
+        solution: "Built a MERN app with JWT authentication, role‑based access control, and integrated rich text editor with image upload.",
+        impact: "Enabled safe publishing for multiple roles and improved engagement tracking with analytics dashboard."
+      },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS"],
       image: "/BloggingPlatform.png",
       frontend: "https://github.com/RanjithMichael/bp-client",
@@ -18,12 +17,11 @@ const Projects = () => {
     },
     {
       title: "AI Chatbot",
-      description: [
-        "Full‑stack MERN app integrated with Cohere’s Command‑R+ model for natural language conversations with persistent chat history.",
-        "Integrated Cohere Command‑R+ API for natural language processing.",
-        "Designed persistent chat history with MongoDB for user sessions.",
-        "Developed responsive UI with TailwindCSS for seamless user experience."
-      ],
+      caseStudy: {
+        problem: "Businesses wanted natural language conversations with persistent history.",
+        solution: "Integrated Cohere’s Command‑R+ API into a MERN stack, storing chat sessions in MongoDB for continuity.",
+        impact: "Delivered responsive, human‑like conversations with session persistence, improving user experience and retention."
+      },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "Cohere API"],
       image: "/ChatBot.png",
       frontend: "https://github.com/RanjithMichael/cb-frontend",
@@ -32,12 +30,11 @@ const Projects = () => {
     },
     {
       title: "Weather Dashboard",
-      description: [
-        "MERN app that fetches real‑time weather data via OpenWeather API, stores search history in MongoDB, and displays results in a responsive UI.",
-        "Connected OpenWeather API for real‑time weather data.",
-        "Built search history persistence with MongoDB.",
-        "Designed responsive dashboard with charts and icons for clarity."
-      ],
+      caseStudy: {
+        problem: "Users needed real‑time weather insights with historical search tracking.",
+        solution: "Connected OpenWeather API, built MongoDB persistence for search history, and designed a responsive dashboard with charts/icons.",
+        impact: "Provided accurate forecasts with a clean UI, reducing repeated searches and improving clarity of weather trends."
+      },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "OpenWeather API"],
       image: "/weatherDashboard.png",
       frontend: "https://github.com/RanjithMichael/wd-frontend",
@@ -70,12 +67,12 @@ const Projects = () => {
                   {proj.title}
                 </h3>
 
-                {/* Description with bullet points */}
-                <ul className="text-gray-600 mb-4 flex-grow text-base leading-relaxed list-disc list-inside space-y-2">
-                  {proj.description.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
+                {/* Case Study Format */}
+                <div className="text-gray-600 mb-4 flex-grow text-base leading-relaxed space-y-2">
+                  <p><strong>Problem:</strong> {proj.caseStudy.problem}</p>
+                  <p><strong>Solution:</strong> {proj.caseStudy.solution}</p>
+                  <p><strong>Impact:</strong> {proj.caseStudy.impact}</p>
+                </div>
 
                 {/* Tech Stack Badges */}
                 <div className="flex flex-wrap gap-2 mb-6">
