@@ -11,7 +11,7 @@ const AboutMe = () => {
         {/* Profile Image */}
         <img
           src="/Ranjith.jpeg"
-          alt="Ranjith Michael"
+          alt="Portrait of Ranjith Michael"
           loading="lazy"
           className="
             w-24 h-24
@@ -30,12 +30,18 @@ const AboutMe = () => {
         />
 
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-blue-600 mb-4 animate-slideUp delay-100">
+        <h2
+          className="text-4xl font-extrabold text-blue-600 mb-4 animate-slideUp delay-100"
+          aria-label="Introduction heading"
+        >
           Hi, I’m Ranjith Michael 👋
         </h2>
 
         {/* Description */}
-        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-6 animate-fadeIn delay-200">
+        <p
+          className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-6 animate-fadeIn delay-200"
+          aria-label="Developer description"
+        >
           Full‑Stack MERN Developer based in Vellore, India. I specialize in
           building scalable web applications, crafting clean UI with TailwindCSS,
           and automating workflows to make development faster and smarter. With a
@@ -44,19 +50,22 @@ const AboutMe = () => {
         </p>
 
         {/* Strengths as bullet points */}
-        <ul className="text-gray-700 mb-8 list-disc list-inside text-left max-w-md mx-auto animate-fadeIn delay-300">
-          <li>🚀 Full‑Stack MERN Developer (MongoDB, Express, React, Node.js)</li>
-          <li>🎨 Clean UI with TailwindCSS</li>
-          <li>⚡ Workflow automation for faster development</li>
-          <li>📦 Logistics & leadership background</li>
-        </ul>
+        <section aria-label="Key strengths">
+          <ul className="text-gray-700 mb-8 list-disc list-inside text-left max-w-md mx-auto animate-fadeIn delay-300">
+            <li>🚀 Full‑Stack MERN Developer (MongoDB, Express, React, Node.js)</li>
+            <li>🎨 Clean UI with TailwindCSS</li>
+            <li>⚡ Workflow automation for faster development</li>
+            <li>📦 Logistics & leadership background</li>
+          </ul>
+        </section>
 
         {/* Call-to-Action Buttons */}
         <div className="flex justify-center gap-6 flex-wrap animate-slideUp delay-400">
           <a
             href="/Ranjith_Michael_B_Resume.pdf"
-            className="px-6 py-2 bg-yellow-400 text-black rounded-lg shadow hover:bg-yellow-500 transition"
+            className="px-6 py-2 bg-yellow-400 text-black rounded-lg shadow hover:bg-yellow-500 hover:scale-105 transition transform"
             download
+            aria-label="Download Resume"
           >
             ⬇️ Download Resume
           </a>
@@ -64,7 +73,8 @@ const AboutMe = () => {
             href="/Ranjith_Michael_B_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
+            className="px-6 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 hover:scale-105 transition transform"
+            aria-label="View Resume Online"
           >
             👀 View Online
           </a>
@@ -72,15 +82,15 @@ const AboutMe = () => {
             href="https://github.com/RanjithMichael"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-900 transition"
+            className="px-6 py-2 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-900 hover:scale-105 transition transform"
+            aria-label="Visit GitHub Profile"
           >
             💻 GitHub
           </a>
-          
         </div>
       </div>
     </section>
   );
 };
-export default AboutMe;
 
+export default AboutMe;
