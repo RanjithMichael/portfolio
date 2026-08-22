@@ -55,9 +55,10 @@ const Projects = () => {
             >
               {/* Project Image */}
               <img
+                
                 src={proj.image}
                 alt={`${proj.title} Screenshot`}
-                className="w-full h-48 object-cover rounded-t-xl hover:scale-105 transition transform"
+                className="w-full h-56 object-cover rounded-t-xl hover:scale-105 transition transform"
                 loading="lazy"
               />
 
