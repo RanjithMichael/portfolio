@@ -1,6 +1,5 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
-import { FaLock, FaShieldAlt, FaCogs, FaCode } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGithub, FaLock, FaShieldAlt, FaCogs, FaCode } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiTailwindcss, SiPostman } from "react-icons/si";
 
 const Skills = () => {
@@ -37,9 +36,9 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 text-center">
-      <h2 className="text-4xl font-extrabold text-blue-600 mb-12">💡 Skills</h2>
-      <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <section id="skills" className="py-20 bg-gradient-to-r from-blue-50 to-purple-100 text-center">
+      <h2 className="text-4xl font-extrabold text-blue-600 mb-12 animate-fadeIn">💡 Skills</h2>
+      <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto animate-slideUp">
         {skillGroups.map((group, index) => (
           <div
             key={index}
@@ -50,7 +49,11 @@ const Skills = () => {
             </h3>
             <ul className="space-y-4 text-gray-700 text-lg">
               {group.skills.map((skill, i) => (
-                <li key={i} className="flex items-center gap-3 hover:text-blue-600 transition">
+                <li
+                  key={i}
+                  className="flex items-center gap-3 hover:text-blue-600 transition"
+                  aria-label={`${skill.name} skill`}
+                >
                   {skill.icon}
                   {skill.name}
                 </li>

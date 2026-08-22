@@ -6,11 +6,7 @@ const BackToTop = () => {
   // Show button when scrolled down
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
+      setVisible(window.scrollY > 300);
     };
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
@@ -28,7 +24,14 @@ const BackToTop = () => {
     visible && (
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition"
+        className="
+          fixed bottom-6 right-6
+          bg-gradient-to-r from-blue-500 to-purple-600
+          text-white p-4 rounded-full shadow-lg
+          hover:scale-110 hover:shadow-xl
+          transition transform duration-300 ease-in-out
+          focus:outline-none focus:ring-2 focus:ring-blue-400
+        "
         aria-label="Back to Top"
       >
         ⬆️
@@ -38,3 +41,4 @@ const BackToTop = () => {
 };
 
 export default BackToTop;
+

@@ -47,30 +47,31 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto text-center">
+    <section id="projects" className="py-20 bg-gradient-to-r from-blue-50 to-purple-100">
+      <div className="max-w-6xl mx-auto text-center animate-fadeIn">
         <h2 className="text-4xl font-extrabold text-blue-600 mb-12">🚀 Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col"
+              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col animate-slideUp"
             >
               {/* Project Image */}
               <img
                 src={proj.image}
-                alt={proj.title}
-                className="w-full h-48 object-cover rounded-t-xl"
+                alt={`${proj.title} Screenshot`}
+                className="w-full h-48 object-cover rounded-t-xl hover:scale-105 transition transform"
+                loading="lazy"
               />
 
               {/* Project Content */}
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-6 flex flex-col flex-grow text-left">
                 <h3 className="text-2xl font-semibold mb-3 text-gray-800">
                   {proj.title}
                 </h3>
 
                 {/* Description with bullet points */}
-                <ul className="text-gray-600 mb-4 flex-grow text-base leading-relaxed list-disc list-inside text-left">
+                <ul className="text-gray-600 mb-4 flex-grow text-base leading-relaxed list-disc list-inside space-y-2">
                   {proj.description.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
@@ -89,13 +90,14 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex justify-center gap-3 mt-auto">
+                <div className="flex justify-start gap-3 mt-auto">
                   {proj.frontend && (
                     <a
                       href={proj.frontend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition transform"
+                      aria-label={`${proj.title} Frontend Code`}
                     >
                       Frontend
                     </a>
@@ -105,7 +107,8 @@ const Projects = () => {
                       href={proj.backend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 hover:scale-105 transition transform"
+                      aria-label={`${proj.title} Backend Code`}
                     >
                       Backend
                     </a>
@@ -114,7 +117,8 @@ const Projects = () => {
                     href={proj.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition"
+                    className="px-4 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 hover:scale-105 transition transform"
+                    aria-label={`${proj.title} Live Demo`}
                   >
                     Live Demo
                   </a>

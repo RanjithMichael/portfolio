@@ -31,7 +31,8 @@ const Contact = () => {
       id="contact"
       className="py-20 bg-gradient-to-r from-blue-50 to-purple-100"
     >
-      <div className="max-w-2xl mx-auto text-center">
+      <div className="max-w-3xl mx-auto text-center animate-fadeIn">
+        {/* Heading */}
         <h2 className="text-4xl font-extrabold text-blue-600 mb-6">
           📬 Contact Me
         </h2>
@@ -45,32 +46,36 @@ const Contact = () => {
           onSubmit={handleSubmit}
           action="https://formspree.io/f/mojgvgdd"
           method="POST"
-          className="bg-white p-8 rounded-xl shadow-lg"
+          className="bg-white p-8 rounded-xl shadow-lg space-y-4"
         >
           <input
             type="text"
             name="name"
             placeholder="Your Name"
             required
-            className="w-full p-3 mb-4 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
+            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
+            aria-label="Your Name"
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
             required
-            className="w-full p-3 mb-4 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
+            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
+            aria-label="Your Email"
           />
           <textarea
             name="message"
             placeholder="Your Message"
             required
             rows="4"
-            className="w-full p-3 mb-4 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
+            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
+            aria-label="Your Message"
           ></textarea>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg shadow hover:scale-105 transition transform font-semibold"
+            aria-label="Send Message"
           >
             ✉️ Send Message
           </button>
@@ -124,3 +129,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
