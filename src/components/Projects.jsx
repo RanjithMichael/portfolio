@@ -5,8 +5,8 @@ const Projects = () => {
     {
       title: "Blogging Platform",
       caseStudy: {
-        problem: "Users needed a secure blogging platform with rich content editing and analytics.",
-        solution: "Built a MERN app with JWT authentication, role‑based access control, and integrated rich text editor with image upload.",
+        problem: "Needed a secure blogging platform with rich content editing and analytics.",
+        solution: "Built a MERN app with JWT authentication, role‑based access, and integrated rich text editor with image upload.",
         impact: "Enabled safe publishing for multiple roles and improved engagement tracking with analytics dashboard."
       },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS"],
@@ -19,7 +19,7 @@ const Projects = () => {
       title: "AI Chatbot",
       caseStudy: {
         problem: "Businesses wanted natural language conversations with persistent history.",
-        solution: "Integrated Cohere’s Command‑R+ API into a MERN stack, storing chat sessions in MongoDB for continuity.",
+        solution: "Integrated Cohere’s command-r-08-2024 API into a MERN stack, storing chat sessions in MongoDB for continuity.",
         impact: "Delivered responsive, human‑like conversations with session persistence, improving user experience and retention."
       },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "Cohere API"],
@@ -47,15 +47,14 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-gradient-to-r from-blue-50 to-purple-100">
       <div className="max-w-6xl mx-auto text-center animate-fadeIn">
         <h2 className="text-4xl font-extrabold text-blue-600 mb-12">🚀 Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col animate-slideUp"
+              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col"
             >
               {/* Project Image */}
               <img
-                
                 src={proj.image}
                 alt={`${proj.title} Screenshot`}
                 className="w-full h-56 object-cover rounded-t-xl hover:scale-105 transition transform"
@@ -68,19 +67,19 @@ const Projects = () => {
                   {proj.title}
                 </h3>
 
-                {/* Case Study Format */}
-                <div className="text-gray-600 mb-4 flex-grow text-base leading-relaxed space-y-2">
-                  <p><strong>Problem:</strong> {proj.caseStudy.problem}</p>
-                  <p><strong>Solution:</strong> {proj.caseStudy.solution}</p>
-                  <p><strong>Impact:</strong> {proj.caseStudy.impact}</p>
+                {/* Case Study */}
+                <div className="text-gray-600 mb-4 flex-grow text-sm leading-relaxed space-y-2">
+                  <p><span className="font-semibold">Problem:</span> {proj.caseStudy.problem}</p>
+                  <p><span className="font-semibold">Solution:</span> {proj.caseStudy.solution}</p>
+                  <p><span className="font-semibold">Impact:</span> {proj.caseStudy.impact}</p>
                 </div>
 
-                {/* Tech Stack Badges */}
+                {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {proj.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-sm bg-blue-100 text-blue-600 rounded-full font-medium"
+                      className="px-3 py-1 text-xs bg-blue-100 text-blue-600 rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -94,8 +93,7 @@ const Projects = () => {
                       href={proj.frontend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition transform"
-                      aria-label={`${proj.title} Frontend Code`}
+                      className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition transform text-sm"
                     >
                       Frontend
                     </a>
@@ -105,8 +103,7 @@ const Projects = () => {
                       href={proj.backend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 hover:scale-105 transition transform"
-                      aria-label={`${proj.title} Backend Code`}
+                      className="px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 hover:scale-105 transition transform text-sm"
                     >
                       Backend
                     </a>
@@ -115,8 +112,7 @@ const Projects = () => {
                     href={proj.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 hover:scale-105 transition transform"
-                    aria-label={`${proj.title} Live Demo`}
+                    className="px-3 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 hover:scale-105 transition transform text-sm"
                   >
                     Live Demo
                   </a>

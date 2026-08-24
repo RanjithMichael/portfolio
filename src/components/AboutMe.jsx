@@ -8,7 +8,7 @@ const AboutMe = () => {
         id="about"
         className="py-20 bg-gradient-to-r from-blue-50 to-purple-100"
       >
-        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-10 flex flex-col items-center text-center animate-fadeIn">
+        <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-10 flex flex-col items-center text-center animate-fadeIn">
           
           {/* Profile Image */}
           <img
@@ -44,14 +44,14 @@ const AboutMe = () => {
             className="text-lg text-gray-700 leading-relaxed mb-6 animate-fadeIn delay-200 max-w-2xl"
             aria-label="Developer description"
           >
-            Full‑Stack MERN Developer based in Vellore, India. I specialize in
+            I’m a Full‑Stack MERN Developer based in Vellore, India. I focus on
             building scalable web applications, crafting clean UI with TailwindCSS,
-            and automating workflows to make development faster and smarter. With a
-            background in logistics and leadership, I bring both technical and
-            organizational strengths to projects.
+            and automating workflows to make development faster and smarter.
+            With a background in logistics and leadership, I bring both technical
+            and organizational strengths to projects.
           </p>
 
-          {/* Strengths as bullet points */}
+          {/* Strengths */}
           <section aria-label="Key strengths">
             <ul className="text-gray-700 mb-8 list-disc list-inside space-y-2 animate-fadeIn delay-300 text-left max-w-md mx-auto">
               <li>🚀 Full‑Stack MERN Developer (MongoDB, Express, React, Node.js)</li>
@@ -98,16 +98,17 @@ const AboutMe = () => {
         id="whyme"
         className="py-20 bg-gradient-to-r from-purple-50 to-blue-100"
       >
-        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-10 text-center animate-fadeIn">
+        <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-10 text-center animate-fadeIn">
           <h2 className="text-3xl font-extrabold text-blue-600 mb-6">
-            🌟 Why Me?
+            🌟 Why Work With Me?
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-            My background in logistics and leadership helps me design apps that
-            solve real business problems, not just technical ones. I combine
-            organizational strengths with full‑stack MERN expertise to deliver
-            solutions that are both scalable and practical. This unique blend
-            sets me apart and ensures I bring value beyond just code.
+            I don’t just write code — I solve business problems. My logistics and
+            leadership background means I understand workflows, efficiency, and
+            scalability. Combined with my MERN expertise, I deliver solutions
+            that are technically strong and practically valuable. This blend of
+            organizational insight and full‑stack skills ensures I bring impact
+            beyond development.
           </p>
         </div>
       </section>
@@ -116,3 +117,4 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+
