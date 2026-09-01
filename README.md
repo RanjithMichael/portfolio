@@ -72,6 +72,7 @@ An intelligent chatbot application integrated with Cohere’s Command‑R+ model
 - 💾 Persistent chat history with MongoDB
 - 🎨 Responsive UI with TailwindCSS
 - 🔄 Real‑time API integration
+- 🔑 JWT authentication & protected routes
 
 ## 🛠️ Tech Stack
 - MongoDB, Express.js, React, Node.js
@@ -107,6 +108,7 @@ A real‑time weather dashboard built with MERN stack and OpenWeather API.
 - 📂 Search history persistence
 - 📊 Responsive dashboard with charts
 - 🎨 TailwindCSS UI
+- 🔑 JWT authentication & protected routes
 
 ## 🛠️ Tech Stack
 - MongoDB, Express.js, React, Node.js

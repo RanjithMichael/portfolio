@@ -18,7 +18,7 @@ const Projects = () => {
     {
       title: "AI Chatbot",
       caseStudy: {
-        problem: "Businesses wanted natural language conversations with persistent history.",
+        problem: "Needed natural language conversations with persistent history.",
         solution: "Integrated Cohere’s command-r-08-2024 API into a MERN stack, storing chat sessions in MongoDB for continuity.",
         impact: "Delivered responsive, human‑like conversations with session persistence, improving user experience and retention."
       },
@@ -31,7 +31,7 @@ const Projects = () => {
     {
       title: "Weather Dashboard",
       caseStudy: {
-        problem: "Users needed real‑time weather insights with historical search tracking.",
+        problem: "Needed real‑time weather insights with historical search tracking.",
         solution: "Connected OpenWeather API, built MongoDB persistence for search history, and designed a responsive dashboard with charts/icons.",
         impact: "Provided accurate forecasts with a clean UI, reducing repeated searches and improving clarity of weather trends."
       },
@@ -47,17 +47,17 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-gradient-to-r from-blue-50 to-purple-100">
       <div className="max-w-6xl mx-auto text-center animate-fadeIn">
         <h2 className="text-4xl font-extrabold text-blue-600 mb-12">🚀 Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col"
+              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 hover:scale-105 flex flex-col"
             >
               {/* Project Image */}
               <img
                 src={proj.image}
                 alt={`${proj.title} Screenshot`}
-                className="w-full h-56 object-cover rounded-t-xl hover:scale-105 transition transform"
+                className="w-full h-56 object-cover rounded-t-xl"
                 loading="lazy"
               />
 
@@ -79,7 +79,7 @@ const Projects = () => {
                   {proj.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs bg-blue-100 text-blue-600 rounded-full font-medium"
+                      className="px-3 py-1 text-xs bg-blue-200 text-blue-800 rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -93,9 +93,9 @@ const Projects = () => {
                       href={proj.frontend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition transform text-sm"
+                      className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm"
                     >
-                      Frontend
+                      💻 Frontend
                     </a>
                   )}
                   {proj.backend && (
@@ -103,18 +103,18 @@ const Projects = () => {
                       href={proj.backend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 hover:scale-105 transition transform text-sm"
+                      className="px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition text-sm"
                     >
-                      Backend
+                      ⚙️ Backend
                     </a>
                   )}
                   <a
                     href={proj.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 hover:scale-105 transition transform text-sm"
+                    className="px-3 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition text-sm"
                   >
-                    Live Demo
+                    🔗 Live Demo
                   </a>
                 </div>
               </div>
