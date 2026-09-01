@@ -1,5 +1,3 @@
-import React from "react";
-
 const certifications = [
   {
     title: "GUVI MERN Full‑Stack Certification",

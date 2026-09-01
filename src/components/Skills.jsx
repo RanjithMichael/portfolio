@@ -1,4 +1,3 @@
-import React from "react";
 import { FaReact, FaNodeJs, FaGithub, FaLock, FaShieldAlt, FaCogs, FaCode } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiTailwindcss, SiPostman } from "react-icons/si";
 
