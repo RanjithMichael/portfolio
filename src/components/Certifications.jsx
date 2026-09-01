@@ -11,7 +11,7 @@ const certifications = [
   // Add more certifications here as needed
 ];
 
-const Certification = () => {
+const Certifications = () => {
   return (
     <section
       id="certifications"
@@ -59,7 +59,7 @@ const Certification = () => {
   );
 };
 
-export default Certification;
+export default Certifications;
 
 
 
