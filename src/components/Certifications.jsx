@@ -8,7 +8,7 @@ const certifications = [
     image: "/GuviCertification.png",
     link: "https://v2.zenclass.in/certificateDownload/mE1rcScXaN3QRqwo",
   },
-  
+  // Add more certifications here as needed
 ];
 
 const Certifications = () => {
@@ -30,18 +30,25 @@ const Certifications = () => {
               key={index}
               className="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-105 animate-slideUp"
             >
+              {/* Certificate Image */}
               <img
                 src={cert.image}
                 alt={`${cert.title} Logo`}
                 className="mb-6 w-44 h-auto rounded-md border border-gray-200 shadow-sm hover:scale-110 transition-transform"
                 loading="lazy"
               />
+
+              {/* Certificate Title */}
               <h3 className="text-xl font-semibold text-gray-800 text-center mb-2">
                 {cert.title}
               </h3>
+
+              {/* Certificate Description */}
               <p className="text-gray-600 text-center text-sm leading-relaxed mb-4">
                 Issued by {cert.issuer}. {cert.description}
               </p>
+
+              {/* View Certificate Button */}
               <a
                 href={cert.link}
                 target="_blank"
@@ -60,3 +67,4 @@ const Certifications = () => {
 };
 
 export default Certifications;
+

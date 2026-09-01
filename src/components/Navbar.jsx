@@ -32,26 +32,6 @@ const Navbar = () => {
           )}
         </ul>
 
-        {/* CTA Buttons */}
-        <div className="hidden md:flex gap-4">
-          <a
-            href="/Ranjith_Michael_B_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-yellow-400 text-black rounded-lg shadow hover:bg-yellow-500 transition font-medium"
-          >
-            Resume
-          </a>
-          <a
-            href="https://github.com/RanjithMichael"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-gray-900 text-white rounded-lg shadow hover:bg-gray-800 transition font-medium"
-          >
-            GitHub
-          </a>
-        </div>
-
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white text-2xl focus:outline-none"
@@ -78,26 +58,6 @@ const Navbar = () => {
               </li>
             )
           )}
-          <li>
-            <a
-              href="/Ranjith_Michael_B_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block px-4 py-2 bg-yellow-400 text-black rounded-lg shadow hover:bg-yellow-500 transition font-medium"
-            >
-              Resume
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/RanjithMichael"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block px-4 py-2 bg-gray-900 text-white rounded-lg shadow hover:bg-gray-800 transition font-medium"
-            >
-              GitHub
-            </a>
-          </li>
         </ul>
       )}
     </nav>
@@ -105,8 +65,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
