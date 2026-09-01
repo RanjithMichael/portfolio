@@ -12,7 +12,7 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <ul className="hidden md:flex gap-8 text-white font-medium">
-          {["about", "skills", "projects", "certification", "contact"].map(
+          {["about", "skills", "projects", "certifications", "contact"].map(
             (item) => (
               <li key={item}>
                 <a
