@@ -44,38 +44,38 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-r from-blue-50 to-purple-100">
+    <section id="projects" className="py-24 bg-gradient-to-r from-blue-50 to-purple-100">
       <div className="max-w-6xl mx-auto text-center animate-fadeIn">
-        <h2 className="text-4xl font-extrabold text-blue-600 mb-12">🚀 Projects</h2>
+        <h2 className="text-5xl font-extrabold text-blue-600 mb-14">🚀 Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 hover:scale-105 flex flex-col"
+              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-105 flex flex-col"
             >
               {/* Project Image */}
               <img
                 src={proj.image}
                 alt={`${proj.title} Screenshot`}
-                className="w-full h-56 object-cover rounded-t-xl"
+                className="w-full h-56 object-cover rounded-t-2xl"
                 loading="lazy"
               />
 
               {/* Project Content */}
-              <div className="p-6 flex flex-col flex-grow text-left">
-                <h3 className="text-2xl font-semibold mb-3 text-gray-800">
+              <div className="p-8 flex flex-col flex-grow text-left">
+                <h3 className="text-2xl font-semibold mb-4 text-gray-800">
                   {proj.title}
                 </h3>
 
                 {/* Case Study */}
-                <div className="text-gray-600 mb-4 flex-grow text-sm leading-relaxed space-y-2">
+                <div className="text-gray-600 mb-6 flex-grow text-sm leading-relaxed space-y-2">
                   <p><span className="font-semibold">Problem:</span> {proj.caseStudy.problem}</p>
                   <p><span className="font-semibold">Solution:</span> {proj.caseStudy.solution}</p>
                   <p><span className="font-semibold">Impact:</span> {proj.caseStudy.impact}</p>
                 </div>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-8">
                   {proj.tech.map((tech, i) => (
                     <span
                       key={i}
@@ -87,13 +87,13 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex justify-start gap-3 mt-auto">
+                <div className="flex justify-start gap-4 mt-auto">
                   {proj.frontend && (
                     <a
                       href={proj.frontend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm"
+                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-transform text-sm font-medium"
                     >
                       💻 Frontend
                     </a>
@@ -103,7 +103,7 @@ const Projects = () => {
                       href={proj.backend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition text-sm"
+                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-transform text-sm font-medium"
                     >
                       ⚙️ Backend
                     </a>
@@ -112,7 +112,7 @@ const Projects = () => {
                     href={proj.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition text-sm"
+                    className="px-4 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition-transform text-sm font-medium"
                   >
                     🔗 Live Demo
                   </a>
