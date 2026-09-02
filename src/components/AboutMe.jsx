@@ -14,7 +14,15 @@ const AboutMe = () => {
               src="/Ranjith.jpeg"
               alt="Portrait of Ranjith Michael"
               loading="lazy"
-              className="w-60 h-60 rounded-full shadow-xl border-4 border-blue-500 hover:scale-105 transition-transform"
+              className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56
+              rounded-full
+              border-4 border-white
+             shadow-xl
+             bg-gradient-to-r from-blue-600 to-purple-700
+             p-1
+             hover:scale-105 transition-transform
+             animate-pulse-glow
+            "
             />
           </div>
 
@@ -56,14 +64,6 @@ const AboutMe = () => {
               >
                 👀 View Online
               </a>
-              <a
-                href="https://github.com/RanjithMichael"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-900 hover:scale-105 transition-transform font-medium"
-              >
-                💻 GitHub
-              </a>
             </div>
           </div>
         </div>
@@ -93,3 +93,4 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+
