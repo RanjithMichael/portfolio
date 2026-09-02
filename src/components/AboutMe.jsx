@@ -14,16 +14,18 @@ const AboutMe = () => {
               src="/Ranjith.jpeg"
               alt="Portrait of Ranjith Michael"
               loading="lazy"
-              className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56
-              rounded-full
-              border-4 border-white
+              className="
+              w-48 h-64 md:w-56 md:h-72 lg:w-64 lg:h-80
+              rounded-xl
+             border-4 border-white
              shadow-xl
              bg-gradient-to-r from-blue-600 to-purple-700
              p-1
              hover:scale-105 transition-transform
              animate-pulse-glow
             "
-            />
+          />
+
           </div>
 
           {/* Text Content */}
