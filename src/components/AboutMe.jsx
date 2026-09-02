@@ -6,86 +6,65 @@ const AboutMe = () => {
         id="about"
         className="py-24 bg-gradient-to-r from-blue-50 to-purple-100"
       >
-        <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl p-12 flex flex-col items-center text-center animate-fadeIn">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center animate-fadeIn">
           
           {/* Profile Image */}
-          <img
-            src="/Ranjith.jpeg"
-            alt="Portrait of Ranjith Michael"
-            loading="lazy"
-            className="
-              w-36 h-36
-              sm:w-44 sm:h-44
-              md:w-52 md:h-52
-              lg:w-60 lg:h-60
-              rounded-full
-              shadow-lg
-              border-4 border-blue-500
-              transition-transform
-              hover:scale-110
-              animate-slideUp
-              mb-8
-            "
-          />
+          <div className="flex justify-center md:justify-end">
+            <img
+              src="/Ranjith.jpeg"
+              alt="Portrait of Ranjith Michael"
+              loading="lazy"
+              className="w-60 h-60 rounded-full shadow-xl border-4 border-blue-500 hover:scale-105 transition-transform"
+            />
+          </div>
 
-          {/* Heading */}
-          <h2
-            className="text-5xl font-extrabold text-blue-600 mb-6 animate-slideUp delay-100"
-            aria-label="Introduction heading"
-          >
-            Hi, I’m Ranjith Michael 👋
-          </h2>
+          {/* Text Content */}
+          <div className="text-center md:text-left">
+            <h2 className="text-5xl font-extrabold text-blue-600 mb-6 animate-slideUp">
+              Hi, I’m Ranjith Michael 👋
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8 animate-fadeIn delay-200">
+              I’m a Full‑Stack MERN Developer based in Vellore, India. I focus on
+              building scalable web applications, crafting clean UI with TailwindCSS,
+              and automating workflows to make development faster and smarter.
+              With a background in logistics and leadership, I bring both technical
+              and organizational strengths to projects.
+            </p>
 
-          {/* Description */}
-          <p
-            className="text-lg text-gray-700 leading-relaxed mb-8 animate-fadeIn delay-200 max-w-3xl"
-            aria-label="Developer description"
-          >
-            I’m a Full‑Stack MERN Developer based in Vellore, India. I focus on
-            building scalable web applications, crafting clean UI with TailwindCSS,
-            and automating workflows to make development faster and smarter.
-            With a background in logistics and leadership, I bring both technical
-            and organizational strengths to projects.
-          </p>
-
-          {/* Strengths */}
-          <section aria-label="Key strengths" className="mb-10">
-            <ul className="text-gray-700 list-disc list-inside space-y-3 animate-fadeIn delay-300 text-left max-w-md mx-auto">
+            {/* Strengths */}
+            <ul className="text-gray-700 space-y-3 mb-10 animate-fadeIn delay-300">
               <li>🚀 Full‑Stack MERN Developer (MongoDB, Express, React, Node.js)</li>
               <li>🎨 Clean UI with TailwindCSS</li>
               <li>⚡ Workflow automation for faster development</li>
               <li>📦 Logistics & leadership background</li>
             </ul>
-          </section>
 
-          {/* Call-to-Action Buttons */}
-          <div className="flex justify-center gap-6 flex-wrap animate-slideUp delay-400">
-            <a
-              href="/Ranjith_Michael_B_Resume.pdf"
-              className="px-6 py-3 bg-yellow-400 text-black rounded-lg shadow hover:bg-yellow-500 hover:scale-105 transition-transform font-medium"
-              download
-              aria-label="Download Resume"
-            >
-              ⬇️ Download Resume
-            </a>
-            <a
-              href="/Ranjith_Michael_B_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 hover:scale-105 transition-transform font-medium"
-              aria-label="View Resume Online"
-            >
-              👀 View Online
-            </a>
-            <a
-              href="https://github.com/RanjithMichael"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-900 hover:scale-105 transition-transform font-medium"
-              aria-label="Visit GitHub Profile"
-            >
-              💻 GitHub
-            </a>
+            {/* CTA Buttons */}
+            <div className="flex gap-4 flex-wrap justify-center md:justify-start animate-slideUp delay-400">
+              <a
+                href="/Ranjith_Michael_B_Resume.pdf"
+                className="px-6 py-3 bg-yellow-400 text-black rounded-lg shadow hover:bg-yellow-500 hover:scale-105 transition-transform font-medium"
+                download
+              >
+                ⬇️ Download Resume
+              </a>
+              <a
+                href="/Ranjith_Michael_B_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 hover:scale-105 transition-transform font-medium"
+              >
+                👀 View Online
+              </a>
+              <a
+                href="https://github.com/RanjithMichael"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-900 hover:scale-105 transition-transform font-medium"
+              >
+                💻 GitHub
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -95,8 +74,8 @@ const AboutMe = () => {
         id="whyme"
         className="py-24 bg-gradient-to-r from-purple-50 to-blue-100"
       >
-        <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl p-12 text-center animate-fadeIn">
-          <h2 className="text-4xl font-extrabold text-blue-600 mb-8">
+        <div className="max-w-6xl mx-auto px-6 text-center animate-fadeIn">
+          <h2 className="text-5xl font-extrabold text-blue-600 mb-8">
             🌟 Why Work With Me?
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
