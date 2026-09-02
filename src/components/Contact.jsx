@@ -29,16 +29,16 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-r from-blue-50 to-purple-100"
+      className="py-24 bg-gradient-to-r from-blue-50 to-purple-100"
     >
-      <div className="max-w-3xl mx-auto text-center animate-fadeIn">
+      <div className="max-w-5xl mx-auto px-6 text-center animate-fadeIn">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-blue-600 mb-6">
-          📬 Contact Me
+        <h2 className="text-5xl font-extrabold text-blue-600 mb-8">
+          📬 Get In Touch
         </h2>
-        <p className="text-gray-700 mb-10 text-lg leading-relaxed">
+        <p className="text-lg text-gray-700 mb-12 leading-relaxed max-w-2xl mx-auto">
           Have a project idea or just want to say hi? Fill out the form below or
-          connect with me directly.
+          connect with me directly through my social links.
         </p>
 
         {/* Contact Form */}
@@ -46,36 +46,41 @@ const Contact = () => {
           onSubmit={handleSubmit}
           action="https://formspree.io/f/mojgvgdd"
           method="POST"
-          className="bg-white p-8 rounded-xl shadow-lg space-y-4"
+          className="bg-white rounded-2xl shadow-xl p-10 space-y-6 text-left"
         >
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
-            aria-label="Your Name"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
-            aria-label="Your Email"
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            required
-            rows="4"
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
-            aria-label="Your Message"
-          ></textarea>
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Name</label>
+            <input
+              type="text"
+              name="name"
+              required
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Message</label>
+            <textarea
+              name="message"
+              rows="5"
+              required
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
+            ></textarea>
+          </div>
+
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg shadow hover:scale-105 transition transform font-semibold"
-            aria-label="Send Message"
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg shadow hover:scale-105 transition font-semibold"
           >
             ✉️ Send Message
           </button>
@@ -93,32 +98,28 @@ const Contact = () => {
         )}
 
         {/* Social Links */}
-        <div className="flex justify-center gap-8 mt-10">
+        <div className="flex justify-center gap-8 mt-12">
           <a
             href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
             className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition font-medium"
-            aria-label="LinkedIn Profile"
           >
             🔗 LinkedIn
           </a>
           <a
             href="https://github.com/RanjithMichael"
             className="flex items-center gap-2 text-gray-800 hover:text-black transition font-medium"
-            aria-label="GitHub Profile"
           >
             💻 GitHub
           </a>
           <a
             href="mailto:ranjithmichael49@gmail.com"
             className="flex items-center gap-2 text-red-600 hover:text-red-800 transition font-medium"
-            aria-label="Email Me"
           >
             📧 Email
           </a>
           <a
             href="tel:+919677956477"
             className="flex items-center gap-2 text-green-600 hover:text-green-800 transition font-medium"
-            aria-label="Call Me"
           >
             📞 Call Me
           </a>
@@ -129,4 +130,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
 

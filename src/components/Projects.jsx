@@ -43,25 +43,29 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-24 bg-gradient-to-r from-blue-50 to-purple-100">
-      <div className="max-w-6xl mx-auto text-center animate-fadeIn">
+      <div className="max-w-6xl mx-auto px-6 text-center animate-fadeIn">
         <h2 className="text-5xl font-extrabold text-blue-600 mb-14">🚀 Projects</h2>
+        
+        {/* Grid Layout */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-105 flex flex-col"
+              className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 animate-slideUp flex flex-col"
             >
               {/* Project Image */}
-              <img
-                src={proj.image}
-                alt={`${proj.title} Screenshot`}
-                className="w-full h-56 object-cover rounded-t-2xl"
-                loading="lazy"
-              />
+              <div className="relative">
+                <img
+                  src={proj.image}
+                  alt={`${proj.title} Screenshot`}
+                  className="w-full h-56 object-cover transition-transform group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
 
               {/* Project Content */}
-              <div className="p-8 flex flex-col flex-grow text-left">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+              <div className="p-6 flex flex-col flex-grow text-left">
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">
                   {proj.title}
                 </h3>
 
@@ -73,11 +77,11 @@ const Projects = () => {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {proj.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs bg-blue-200 text-blue-800 rounded-full font-medium"
+                      className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -85,7 +89,7 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex justify-start gap-4 mt-auto">
+                <div className="flex justify-start gap-3 mt-auto">
                   {proj.frontend && (
                     <a
                       href={proj.frontend}

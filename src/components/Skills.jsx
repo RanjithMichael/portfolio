@@ -35,31 +35,38 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-gradient-to-r from-blue-50 to-purple-100 text-center">
-      <h2 className="text-5xl font-extrabold text-blue-600 mb-14 animate-fadeIn">💡 Skills</h2>
-      <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto animate-slideUp">
-        {skillGroups.map((group, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-xl p-10 hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-105"
-          >
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800 border-b pb-3">
-              {group.icon} {group.title}
-            </h3>
-            <ul className="space-y-5 text-gray-700 text-lg">
-              {group.skills.map((skill, i) => (
-                <li
-                  key={i}
-                  className="flex items-center gap-4 hover:text-blue-600 transition-colors"
-                  aria-label={`${skill.name} skill`}
-                >
-                  {skill.icon}
-                  <span className="font-medium">{skill.name}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <section id="skills" className="py-24 bg-gradient-to-r from-blue-50 to-purple-100">
+      <div className="max-w-6xl mx-auto px-6 text-center animate-fadeIn">
+        {/* Heading */}
+        <h2 className="text-5xl font-extrabold text-blue-600 mb-14">💡 Skills</h2>
+
+        {/* Grid Layout */}
+        <div className="grid md:grid-cols-3 gap-12">
+          {skillGroups.map((group, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-2xl shadow-lg p-10 hover:shadow-2xl transition-transform transform hover:-translate-y-2 animate-slideUp"
+            >
+              {/* Group Title */}
+              <h3 className="text-2xl font-semibold mb-6 text-gray-800 border-b pb-3">
+                {group.icon} {group.title}
+              </h3>
+
+              {/* Skills List */}
+              <ul className="space-y-5 text-gray-700 text-lg">
+                {group.skills.map((skill, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-4 group-hover:text-blue-600 transition-colors"
+                  >
+                    {skill.icon}
+                    <span className="font-medium">{skill.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
