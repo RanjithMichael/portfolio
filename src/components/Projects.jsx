@@ -15,11 +15,11 @@ const Projects = () => {
     },
     {
       title: "AI Chatbot",
-      caseStudy: {
-        problem: "Needed natural language conversations with persistent history.",
-        solution: "Integrated Cohere’s command-r-08-2024 API into a MERN stack, storing chat sessions in MongoDB for continuity.",
-        impact: "Delivered responsive, human‑like conversations with session persistence, improving user experience and retention."
-      },
+    caseStudy: {
+      problem: "Needed natural language conversations with persistent history tied to user accounts.",
+      solution: "Developed a MERN chatbot with JWT authentication and protected routes. Integrated Cohere’s command‑r‑08‑2024 API, storing chat sessions in MongoDB per user.",
+      impact: "Delivered secure, human‑like conversations with session persistence, ensuring only authorized users could access and retain their chat history."
+    },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "Cohere API"],
       image: "/ChatBot.png",
       frontend: "https://github.com/RanjithMichael/cb-frontend",
@@ -28,11 +28,11 @@ const Projects = () => {
     },
     {
       title: "Weather Dashboard",
-      caseStudy: {
-        problem: "Needed real‑time weather insights with historical search tracking.",
-        solution: "Connected OpenWeather API, built MongoDB persistence for search history, and designed a responsive dashboard with charts/icons.",
-        impact: "Provided accurate forecasts with a clean UI, reducing repeated searches and improving clarity of weather trends."
-      },
+    caseStudy: {
+      problem: "Needed real‑time weather insights with historical search tracking per user.",
+      solution: "Built a MERN app with JWT authentication and protected routes. Connected OpenWeather API, persisted search history in MongoDB, and designed a responsive dashboard with charts/icons.",
+      impact: "Provided accurate forecasts with a clean UI, while ensuring only authenticated users could view and manage their personal search history."
+    },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "OpenWeather API"],
       image: "/weatherDashboard.png",
       frontend: "https://github.com/RanjithMichael/wd-frontend",
