@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import ScrollProgressBar from "./components/ScrollProgressBar"; 
+import Reveal from "./components/Reveal"; 
 
 function App() {
   return (
@@ -18,12 +19,12 @@ function App() {
       <Navbar />
 
       {/* Main Sections */}
-      <div className="pt-20">
-        <AboutMe />
-        <Skills />
-        <Projects />
-        <Certifications />
-        <Contact />
+      <div className="pt-20 space-y-24">
+        <Reveal><AboutMe /></Reveal>
+        <Reveal><Skills /></Reveal>
+        <Reveal><Projects /></Reveal>
+        <Reveal><Certifications /></Reveal>
+        <Reveal><Contact /></Reveal>
       </div>
 
       {/* Footer + Back to Top */}
@@ -34,3 +35,4 @@ function App() {
 }
 
 export default App;
+

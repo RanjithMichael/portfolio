@@ -21,24 +21,22 @@ const BackToTop = () => {
   };
 
   return (
-    visible && (
-      <button
-        onClick={scrollToTop}
-        className="
-          fixed bottom-6 right-6
-          bg-gradient-to-r from-blue-500 to-purple-600
-          text-white p-4 rounded-full shadow-lg
-          hover:scale-110 hover:shadow-xl
-          transition transform duration-300 ease-in-out
-          focus:outline-none focus:ring-2 focus:ring-blue-400
-        "
-        aria-label="Back to Top"
-      >
-        ⬆️
-      </button>
-    )
+    <button
+      onClick={scrollToTop}
+      className={`
+        fixed bottom-6 right-6 w-12 h-12
+        rounded-full bg-gradient-to-r from-blue-600 to-purple-700
+        text-white shadow-lg flex items-center justify-center
+        transition-all duration-300 ease-in-out
+        hover:scale-110 hover:shadow-xl
+        focus:outline-none focus:ring-2 focus:ring-blue-400
+        ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}
+      `}
+      aria-label="Back to Top"
+    >
+      ⬆️
+    </button>
   );
 };
 
 export default BackToTop;
-
