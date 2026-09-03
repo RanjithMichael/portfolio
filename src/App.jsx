@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import ScrollProgressBar from "./components/ScrollProgressBar"; 
 import Reveal from "./components/Reveal"; 
+import RevealStagger from "./components/RevealStagger"; // ✅ new import for child animations
 
 function App() {
   return (
@@ -21,8 +22,21 @@ function App() {
       {/* Main Sections */}
       <div className="pt-20 space-y-24">
         <Reveal><AboutMe /></Reveal>
-        <Reveal><Skills /></Reveal>
-        <Reveal><Projects /></Reveal>
+
+        {/* Skills with staggered child animations */}
+        <Reveal>
+          <RevealStagger>
+            <Skills />
+          </RevealStagger>
+        </Reveal>
+
+        {/* Projects with staggered child animations */}
+        <Reveal>
+          <RevealStagger>
+            <Projects />
+          </RevealStagger>
+        </Reveal>
+
         <Reveal><Certifications /></Reveal>
         <Reveal><Contact /></Reveal>
       </div>
@@ -35,4 +49,5 @@ function App() {
 }
 
 export default App;
+
 
