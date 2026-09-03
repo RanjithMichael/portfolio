@@ -6,11 +6,18 @@ import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
+import ScrollProgressBar from "./components/ScrollProgressBar"; 
 
 function App() {
   return (
     <div className="App">
+      {/* Scroll Progress Bar */}
+      <ScrollProgressBar />
+
+      {/* Navbar */}
       <Navbar />
+
+      {/* Main Sections */}
       <div className="pt-20">
         <AboutMe />
         <Skills />
@@ -18,6 +25,8 @@ function App() {
         <Certifications />
         <Contact />
       </div>
+
+      {/* Footer + Back to Top */}
       <Footer />
       <BackToTop />
     </div>
@@ -25,4 +34,3 @@ function App() {
 }
 
 export default App;
-
