@@ -4,9 +4,9 @@ const AboutMe = () => {
       {/* About Section */}
       <section
         id="about"
-        className="py-24 bg-gradient-to-r from-blue-50 to-purple-100"
+        className="py-24 bg-gradient-to-r from-blue-600 to-teal-500 text-white"
       >
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center animate-fadeIn">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           
           {/* Profile Image */}
           <div className="flex justify-center md:justify-end">
@@ -17,23 +17,19 @@ const AboutMe = () => {
               className="
               w-48 h-64 md:w-56 md:h-72 lg:w-64 lg:h-80
               rounded-xl
-             border-4 border-white
-             shadow-xl
-             bg-gradient-to-r from-blue-600 to-purple-700
-             p-1
-             hover:scale-105 transition-transform
-             animate-pulse-glow
+              shadow-2xl
+              border-4 border-white
+              hover:scale-105 transition-transform
             "
-          />
-
+            />
           </div>
 
           {/* Text Content */}
           <div className="text-center md:text-left">
-            <h2 className="text-5xl font-extrabold text-blue-600 mb-6 animate-slideUp">
+            <h2 className="text-5xl font-extrabold mb-6">
               Hi, I’m Ranjith Michael 👋
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8 animate-fadeIn delay-200">
+            <p className="text-lg leading-relaxed mb-8">
               I’m a Full‑Stack MERN Developer based in Vellore, India. I focus on
               building scalable web applications, crafting clean UI with TailwindCSS,
               and automating workflows to make development faster and smarter.
@@ -42,7 +38,7 @@ const AboutMe = () => {
             </p>
 
             {/* Strengths */}
-            <ul className="text-gray-700 space-y-3 mb-10 animate-fadeIn delay-300">
+            <ul className="space-y-3 mb-10 text-lg">
               <li>🚀 Full‑Stack MERN Developer (MongoDB, Express, React, Node.js)</li>
               <li>🎨 Clean UI with TailwindCSS</li>
               <li>⚡ Workflow automation for faster development</li>
@@ -50,10 +46,10 @@ const AboutMe = () => {
             </ul>
 
             {/* CTA Buttons */}
-            <div className="flex gap-4 flex-wrap justify-center md:justify-start animate-slideUp delay-400">
+            <div className="flex gap-4 flex-wrap justify-center md:justify-start">
               <a
                 href="/Ranjith_Michael_B_Resume.pdf"
-                className="px-6 py-3 bg-yellow-400 text-black rounded-lg shadow hover:bg-yellow-500 hover:scale-105 transition-transform font-medium"
+                className="px-6 py-3 bg-white text-blue-600 rounded-lg shadow hover:opacity-90 hover:scale-105 transition-transform font-semibold"
                 download
               >
                 ⬇️ Download Resume
@@ -62,7 +58,7 @@ const AboutMe = () => {
                 href="/Ranjith_Michael_B_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 hover:scale-105 transition-transform font-medium"
+                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg shadow hover:opacity-90 hover:scale-105 transition-transform font-semibold"
               >
                 👀 View Online
               </a>
@@ -74,10 +70,10 @@ const AboutMe = () => {
       {/* Why Me Section */}
       <section
         id="whyme"
-        className="py-24 bg-gradient-to-r from-purple-50 to-blue-100"
+        className="py-24 bg-gray-50"
       >
-        <div className="max-w-6xl mx-auto px-6 text-center animate-fadeIn">
-          <h2 className="text-5xl font-extrabold text-blue-600 mb-8">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-extrabold text-blue-600 mb-8">
             🌟 Why Work With Me?
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
@@ -95,4 +91,5 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+
 

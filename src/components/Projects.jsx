@@ -15,11 +15,11 @@ const Projects = () => {
     },
     {
       title: "AI Chatbot",
-    caseStudy: {
-      problem: "Needed natural language conversations with persistent history tied to user accounts.",
-      solution: "Developed a MERN chatbot with JWT authentication and protected routes. Integrated Cohere’s command‑r‑08‑2024 API, storing chat sessions in MongoDB per user.",
-      impact: "Delivered secure, human‑like conversations with session persistence, ensuring only authorized users could access and retain their chat history."
-    },
+      caseStudy: {
+        problem: "Needed natural language conversations with persistent history tied to user accounts.",
+        solution: "Developed a MERN chatbot with JWT authentication and protected routes. Integrated Cohere’s command‑r‑08‑2024 API, storing chat sessions in MongoDB per user.",
+        impact: "Delivered secure, human‑like conversations with session persistence, ensuring only authorized users could access and retain their chat history."
+      },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "Cohere API"],
       image: "/ChatBot.png",
       frontend: "https://github.com/RanjithMichael/cb-frontend",
@@ -28,11 +28,11 @@ const Projects = () => {
     },
     {
       title: "Weather Dashboard",
-    caseStudy: {
-      problem: "Needed real‑time weather insights with historical search tracking per user.",
-      solution: "Built a MERN app with JWT authentication and protected routes. Connected OpenWeather API, persisted search history in MongoDB, and designed a responsive dashboard with charts/icons.",
-      impact: "Provided accurate forecasts with a clean UI, while ensuring only authenticated users could view and manage their personal search history."
-    },
+      caseStudy: {
+        problem: "Needed real‑time weather insights with historical search tracking per user.",
+        solution: "Built a MERN app with JWT authentication and protected routes. Connected OpenWeather API, persisted search history in MongoDB, and designed a responsive dashboard with charts/icons.",
+        impact: "Provided accurate forecasts with a clean UI, while ensuring only authenticated users could view and manage their personal search history."
+      },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "OpenWeather API"],
       image: "/weatherDashboard.png",
       frontend: "https://github.com/RanjithMichael/wd-frontend",
@@ -42,16 +42,16 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-gradient-to-r from-blue-50 to-purple-100">
-      <div className="max-w-6xl mx-auto px-6 text-center animate-fadeIn">
-        <h2 className="text-5xl font-extrabold text-blue-600 mb-14">🚀 Projects</h2>
+    <section id="projects" className="py-24 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-extrabold text-blue-600 mb-14">🚀 Projects</h2>
         
         {/* Grid Layout */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 animate-slideUp flex flex-col"
+              className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 flex flex-col"
             >
               {/* Project Image */}
               <div className="relative">
@@ -95,7 +95,7 @@ const Projects = () => {
                       href={proj.frontend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-transform text-sm font-medium"
+                      className="px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg hover:opacity-90 transition-transform text-sm font-medium"
                     >
                       💻 Frontend
                     </a>
@@ -105,7 +105,7 @@ const Projects = () => {
                       href={proj.backend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-transform text-sm font-medium"
+                      className="px-4 py-2 bg-gradient-to-r from-green-600 to-teal-500 text-white rounded-lg hover:opacity-90 transition-transform text-sm font-medium"
                     >
                       ⚙️ Backend
                     </a>
@@ -114,7 +114,7 @@ const Projects = () => {
                     href={proj.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition-transform text-sm font-medium"
+                    className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black rounded-lg hover:opacity-90 transition-transform text-sm font-medium"
                   >
                     🔗 Live Demo
                   </a>
