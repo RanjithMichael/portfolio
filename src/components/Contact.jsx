@@ -87,12 +87,12 @@ const Contact = () => {
         {/* Status Message */}
         {status && (
           <p
-            className={`mt-4 font-medium ${
-              status.startsWith("✅") ? "text-green-600" : "text-red-600"
-            }`}
-          >
-            {status}
-          </p>
+           className={`mt-4 font-medium ${
+           status.startsWith("✅") ? "text-green-700 bg-green-100 px-4 py-2 rounded-lg inline-block" : "text-red-700 bg-red-100 px-4 py-2 rounded-lg inline-block"
+           }`}
+         >
+          {status}
+         </p>
         )}
 
         {/* Social Links */}
