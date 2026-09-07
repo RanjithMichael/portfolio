@@ -19,10 +19,11 @@ const ScrollProgressBar = () => {
 
   return (
     <div
-      className="fixed top-0 left-0 h-1 bg-yellow-400 z-50 transition-all duration-200"
+      className="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 z-50 transition-all duration-200"
       style={{ width: `${scroll}%` }}
     />
   );
 };
 
 export default ScrollProgressBar;
+
