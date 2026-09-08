@@ -18,10 +18,7 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section
-      id="certifications"
-      className="py-24 bg-gray-50"
-    >
+    <section id="certifications" className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Heading */}
         <h2 className="text-4xl font-extrabold text-blue-600 mb-14">
@@ -29,11 +26,11 @@ const Certifications = () => {
         </h2>
 
         {/* Grid Layout */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2"
+              className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2"
             >
               {/* Certificate Image */}
               {cert.image ? (
@@ -50,7 +47,7 @@ const Certifications = () => {
               )}
 
               {/* Content */}
-              <div className="p-6 flex flex-col items-center text-center">
+              <div className="p-6 flex flex-col flex-grow text-center">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                   {cert.title}
                 </h3>
@@ -78,6 +75,4 @@ const Certifications = () => {
     </section>
   );
 };
-
 export default Certifications;
-
