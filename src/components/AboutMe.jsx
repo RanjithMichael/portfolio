@@ -6,7 +6,7 @@ const AboutMe = () => {
         id="about"
         className="py-16 bg-gradient-to-r from-blue-600 to-teal-500 text-white"
       >
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
           
           {/* Profile Image */}
           <div className="flex justify-center md:justify-end">
@@ -15,12 +15,12 @@ const AboutMe = () => {
               alt="Portrait of Ranjith Michael"
               loading="lazy"
               className="
-              w-48 h-64 md:w-56 md:h-72 lg:w-64 lg:h-80
-              rounded-xl
-              shadow-2xl
-              border-4 border-white
-              hover:scale-105 transition-transform
-            "
+                w-48 h-64 md:w-56 md:h-72 lg:w-64 lg:h-80
+                rounded-xl
+                shadow-2xl
+                border-4 border-white
+                hover:scale-105 transition-transform
+              "
             />
           </div>
 
@@ -29,7 +29,7 @@ const AboutMe = () => {
             <h2 className="text-5xl font-extrabold mb-6">
               Hi, I’m Ranjith Michael 👋
             </h2>
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="text-lg leading-relaxed mb-8 max-w-xl">
               I’m a Full‑Stack MERN Developer based in Vellore, India. I focus on
               building scalable web applications, crafting clean UI with TailwindCSS,
               and automating workflows to make development faster and smarter.
@@ -68,10 +68,7 @@ const AboutMe = () => {
       </section>
 
       {/* Why Me Section */}
-      <section
-        id="whyme"
-        className="py-16 bg-gray-50"
-      >
+      <section id="whyme" className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-extrabold text-blue-600 mb-8">
             🌟 Why Work With Me?
@@ -91,5 +88,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-

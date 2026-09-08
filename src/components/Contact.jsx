@@ -27,14 +27,11 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-16 bg-gradient-to-r from-blue-600 to-teal-500 text-white"
-    >
+    <section id="contact" className="py-16 bg-gradient-to-r from-blue-600 to-teal-500 text-white">
       <div className="max-w-5xl mx-auto px-6 text-center">
         {/* Heading */}
         <h2 className="text-4xl font-extrabold mb-6">📬 Get In Touch</h2>
-        <p className="text-lg mb-12 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
           Have a project idea or just want to say hi? Fill out the form below or
           connect with me directly through my social links.
         </p>
@@ -44,7 +41,7 @@ const Contact = () => {
           onSubmit={handleSubmit}
           action="https://formspree.io/f/mojgvgdd"
           method="POST"
-          className="bg-white rounded-xl shadow-xl p-10 space-y-6 text-left text-gray-800"
+          className="bg-white rounded-xl shadow-xl p-8 space-y-6 text-left text-gray-800"
         >
           <div>
             <label className="block font-medium mb-2">Name</label>
@@ -87,16 +84,18 @@ const Contact = () => {
         {/* Status Message */}
         {status && (
           <p
-           className={`mt-4 font-medium ${
-           status.startsWith("✅") ? "text-green-700 bg-green-100 px-4 py-2 rounded-lg inline-block" : "text-red-700 bg-red-100 px-4 py-2 rounded-lg inline-block"
-           }`}
-         >
-          {status}
-         </p>
+            className={`mt-6 font-medium ${
+              status.startsWith("✅")
+                ? "text-green-700 bg-green-100 px-4 py-2 rounded-lg inline-block"
+                : "text-red-700 bg-red-100 px-4 py-2 rounded-lg inline-block"
+            }`}
+          >
+            {status}
+          </p>
         )}
 
         {/* Social Links */}
-        <div className="flex justify-center gap-8 mt-12 text-lg font-medium">
+        <div className="flex justify-center gap-8 mt-10 text-lg font-medium">
           <a
             href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
             className="flex items-center gap-2 hover:text-gray-200 transition"
@@ -128,3 +127,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
