@@ -45,30 +45,30 @@ const Projects = () => {
     <section id="projects" className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-extrabold text-blue-600 mb-14">🚀 Projects</h2>
-        
+
         {/* Grid Layout */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 flex flex-col"
+              className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02] flex flex-col"
             >
-              {/* Project Image */}
+              {/* Project Image with Overlay */}
               <div className="relative">
                 <img
                   src={proj.image}
                   alt={`${proj.title} Screenshot`}
-                  className="w-full h-56 object-cover transition-transform group-hover:scale-105"
+                  className="w-full h-56 md:h-64 lg:h-72 object-cover transition-transform group-hover:scale-105"
                   loading="lazy"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <h3 className="absolute bottom-3 left-3 text-white text-lg font-bold">
+                  {proj.title}
+                </h3>
               </div>
 
               {/* Project Content */}
               <div className="p-6 flex flex-col flex-grow text-left">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  {proj.title}
-                </h3>
-
                 {/* Case Study */}
                 <div className="text-gray-600 mb-6 flex-grow text-sm leading-relaxed space-y-2">
                   <p><span className="font-semibold">Problem:</span> {proj.caseStudy.problem}</p>
@@ -95,7 +95,8 @@ const Projects = () => {
                       href={proj.frontend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg hover:opacity-90 transition-transform text-sm font-medium"
+                      aria-label={`View frontend code for ${proj.title}`}
+                      className="px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg flex items-center gap-2 text-sm font-medium hover:opacity-90 transition-transform"
                     >
                       💻 Frontend
                     </a>
@@ -105,7 +106,8 @@ const Projects = () => {
                       href={proj.backend}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-gradient-to-r from-green-600 to-teal-500 text-white rounded-lg hover:opacity-90 transition-transform text-sm font-medium"
+                      aria-label={`View backend code for ${proj.title}`}
+                      className="px-4 py-2 bg-gradient-to-r from-green-600 to-teal-500 text-white rounded-lg flex items-center gap-2 text-sm font-medium hover:opacity-90 transition-transform"
                     >
                       ⚙️ Backend
                     </a>
@@ -114,7 +116,8 @@ const Projects = () => {
                     href={proj.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black rounded-lg hover:opacity-90 transition-transform text-sm font-medium"
+                    aria-label={`View live demo of ${proj.title}`}
+                    className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black rounded-lg flex items-center gap-2 text-sm font-medium hover:opacity-90 transition-transform"
                   >
                     🔗 Live Demo
                   </a>
@@ -127,5 +130,5 @@ const Projects = () => {
     </section>
   );
 };
-
 export default Projects;
+
