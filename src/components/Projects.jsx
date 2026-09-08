@@ -1,3 +1,5 @@
+import React from "react";
+
 const Projects = () => {
   const projects = [
     {
@@ -53,7 +55,7 @@ const Projects = () => {
               key={index}
               className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02] flex flex-col"
             >
-              {/* Project Image with Overlay */}
+              {/* Project Image with Hover Overlay */}
               <div className="relative">
                 <img
                   src={proj.image}
@@ -61,7 +63,38 @@ const Projects = () => {
                   className="w-full h-56 md:h-64 lg:h-72 object-cover transition-transform group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3">
+                  {proj.frontend && (
+                    <a
+                      href={proj.frontend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-md text-sm font-medium hover:opacity-90"
+                    >
+                      💻 Frontend
+                    </a>
+                  )}
+                  {proj.backend && (
+                    <a
+                      href={proj.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-gradient-to-r from-green-600 to-teal-500 text-white rounded-md text-sm font-medium hover:opacity-90"
+                    >
+                      ⚙️ Backend
+                    </a>
+                  )}
+                  <a
+                    href={proj.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black rounded-md text-sm font-medium hover:opacity-90"
+                  >
+                    🔗 Live Demo
+                  </a>
+                </div>
+                {/* Title on Image */}
                 <h3 className="absolute bottom-3 left-3 text-white text-lg font-bold">
                   {proj.title}
                 </h3>
@@ -87,41 +120,6 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-
-                {/* Action Buttons */}
-                <div className="flex justify-start gap-3 mt-auto">
-                  {proj.frontend && (
-                    <a
-                      href={proj.frontend}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`View frontend code for ${proj.title}`}
-                      className="px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg flex items-center gap-2 text-sm font-medium hover:opacity-90 transition-transform"
-                    >
-                      💻 Frontend
-                    </a>
-                  )}
-                  {proj.backend && (
-                    <a
-                      href={proj.backend}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`View backend code for ${proj.title}`}
-                      className="px-4 py-2 bg-gradient-to-r from-green-600 to-teal-500 text-white rounded-lg flex items-center gap-2 text-sm font-medium hover:opacity-90 transition-transform"
-                    >
-                      ⚙️ Backend
-                    </a>
-                  )}
-                  <a
-                    href={proj.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`View live demo of ${proj.title}`}
-                    className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black rounded-lg flex items-center gap-2 text-sm font-medium hover:opacity-90 transition-transform"
-                  >
-                    🔗 Live Demo
-                  </a>
-                </div>
               </div>
             </div>
           ))}
@@ -130,5 +128,7 @@ const Projects = () => {
     </section>
   );
 };
+
 export default Projects;
+
 
