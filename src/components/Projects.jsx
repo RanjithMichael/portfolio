@@ -1,4 +1,17 @@
-import React from "react";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
+import { BsCloudSun } from "react-icons/bs";
+import { FaRobot } from "react-icons/fa"; // fallback icon for Cohere API
+
+const techIcons = {
+  React: <FaReact className="text-blue-500 text-lg" />,
+  "Node.js": <FaNodeJs className="text-green-600 text-lg" />,
+  MongoDB: <SiMongodb className="text-green-700 text-lg" />,
+  Express: <SiExpress className="text-gray-600 text-lg" />,
+  TailwindCSS: <SiTailwindcss className="text-cyan-500 text-lg" />,
+  "OpenWeather API": <BsCloudSun className="text-yellow-500 text-lg" />,
+  "Cohere API": <FaRobot className="text-purple-600 text-lg" />,
+};
 
 const Projects = () => {
   const projects = [
@@ -63,7 +76,6 @@ const Projects = () => {
                   className="w-full h-56 md:h-64 lg:h-72 object-cover transition-transform group-hover:scale-105"
                   loading="lazy"
                 />
-                {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3">
                   {proj.frontend && (
                     <a
@@ -94,7 +106,6 @@ const Projects = () => {
                     🔗 Live Demo
                   </a>
                 </div>
-                {/* Title on Image */}
                 <h3 className="absolute bottom-3 left-3 text-white text-lg font-bold">
                   {proj.title}
                 </h3>
@@ -109,15 +120,13 @@ const Projects = () => {
                   <p><span className="font-semibold">Impact:</span> {proj.caseStudy.impact}</p>
                 </div>
 
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                {/* Tech Stack Icons */}
+                <div className="flex flex-wrap gap-4 mb-6">
                   {proj.tech.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded-full font-medium"
-                    >
-                      {tech}
-                    </span>
+                    <div key={i} className="flex items-center gap-2 bg-blue-50 px-3 py-2 rounded-lg">
+                      {techIcons[tech]}
+                      <span className="text-xs font-medium text-gray-700">{tech}</span>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -128,7 +137,4 @@ const Projects = () => {
     </section>
   );
 };
-
 export default Projects;
-
-
