@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-24 bg-gradient-to-r from-blue-600 to-teal-500 text-white"
+      className="py-16 bg-gradient-to-r from-blue-600 to-teal-500 text-white"
     >
       <div className="max-w-5xl mx-auto px-6 text-center">
         {/* Heading */}

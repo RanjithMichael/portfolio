@@ -35,13 +35,13 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-gray-50">
+    <section id="skills" className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-blue-600 mb-14">💡 Skills</h2>
+        <h2 className="text-4xl font-extrabold text-blue-600 mb-8">💡 Skills</h2>
 
         {/* Grid Layout */}
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-8">
           {skillGroups.map((group, index) => (
             <div
               key={index}

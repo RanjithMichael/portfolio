@@ -57,12 +57,12 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-gray-50">
+    <section id="projects" className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold text-blue-600 mb-14">🚀 Projects</h2>
+        <h2 className="text-4xl font-extrabold text-blue-600 mb-8">🚀 Projects</h2>
 
         {/* Grid Layout */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((proj, index) => (
             <div
               key={index}

@@ -4,7 +4,7 @@ const AboutMe = () => {
       {/* About Section */}
       <section
         id="about"
-        className="py-24 bg-gradient-to-r from-blue-600 to-teal-500 text-white"
+        className="py-16 bg-gradient-to-r from-blue-600 to-teal-500 text-white"
       >
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           
@@ -70,7 +70,7 @@ const AboutMe = () => {
       {/* Why Me Section */}
       <section
         id="whyme"
-        className="py-24 bg-gray-50"
+        className="py-16 bg-gray-50"
       >
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-extrabold text-blue-600 mb-8">
