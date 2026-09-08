@@ -10,7 +10,7 @@ const certifications = [
     title: "AI Tools & ChatGPT Workshop",
     issuer: "be10x",
     description: "Certified in leveraging AI tools for presentations, data analysis, and coding/debugging.",
-    image: null, // no image
+    image: "/be10x.png",
     link: "/Be10xCertificate.pdf",
   },
   // Add more certificates here
