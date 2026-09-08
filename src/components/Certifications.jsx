@@ -26,18 +26,18 @@ const Certifications = () => {
         </h2>
 
         {/* Grid Layout */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2"
+              className="flex flex-col h-full bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Certificate Image */}
               {cert.image ? (
                 <img
                   src={cert.image}
                   alt={`${cert.title} Logo`}
-                  className="mx-auto h-40 w-auto object-contain p-6 transition-transform group-hover:scale-105"
+                  className="mx-auto h-40 w-auto object-contain p-6 transition-transform hover:scale-105"
                   loading="lazy"
                 />
               ) : (
@@ -75,4 +75,6 @@ const Certifications = () => {
     </section>
   );
 };
+
 export default Certifications;
+

@@ -1,7 +1,6 @@
-import { FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaRobot } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
 import { BsCloudSun } from "react-icons/bs";
-import { FaRobot } from "react-icons/fa"; // fallback icon for Cohere API
 
 const techIcons = {
   React: <FaReact className="text-blue-500 text-lg" />,
@@ -62,11 +61,11 @@ const Projects = () => {
         <h2 className="text-4xl font-extrabold text-blue-600 mb-8">🚀 Projects</h2>
 
         {/* Grid Layout */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02] flex flex-col"
+              className="flex flex-col h-full bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Project Image with Hover Overlay */}
               <div className="relative">
@@ -76,7 +75,7 @@ const Projects = () => {
                   className="w-full h-56 md:h-64 lg:h-72 object-cover transition-transform group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3">
+                <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3">
                   {proj.frontend && (
                     <a
                       href={proj.frontend}
@@ -121,9 +120,9 @@ const Projects = () => {
                 </div>
 
                 {/* Tech Stack Icons */}
-                <div className="flex flex-wrap gap-4 mb-6">
+                <div className="flex flex-wrap gap-4 mt-auto">
                   {proj.tech.map((tech, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-blue-50 px-3 py-2 rounded-lg">
+                    <div key={i} className="flex items-center gap-2 bg-blue-50 px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors">
                       {techIcons[tech]}
                       <span className="text-xs font-medium text-gray-700">{tech}</span>
                     </div>
@@ -137,4 +136,6 @@ const Projects = () => {
     </section>
   );
 };
+
 export default Projects;
+
