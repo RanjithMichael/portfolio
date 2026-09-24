@@ -1,7 +1,6 @@
 import { FaReact, FaNodeJs, FaRobot } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
+import { SiMongodb, SiExpress, SiTailwindcss, SiCloudinary } from "react-icons/si";
 import { BsCloudSun } from "react-icons/bs";
-import { SiCloudinary } from "react-icons/si"; 
 
 const techIcons = {
   React: <FaReact className="text-blue-500 text-lg" />,
@@ -11,7 +10,7 @@ const techIcons = {
   TailwindCSS: <SiTailwindcss className="text-cyan-500 text-lg" />,
   "OpenWeather API": <BsCloudSun className="text-yellow-500 text-lg" />,
   "Cohere API": <FaRobot className="text-purple-600 text-lg" />,
-  Cloudinary: <SiCloudinary className="text-blue-400 text-lg" />, 
+  Cloudinary: <SiCloudinary className="text-blue-400 text-lg" />,
 };
 
 const Projects = () => {
@@ -49,7 +48,7 @@ const Projects = () => {
         solution: "Built a full‑stack MERN application with JWT authentication, role‑based access (admin/user), Cloudinary image uploads, and MongoDB Atlas integration. Designed responsive UI with popular cars filter, booking dashboard, and FAQs.",
         impact: "Delivered a scalable rental system enabling smooth customer bookings and efficient admin management. Improved usability with real‑time car listings and secure data handling, deployable on Netlify + Railway."
       },
-      tech: ["MongoDB", "React", "Node.js", "TailwindCSS", "Cloudinary"], 
+      tech: ["MongoDB", "React", "Node.js", "TailwindCSS", "Cloudinary"],
       image: "/car-rental.png",
       frontend: "https://github.com/RanjithMichael/cra-frontend",
       backend: "https://github.com/RanjithMichael/cra-backend",
@@ -58,16 +57,29 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold text-blue-600 mb-8">🚀 Projects</h2>
+    <section id="projects" className="relative py-20 text-white">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790280230/programming-web-banner-best-languages-260nw-2392481249.webp')", // ✅ replace with your Cloudinary background
+        }}
+      ></div>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Content */}
+      <div className="relative max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-extrabold text-blue-300 mb-12">🚀 Projects</h2>
 
         {/* Grid Layout */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="flex flex-col h-full bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
+              className="flex flex-col h-full group bg-white/90 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Project Image with Hover Overlay */}
               <div className="relative group">
@@ -115,7 +127,7 @@ const Projects = () => {
               {/* Project Content */}
               <div className="p-6 flex flex-col flex-grow text-left">
                 {/* Case Study */}
-                <div className="text-gray-600 mb-6 flex-grow text-sm leading-relaxed space-y-2">
+                <div className="text-gray-700 mb-6 flex-grow text-sm leading-relaxed space-y-2">
                   <p><span className="font-semibold">Problem:</span> {proj.caseStudy.problem}</p>
                   <p><span className="font-semibold">Solution:</span> {proj.caseStudy.solution}</p>
                   <p><span className="font-semibold">Impact:</span> {proj.caseStudy.impact}</p>
@@ -124,7 +136,10 @@ const Projects = () => {
                 {/* Tech Stack Icons */}
                 <div className="flex flex-wrap gap-4 mt-auto">
                   {proj.tech.map((tech, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-blue-50 px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors">
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 bg-blue-50 px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors"
+                    >
                       {techIcons[tech]}
                       <span className="text-xs font-medium text-gray-700">{tech}</span>
                     </div>

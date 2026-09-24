@@ -18,10 +18,23 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section id="certifications" className="relative py-20 text-white">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790280458/istockphoto-1904641522-612x612.jpg')", 
+        }}
+      ></div>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Content */}
+      <div className="relative max-w-6xl mx-auto px-6 text-center">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-blue-600 mb-8">
+        <h2 className="text-4xl font-extrabold text-blue-300 mb-12">
           📜 Certifications
         </h2>
 
@@ -30,7 +43,7 @@ const Certifications = () => {
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="flex flex-col h-full bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
+              className="flex flex-col h-full bg-white/90 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Certificate Image */}
               {cert.image ? (
@@ -77,4 +90,3 @@ const Certifications = () => {
 };
 
 export default Certifications;
-
