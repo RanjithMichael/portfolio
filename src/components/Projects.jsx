@@ -1,6 +1,7 @@
 import { FaReact, FaNodeJs, FaRobot } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
 import { BsCloudSun } from "react-icons/bs";
+import { SiCloudinary } from "react-icons/si"; 
 
 const techIcons = {
   React: <FaReact className="text-blue-500 text-lg" />,
@@ -10,6 +11,7 @@ const techIcons = {
   TailwindCSS: <SiTailwindcss className="text-cyan-500 text-lg" />,
   "OpenWeather API": <BsCloudSun className="text-yellow-500 text-lg" />,
   "Cohere API": <FaRobot className="text-purple-600 text-lg" />,
+  Cloudinary: <SiCloudinary className="text-blue-400 text-lg" />, 
 };
 
 const Projects = () => {
@@ -47,7 +49,7 @@ const Projects = () => {
         solution: "Built a full‑stack MERN application with JWT authentication, role‑based access (admin/user), Cloudinary image uploads, and MongoDB Atlas integration. Designed responsive UI with popular cars filter, booking dashboard, and FAQs.",
         impact: "Delivered a scalable rental system enabling smooth customer bookings and efficient admin management. Improved usability with real‑time car listings and secure data handling, deployable on Netlify + Railway."
       },
-      tech: ["MongoDB", "React", "Node.js", "TailwindCSS", "cloudinary"],
+      tech: ["MongoDB", "React", "Node.js", "TailwindCSS", "Cloudinary"], 
       image: "/car-rental.png",
       frontend: "https://github.com/RanjithMichael/cra-frontend",
       backend: "https://github.com/RanjithMichael/cra-backend",
@@ -68,14 +70,14 @@ const Projects = () => {
               className="flex flex-col h-full bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Project Image with Hover Overlay */}
-              <div className="relative">
+              <div className="relative group">
                 <img
                   src={proj.image}
                   alt={`${proj.title} Screenshot`}
                   className="w-full h-56 md:h-64 lg:h-72 object-cover transition-transform group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3">
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3">
                   {proj.frontend && (
                     <a
                       href={proj.frontend}
@@ -138,4 +140,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
