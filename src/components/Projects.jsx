@@ -41,17 +41,17 @@ const Projects = () => {
       demo: "https://aicb1.netlify.app/",
     },
     {
-      title: "Weather Dashboard",
+      title: "Car Rental App",
       caseStudy: {
-        problem: "Needed real‑time weather insights with historical search tracking per user.",
-        solution: "Built a MERN app with JWT authentication and protected routes. Connected OpenWeather API, persisted search history in MongoDB, and designed a responsive dashboard with charts/icons.",
-        impact: "Provided accurate forecasts with a clean UI, while ensuring only authenticated users could view and manage their personal search history."
+        problem: "Needed a secure, user‑friendly platform for customers to browse cars, make bookings, and for admins to manage inventory with images and availability.",
+        solution: "Built a full‑stack MERN application with JWT authentication, role‑based access (admin/user), Cloudinary image uploads, and MongoDB Atlas integration. Designed responsive UI with popular cars filter, booking dashboard, and FAQs.",
+        impact: "Delivered a scalable rental system enabling smooth customer bookings and efficient admin management. Improved usability with real‑time car listings and secure data handling, deployable on Netlify + Railway."
       },
-      tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "OpenWeather API"],
-      image: "/weatherDashboard.png",
-      frontend: "https://github.com/RanjithMichael/wd-frontend",
-      backend: "https://github.com/RanjithMichael/wd-backend",
-      demo: "https://wdashboar.netlify.app/",
+      tech: ["MongoDB", "React", "Node.js", "TailwindCSS", "cloudinary"],
+      image: "/car-rental.png",
+      frontend: "https://github.com/RanjithMichael/cra-frontend",
+      backend: "https://github.com/RanjithMichael/cra-backend",
+      demo: "https://crenta.netlify.app/",
     },
   ];
 

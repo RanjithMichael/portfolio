@@ -99,33 +99,33 @@ npm install
 npm start
 
 
-# 🌦️ Weather Dashboard (MERN + OpenWeather API)
+# 🚗 Car Rental App
 
-A real‑time weather dashboard built with MERN stack and OpenWeather API.
+A full‑stack web application that enables users to browse cars, make secure bookings, and manage reservations, while admins can upload car images, set pricing, and oversee inventory. Features include JWT authentication, role‑based access, Cloudinary integration for media storage, responsive UI with popular cars filter and FAQs, and deployment on Netlify (frontend) with Railway (backend).
 
 ## 🚀 Features
-- 🌦️ Real‑time weather data via OpenWeather API
-- 📂 Search history persistence
-- 📊 Responsive dashboard with charts
-- 🎨 TailwindCSS UI
-- 🔑 JWT authentication & protected routes
+- 🚘 Cloudinary image upload for car listings with photos, pricing, and availability
+- 📊 Admin dashboard to manage cars, bookings, and user accounts in real time
+- 🌟 Popular cars filter & FAQ section for enhanced user experience
+- 🔐 JWT authentication & role‑based access (Admin vs User) for secure login and booking management
+- ⚡ Responsive UI deployed on Netlify with backend hosted on Railway
 
 ## 🛠️ Tech Stack
 - MongoDB, Express.js, React, Node.js
 - TailwindCSS
-- OpenWeather API
+- Cloudinary
 
 ## 🌐 Live Demo
-[View Demo](https://wdashboar.netlify.app/)
+[View Demo](https://crenta.netlify.app/)
 
 ## 📂 Repositories
-- [Frontend](https://github.com/RanjithMichael/wd-frontend)
-- [Backend](https://github.com/RanjithMichael/wd-backend)
+- [Frontend](https://github.com/RanjithMichael/cra-frontend)
+- [Backend](https://github.com/RanjithMichael/cra-backend)
 
 ## ⚡ Getting Started
 ```bash
 # Clone repo
-git clone https://github.com/RanjithMichael/wd-frontend
+git clone https://github.com/RanjithMichael/cra-frontend
 cd wd-frontend
 
 # Install dependencies
