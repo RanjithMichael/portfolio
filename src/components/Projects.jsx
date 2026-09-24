@@ -63,7 +63,7 @@ const Projects = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790280230/programming-web-banner-best-languages-260nw-2392481249.webp')", // ✅ replace with your Cloudinary background
+            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790280712/Prerequisites-to-becoming-a-full-stack-developer-min.jpg')", 
         }}
       ></div>
 
