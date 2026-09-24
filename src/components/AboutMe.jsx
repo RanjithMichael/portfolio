@@ -4,10 +4,22 @@ const AboutMe = () => {
       {/* About Section */}
       <section
         id="about"
-        className="py-16 bg-gradient-to-r from-blue-600 to-teal-500 text-white"
+        className="relative py-20 text-white"
       >
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-          
+        {/* Background Image (Cloudinary or local) */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790279365/pngtree-computer-of-the-software-developer-on-the-desk-in-the-room-image_15746066.png')",
+          }}
+        ></div>
+
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        {/* Content */}
+        <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
           <div className="flex justify-center md:justify-end">
             <img
@@ -30,18 +42,17 @@ const AboutMe = () => {
               Hi, I’m Ranjith Michael 👋
             </h2>
             <p className="text-lg leading-relaxed mb-8 max-w-xl">
-              I’m a Full‑Stack MERN Developer based in Vellore, India. I focus on
-              building scalable web applications, crafting clean UI with TailwindCSS,
-              and automating workflows to make development faster and smarter.
-              With a background in logistics and leadership, I bring both technical
-              and organizational strengths to projects.
+              Full‑Stack MERN Developer based in Vellore, India. I build scalable
+              web applications, craft clean UI with TailwindCSS, and automate workflows
+              to make development faster and smarter. With a background in logistics
+              and leadership, I bring both technical and organizational strengths to projects.
             </p>
 
             {/* Strengths */}
             <ul className="space-y-3 mb-10 text-lg">
-              <li>🚀 Full‑Stack MERN Developer (MongoDB, Express, React, Node.js)</li>
+              <li>🚀 MERN Developer (MongoDB, Express, React, Node.js)</li>
               <li>🎨 Clean UI with TailwindCSS</li>
-              <li>⚡ Workflow automation for faster development</li>
+              <li>⚡ Workflow automation</li>
               <li>📦 Logistics & leadership background</li>
             </ul>
 
@@ -68,18 +79,17 @@ const AboutMe = () => {
       </section>
 
       {/* Why Me Section */}
-      <section id="whyme" className="py-16 bg-gray-50">
+      <section id="whyme" className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-extrabold text-blue-600 mb-8">
             🌟 Why Work With Me?
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
             I don’t just write code — I solve business problems. My logistics and
-            leadership background means I understand workflows, efficiency, and
-            scalability. Combined with my MERN expertise, I deliver solutions
-            that are technically strong and practically valuable. This blend of
-            organizational insight and full‑stack skills ensures I bring impact
-            beyond development.
+            leadership background means I understand workflows, efficiency, and scalability.
+            Combined with my MERN expertise, I deliver solutions that are technically strong
+            and practically valuable. This blend of organizational insight and full‑stack skills
+            ensures I bring impact beyond development.
           </p>
         </div>
       </section>
