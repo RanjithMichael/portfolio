@@ -1,6 +1,6 @@
 import { FaReact, FaNodeJs, FaRobot } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss, SiCloudinary } from "react-icons/si";
-import { BsCloudSun } from "react-icons/bs";
+
 
 const techIcons = {
   React: <FaReact className="text-blue-500 text-lg" />,
@@ -8,7 +8,6 @@ const techIcons = {
   MongoDB: <SiMongodb className="text-green-700 text-lg" />,
   Express: <SiExpress className="text-gray-600 text-lg" />,
   TailwindCSS: <SiTailwindcss className="text-cyan-500 text-lg" />,
-  "OpenWeather API": <BsCloudSun className="text-yellow-500 text-lg" />,
   "Cohere API": <FaRobot className="text-purple-600 text-lg" />,
   Cloudinary: <SiCloudinary className="text-blue-400 text-lg" />,
 };
@@ -79,17 +78,43 @@ const Projects = () => {
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="flex flex-col h-full group bg-white/90 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
+              className="relative flex flex-col h-full rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
             >
-              {/* Project Image with Hover Overlay */}
-              <div className="relative group">
-                <img
-                  src={proj.image}
-                  alt={`${proj.title} Screenshot`}
-                  className="w-full h-56 md:h-64 lg:h-72 object-cover transition-transform group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3">
+              {/* Background Screenshot */}
+              <img
+                src={proj.image}
+                alt={`${proj.title} Screenshot`}
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/50"></div>
+
+              {/* Content Layer */}
+              <div className="relative p-6 flex flex-col flex-grow text-left text-white">
+                <h3 className="text-xl font-bold mb-4">{proj.title}</h3>
+
+                {/* Case Study */}
+                <div className="text-sm leading-relaxed space-y-2 mb-6">
+                  <p><span className="font-semibold">Problem:</span> {proj.caseStudy.problem}</p>
+                  <p><span className="font-semibold">Solution:</span> {proj.caseStudy.solution}</p>
+                  <p><span className="font-semibold">Impact:</span> {proj.caseStudy.impact}</p>
+                </div>
+
+                {/* Tech Stack Icons */}
+                <div className="flex flex-wrap gap-3 mb-4">
+                  {proj.tech.map((tech, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 bg-white/20 px-3 py-1 rounded-lg hover:bg-white/30 transition-colors"
+                    >
+                      {techIcons[tech]}
+                      <span className="text-xs font-medium">{tech}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Project Links */}
+                <div className="flex gap-3 mt-auto">
                   {proj.frontend && (
                     <a
                       href={proj.frontend}
@@ -119,32 +144,6 @@ const Projects = () => {
                     🔗 Live Demo
                   </a>
                 </div>
-                <h3 className="absolute bottom-3 left-3 text-white text-lg font-bold">
-                  {proj.title}
-                </h3>
-              </div>
-
-              {/* Project Content */}
-              <div className="p-6 flex flex-col flex-grow text-left">
-                {/* Case Study */}
-                <div className="text-gray-700 mb-6 flex-grow text-sm leading-relaxed space-y-2">
-                  <p><span className="font-semibold">Problem:</span> {proj.caseStudy.problem}</p>
-                  <p><span className="font-semibold">Solution:</span> {proj.caseStudy.solution}</p>
-                  <p><span className="font-semibold">Impact:</span> {proj.caseStudy.impact}</p>
-                </div>
-
-                {/* Tech Stack Icons */}
-                <div className="flex flex-wrap gap-4 mt-auto">
-                  {proj.tech.map((tech, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-2 bg-blue-50 px-3 py-2 rounded-lg hover:bg-blue-100 transition-colors"
-                    >
-                      {techIcons[tech]}
-                      <span className="text-xs font-medium text-gray-700">{tech}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           ))}
@@ -155,3 +154,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
