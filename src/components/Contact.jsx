@@ -27,8 +27,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gradient-to-r from-blue-600 to-teal-500 text-white">
-      <div className="max-w-5xl mx-auto px-6 text-center">
+    <section id="contact" className="relative py-20 text-white">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790333499/k613wb.webp')", 
+        }}
+      ></div>
+
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-700/80 to-teal-600/80"></div>
+
+      {/* Content */}
+      <div className="relative max-w-5xl mx-auto px-6 text-center">
         {/* Heading */}
         <h2 className="text-4xl font-extrabold mb-6">📬 Get In Touch</h2>
         <p className="text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
@@ -127,4 +140,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
