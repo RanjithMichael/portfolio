@@ -42,10 +42,10 @@ const AboutMe = () => {
               Hi, I’m Ranjith Michael 👋
             </h2>
             <p className="text-lg leading-relaxed mb-8 max-w-xl">
-              Full‑Stack MERN Developer based in Vellore, India. I build scalable
-              web applications, craft clean UI with TailwindCSS, and automate workflows
-              to make development faster and smarter. With a background in logistics
-              and leadership, I bring both technical and organizational strengths to projects.
+              a Full‑Stack MERN Developer specializing in scalable web applications, 
+              clean UI with TailwindCSS, and workflow automation. 
+              My background in logistics and leadership adds organizational insight, 
+              enabling me to deliver solutions that are both technically strong and business‑focused.
             </p>
 
             {/* Strengths */}

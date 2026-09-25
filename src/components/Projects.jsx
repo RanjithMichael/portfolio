@@ -19,11 +19,11 @@ const Projects = () => {
       title: "Blogging Platform",
       caseStudy: {
         problem: "Needed a secure blogging platform with rich content editing and analytics.",
-        solution: "Built a MERN app with JWT authentication, role‑based access, and integrated rich text editor with image upload.",
-        impact: "Enabled safe publishing for multiple roles and improved engagement tracking with analytics dashboard."
+        solution: "MERN app with JWT auth, role‑based access, rich text editor, image upload.",
+        impact: "Safe multi‑role publishing and engagement tracking"
       },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS"],
-      image: "/BloggingPlatform.png",
+      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1790332122/Screenshot_2026-09-25_155816.png",
       frontend: "https://github.com/RanjithMichael/bp-client",
       backend: "https://github.com/RanjithMichael/bp-server",
       demo: "https://bpclient.netlify.app/",
@@ -31,12 +31,12 @@ const Projects = () => {
     {
       title: "AI Chatbot",
       caseStudy: {
-        problem: "Needed natural language conversations with persistent history tied to user accounts.",
-        solution: "Developed a MERN chatbot with JWT authentication and protected routes. Integrated Cohere’s command‑r‑08‑2024 API, storing chat sessions in MongoDB per user.",
-        impact: "Delivered secure, human‑like conversations with session persistence, ensuring only authorized users could access and retain their chat history."
+        problem: "Required natural language chat with history.",
+        solution: "MERN chatbot with JWT auth, protected routes, Cohere API, MongoDB sessions.",
+        impact: "Secure, human‑like conversations with persistence."
       },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "Cohere API"],
-      image: "/ChatBot.png",
+      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1790331856/Screenshot_2026-09-25_155330.png",
       frontend: "https://github.com/RanjithMichael/cb-frontend",
       backend: "https://github.com/RanjithMichael/cb-backend",
       demo: "https://aicb1.netlify.app/",
@@ -44,12 +44,12 @@ const Projects = () => {
     {
       title: "Car Rental App",
       caseStudy: {
-        problem: "Needed a secure, user‑friendly platform for customers to browse cars, make bookings, and for admins to manage inventory with images and availability.",
-        solution: "Built a full‑stack MERN application with JWT authentication, role‑based access (admin/user), Cloudinary image uploads, and MongoDB Atlas integration. Designed responsive UI with popular cars filter, booking dashboard, and FAQs.",
-        impact: "Delivered a scalable rental system enabling smooth customer bookings and efficient admin management. Improved usability with real‑time car listings and secure data handling, deployable on Netlify + Railway."
+        problem: "Customers needed easy bookings; admins needed inventory control.",
+        solution: "MERN app with JWT auth, role‑based access, Cloudinary uploads, responsive UI.",
+        impact: "Smooth bookings, real‑time listings, efficient admin workflows."
       },
       tech: ["MongoDB", "React", "Node.js", "TailwindCSS", "Cloudinary"],
-      image: "/car-rental.png",
+      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1790331256/Screenshot_2026-09-25_154214.png",
       frontend: "https://github.com/RanjithMichael/cra-frontend",
       backend: "https://github.com/RanjithMichael/cra-backend",
       demo: "https://crenta.netlify.app/",
