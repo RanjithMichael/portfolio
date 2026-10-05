@@ -13,28 +13,21 @@ const certifications = [
     image: "/be10x.png",
     link: "/Be10xCertificate.pdf",
   },
-  
 ];
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="relative py-20 text-white">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790280458/istockphoto-1904641522-612x612.jpg')",
-        }}
-      ></div>
+    <section id="certifications" className="relative py-20 text-gray-200">
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]"></div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      {/* Overlay Glow */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
       <div className="relative max-w-6xl mx-auto px-6 text-center">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-blue-300 mb-12">
+        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-12">
           📜 Certifications
         </h2>
 
@@ -43,7 +36,7 @@ const Certifications = () => {
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="flex flex-col h-full bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform hover:-translate-y-2 hover:scale-[1.02]"
+              className="flex flex-col h-full bg-white/10 backdrop-blur-md rounded-xl shadow-lg hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-transform hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Certificate Image */}
               {cert.image ? (
@@ -54,17 +47,17 @@ const Certifications = () => {
                   loading="lazy"
                 />
               ) : (
-                <div className="h-40 flex items-center justify-center bg-gradient-to-r from-blue-100 to-teal-100 text-blue-600 font-semibold">
+                <div className="h-40 flex items-center justify-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold">
                   No Image Available
                 </div>
               )}
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-grow text-center space-y-4">
-                <h3 className="text-lg font-semibold text-gray-800">
+                <h3 className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
                   {cert.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   Issued by {cert.issuer}. {cert.description}
                 </p>
 
@@ -74,7 +67,7 @@ const Certifications = () => {
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-block px-5 py-2 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg shadow hover:opacity-90 hover:scale-105 transition-transform text-sm font-medium"
+                    className="mt-auto inline-block px-5 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-[0_0_20px_rgba(124,58,237,0.6)] transition-transform text-sm font-medium"
                     aria-label={`View ${cert.title}`}
                   >
                     🔗 View Certificate
@@ -90,3 +83,4 @@ const Certifications = () => {
 };
 
 export default Certifications;
+

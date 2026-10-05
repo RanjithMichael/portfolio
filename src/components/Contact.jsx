@@ -28,24 +28,20 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-20 text-white">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790333499/k613wb.webp')",
-        }}
-      ></div>
+    <section id="contact" className="relative py-20 text-gray-200">
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]"></div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-800/80 to-teal-700/80"></div>
+      {/* Overlay Glow */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
       <div className="relative max-w-5xl mx-auto px-6 text-center space-y-8">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold">📬 Get In Touch</h2>
-        <p className="text-lg leading-relaxed max-w-2xl mx-auto">
+        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+          📬 Get In Touch
+        </h2>
+        <p className="text-lg leading-relaxed max-w-2xl mx-auto text-gray-300">
           Have a project idea or just want to say hi? Fill out the form below or
           connect with me directly through my social links.
         </p>
@@ -55,7 +51,7 @@ const Contact = () => {
           onSubmit={handleSubmit}
           action="https://formspree.io/f/mojgvgdd"
           method="POST"
-          className="bg-white rounded-xl shadow-xl p-8 space-y-6 text-left text-gray-800"
+          className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-8 space-y-6 text-left text-gray-200"
         >
           <div>
             <label className="block font-medium mb-2">Name</label>
@@ -63,7 +59,7 @@ const Contact = () => {
               type="text"
               name="name"
               required
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400"
+              className="w-full p-3 rounded-lg bg-[#0F172A] border border-cyan-400 focus:ring-2 focus:ring-purple-500"
             />
           </div>
 
@@ -73,7 +69,7 @@ const Contact = () => {
               type="email"
               name="email"
               required
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400"
+              className="w-full p-3 rounded-lg bg-[#0F172A] border border-cyan-400 focus:ring-2 focus:ring-purple-500"
             />
           </div>
 
@@ -83,13 +79,13 @@ const Contact = () => {
               name="message"
               rows="5"
               required
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400"
+              className="w-full p-3 rounded-lg bg-[#0F172A] border border-cyan-400 focus:ring-2 focus:ring-purple-500"
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-blue-600 to-teal-500 text-white py-3 rounded-lg shadow hover:opacity-90 hover:scale-105 transition font-semibold"
+            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg shadow-lg hover:shadow-[0_0_20px_rgba(124,58,237,0.6)] hover:scale-105 transition font-semibold"
           >
             ✉️ Send Message
           </button>
@@ -100,8 +96,8 @@ const Contact = () => {
           <p
             className={`font-medium ${
               status.startsWith("✅")
-                ? "text-green-700 bg-green-100 px-4 py-2 rounded-lg inline-block"
-                : "text-red-700 bg-red-100 px-4 py-2 rounded-lg inline-block"
+                ? "text-green-400 bg-green-900/40 px-4 py-2 rounded-lg inline-block"
+                : "text-red-400 bg-red-900/40 px-4 py-2 rounded-lg inline-block"
             }`}
           >
             {status}
@@ -112,25 +108,25 @@ const Contact = () => {
         <div className="flex justify-center gap-8 mt-8 text-lg font-medium">
           <a
             href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
-            className="flex items-center gap-2 hover:text-gray-200 transition"
+            className="flex items-center gap-2 text-cyan-400 hover:text-purple-400 transition"
           >
             <FaLinkedin /> LinkedIn
           </a>
           <a
             href="https://github.com/RanjithMichael"
-            className="flex items-center gap-2 hover:text-gray-200 transition"
+            className="flex items-center gap-2 text-cyan-400 hover:text-purple-400 transition"
           >
             <FaGithub /> GitHub
           </a>
           <a
             href="mailto:ranjithmichael49@gmail.com"
-            className="flex items-center gap-2 hover:text-gray-200 transition"
+            className="flex items-center gap-2 text-cyan-400 hover:text-purple-400 transition"
           >
             <FaEnvelope /> Email
           </a>
           <a
             href="tel:+919677956477"
-            className="flex items-center gap-2 hover:text-gray-200 transition"
+            className="flex items-center gap-2 text-cyan-400 hover:text-purple-400 transition"
           >
             <FaPhone /> Call Me
           </a>
@@ -141,4 +137,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
