@@ -24,27 +24,27 @@ const Navbar = () => {
   const navItems = ["about", "skills", "projects", "certifications", "contact"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-md z-50 transition-colors duration-300">
+    <nav className="fixed top-0 left-0 w-full bg-[#0F172A]/80 backdrop-blur-md shadow-lg z-50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         
         {/* Logo */}
         <a
           href="#hero"
-          className="text-2xl md:text-3xl font-extrabold text-blue-600 tracking-wide hover:text-teal-500 transition-transform transform hover:scale-105"
+          className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 tracking-wide hover:scale-105 transition-transform"
         >
           Ranjith Michael
         </a>
 
         {/* Desktop Nav Links */}
-        <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
+        <ul className="hidden md:flex gap-8 text-gray-300 font-medium">
           {navItems.map((item) => (
             <li key={item}>
               <a
                 href={`#${item}`}
-                className={`relative after:content-[''] after:block after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 ${
+                className={`relative after:content-[''] after:block after:h-[2px] after:bg-gradient-to-r from-cyan-400 to-purple-500 after:transition-all after:duration-300 ${
                   activeSection === item
-                    ? "text-blue-600 after:w-full font-semibold"
-                    : "hover:text-teal-500 after:w-0 hover:after:w-full"
+                    ? "text-cyan-400 after:w-full font-semibold"
+                    : "hover:text-purple-400 after:w-0 hover:after:w-full"
                 }`}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -55,7 +55,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg shadow hover:opacity-90 transition font-semibold"
+              className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(124,58,237,0.6)] transition font-semibold"
             >
               Hire Me
             </a>
@@ -64,7 +64,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-blue-600 text-2xl focus:outline-none"
+          className="md:hidden text-cyan-400 text-2xl focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✕" : "☰"}
@@ -73,13 +73,15 @@ const Navbar = () => {
 
       {/* Mobile Nav Links */}
       {isOpen && (
-        <ul className="md:hidden bg-gradient-to-r from-blue-600 to-teal-500 text-white px-6 py-4 space-y-4">
+        <ul className="md:hidden bg-[#0F172A] text-gray-200 px-6 py-4 space-y-4 shadow-lg">
           {navItems.map((item) => (
             <li key={item}>
               <a
                 href={`#${item}`}
                 className={`block ${
-                  activeSection === item ? "text-yellow-300 font-semibold" : "hover:text-yellow-300"
+                  activeSection === item
+                    ? "text-cyan-400 font-semibold"
+                    : "hover:text-purple-400"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -90,7 +92,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="block px-4 py-2 bg-yellow-400 text-black rounded-lg shadow hover:bg-yellow-500 transition font-semibold"
+              className="block px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(124,58,237,0.6)] transition font-semibold"
               onClick={() => setIsOpen(false)}
             >
               Hire Me
