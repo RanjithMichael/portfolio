@@ -1,7 +1,6 @@
 import { FaReact, FaNodeJs, FaRobot } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss, SiCloudinary } from "react-icons/si";
 
-
 const techIcons = {
   React: <FaReact className="text-blue-500 text-lg" />,
   "Node.js": <FaNodeJs className="text-green-600 text-lg" />,
@@ -62,23 +61,23 @@ const Projects = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790280712/Prerequisites-to-becoming-a-full-stack-developer-min.jpg')", 
+            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790280712/Prerequisites-to-becoming-a-full-stack-developer-min.jpg')",
         }}
       ></div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
       <div className="relative max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-extrabold text-blue-300 mb-12">🚀 Projects</h2>
 
         {/* Grid Layout */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((proj, index) => (
             <div
               key={index}
-              className="relative flex flex-col h-full rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
+              className="relative flex flex-col h-full rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Background Screenshot */}
               <img
@@ -87,21 +86,21 @@ const Projects = () => {
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-black/50"></div>
+              <div className="absolute inset-0 bg-black/60"></div>
 
               {/* Content Layer */}
-              <div className="relative p-6 flex flex-col flex-grow text-left text-white">
-                <h3 className="text-xl font-bold mb-4">{proj.title}</h3>
+              <div className="relative p-6 flex flex-col flex-grow text-left text-white space-y-4">
+                <h3 className="text-xl font-bold">{proj.title}</h3>
 
                 {/* Case Study */}
-                <div className="text-sm leading-relaxed space-y-2 mb-6">
+                <div className="text-sm leading-relaxed space-y-2">
                   <p><span className="font-semibold">Problem:</span> {proj.caseStudy.problem}</p>
                   <p><span className="font-semibold">Solution:</span> {proj.caseStudy.solution}</p>
                   <p><span className="font-semibold">Impact:</span> {proj.caseStudy.impact}</p>
                 </div>
 
                 {/* Tech Stack Icons */}
-                <div className="flex flex-wrap gap-3 mb-4">
+                <div className="flex flex-wrap gap-3">
                   {proj.tech.map((tech, i) => (
                     <div
                       key={i}
@@ -154,4 +153,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
 

@@ -2,11 +2,8 @@ const AboutMe = () => {
   return (
     <>
       {/* About Section */}
-      <section
-        id="about"
-        className="relative py-20 text-white"
-      >
-        {/* Background Image (Cloudinary or local) */}
+      <section id="about" className="relative py-20 text-white">
+        {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -15,8 +12,8 @@ const AboutMe = () => {
           }}
         ></div>
 
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Content */}
         <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -26,30 +23,24 @@ const AboutMe = () => {
               src="/Ranjith.jpeg"
               alt="Portrait of Ranjith Michael"
               loading="lazy"
-              className="
-                w-48 h-64 md:w-56 md:h-72 lg:w-64 lg:h-80
-                rounded-xl
-                shadow-2xl
-                border-4 border-white
-                hover:scale-105 transition-transform
-              "
+              className="w-48 h-64 md:w-56 md:h-72 lg:w-64 lg:h-80 rounded-xl shadow-2xl border-4 border-white hover:scale-105 transition-transform"
             />
           </div>
 
           {/* Text Content */}
-          <div className="text-center md:text-left">
-            <h2 className="text-5xl font-extrabold mb-6">
+          <div className="text-center md:text-left space-y-6">
+            <h2 className="text-5xl font-extrabold">
               Hi, I’m Ranjith Michael 👋
             </h2>
-            <p className="text-lg leading-relaxed mb-8 max-w-xl">
-              a Full‑Stack MERN Developer specializing in scalable web applications, 
+            <p className="text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+              Full‑Stack MERN Developer specializing in scalable web applications, 
               clean UI with TailwindCSS, and workflow automation. 
               My background in logistics and leadership adds organizational insight, 
               enabling me to deliver solutions that are both technically strong and business‑focused.
             </p>
 
             {/* Strengths */}
-            <ul className="space-y-3 mb-10 text-lg">
+            <ul className="space-y-3 text-lg">
               <li>🚀 MERN Developer (MongoDB, Express, React, Node.js)</li>
               <li>🎨 Clean UI with TailwindCSS</li>
               <li>⚡ Workflow automation</li>
@@ -60,7 +51,7 @@ const AboutMe = () => {
             <div className="flex gap-4 flex-wrap justify-center md:justify-start">
               <a
                 href="/Ranjith_Michael_B_Resume.pdf"
-                className="px-6 py-3 bg-white text-blue-600 rounded-lg shadow hover:opacity-90 hover:scale-105 transition-transform font-semibold"
+                className="px-6 py-3 bg-white text-blue-600 rounded-lg shadow hover:opacity-90 hover:scale-105 transition font-semibold"
                 download
               >
                 ⬇️ Download Resume
@@ -69,7 +60,7 @@ const AboutMe = () => {
                 href="/Ranjith_Michael_B_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg shadow hover:opacity-90 hover:scale-105 transition-transform font-semibold"
+                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg shadow hover:opacity-90 hover:scale-105 transition font-semibold"
               >
                 👀 View Online
               </a>
@@ -80,8 +71,8 @@ const AboutMe = () => {
 
       {/* Why Me Section */}
       <section id="whyme" className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-extrabold text-blue-600 mb-8">
+        <div className="max-w-6xl mx-auto px-6 text-center space-y-6">
+          <h2 className="text-4xl font-extrabold text-blue-600">
             🌟 Why Work With Me?
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">

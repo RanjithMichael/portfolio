@@ -13,7 +13,7 @@ const certifications = [
     image: "/be10x.png",
     link: "/Be10xCertificate.pdf",
   },
-  // Add more certificates here
+  
 ];
 
 const Certifications = () => {
@@ -24,12 +24,12 @@ const Certifications = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790280458/istockphoto-1904641522-612x612.jpg')", 
+            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790280458/istockphoto-1904641522-612x612.jpg')",
         }}
       ></div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
       <div className="relative max-w-6xl mx-auto px-6 text-center">
@@ -39,11 +39,11 @@ const Certifications = () => {
         </h2>
 
         {/* Grid Layout */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="flex flex-col h-full bg-white/90 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
+              className="flex flex-col h-full bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Certificate Image */}
               {cert.image ? (
@@ -60,11 +60,11 @@ const Certifications = () => {
               )}
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-grow text-center">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <div className="p-6 flex flex-col flex-grow text-center space-y-4">
+                <h3 className="text-lg font-semibold text-gray-800">
                   {cert.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   Issued by {cert.issuer}. {cert.description}
                 </p>
 
@@ -74,7 +74,7 @@ const Certifications = () => {
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto px-5 py-2 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg shadow hover:opacity-90 hover:scale-105 transition-transform text-sm font-medium"
+                    className="mt-auto inline-block px-5 py-2 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg shadow hover:opacity-90 hover:scale-105 transition-transform text-sm font-medium"
                     aria-label={`View ${cert.title}`}
                   >
                     🔗 View Certificate

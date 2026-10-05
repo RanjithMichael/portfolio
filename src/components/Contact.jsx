@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const Contact = () => {
   const [status, setStatus] = useState("");
@@ -33,18 +34,18 @@ const Contact = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790333499/k613wb.webp')", 
+            "url('https://res.cloudinary.com/naqamlzv/image/upload/v1790333499/k613wb.webp')",
         }}
       ></div>
 
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-700/80 to-teal-600/80"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-800/80 to-teal-700/80"></div>
 
       {/* Content */}
-      <div className="relative max-w-5xl mx-auto px-6 text-center">
+      <div className="relative max-w-5xl mx-auto px-6 text-center space-y-8">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold mb-6">📬 Get In Touch</h2>
-        <p className="text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
+        <h2 className="text-4xl font-extrabold">📬 Get In Touch</h2>
+        <p className="text-lg leading-relaxed max-w-2xl mx-auto">
           Have a project idea or just want to say hi? Fill out the form below or
           connect with me directly through my social links.
         </p>
@@ -97,7 +98,7 @@ const Contact = () => {
         {/* Status Message */}
         {status && (
           <p
-            className={`mt-6 font-medium ${
+            className={`font-medium ${
               status.startsWith("✅")
                 ? "text-green-700 bg-green-100 px-4 py-2 rounded-lg inline-block"
                 : "text-red-700 bg-red-100 px-4 py-2 rounded-lg inline-block"
@@ -108,30 +109,30 @@ const Contact = () => {
         )}
 
         {/* Social Links */}
-        <div className="flex justify-center gap-8 mt-10 text-lg font-medium">
+        <div className="flex justify-center gap-8 mt-8 text-lg font-medium">
           <a
             href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
             className="flex items-center gap-2 hover:text-gray-200 transition"
           >
-            🔗 LinkedIn
+            <FaLinkedin /> LinkedIn
           </a>
           <a
             href="https://github.com/RanjithMichael"
             className="flex items-center gap-2 hover:text-gray-200 transition"
           >
-            💻 GitHub
+            <FaGithub /> GitHub
           </a>
           <a
             href="mailto:ranjithmichael49@gmail.com"
             className="flex items-center gap-2 hover:text-gray-200 transition"
           >
-            📧 Email
+            <FaEnvelope /> Email
           </a>
           <a
             href="tel:+919677956477"
             className="flex items-center gap-2 hover:text-gray-200 transition"
           >
-            📞 Call Me
+            <FaPhone /> Call Me
           </a>
         </div>
       </div>
@@ -140,3 +141,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
