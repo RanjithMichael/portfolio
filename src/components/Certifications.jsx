@@ -20,8 +20,6 @@ const Certifications = () => {
     <section id="certifications" className="relative py-20 text-gray-200">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]"></div>
-
-      {/* Overlay Glow */}
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
@@ -31,8 +29,8 @@ const Certifications = () => {
           📜 Certifications
         </h2>
 
-        {/* Grid Layout */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* Grid Layout with equal height cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
           {certifications.map((cert, index) => (
             <div
               key={index}
@@ -61,7 +59,7 @@ const Certifications = () => {
                   Issued by {cert.issuer}. {cert.description}
                 </p>
 
-                {/* View Certificate Button */}
+                {/* Button pinned to bottom */}
                 {cert.link && (
                   <a
                     href={cert.link}
@@ -83,4 +81,3 @@ const Certifications = () => {
 };
 
 export default Certifications;
-
