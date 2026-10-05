@@ -2,7 +2,7 @@ const certifications = [
   {
     title: "GUVI MERN Full‑Stack Certification",
     issuer: "GUVI Geek Network",
-    description: "Validates skills in MongoDB, Express, React, <br /> and Node.js.",
+    description: "Validates skills in MongoDB, Express, React, and Node.js.",
     image: "/GuviCertification.png",
     link: "https://v2.zenclass.in/certificateDownload/mE1rcScXaN3QRqwo",
   },
