@@ -30,7 +30,7 @@ const Projects = () => {
       title: "AI Chatbot",
       caseStudy: {
         problem: "Required natural language chat with history.",
-        solution: "MERN chatbot with JWT auth, protected routes, Cohere API, MongoDB sessions.",
+        solution: "MERN chatbot with JWT auth, protected routes, Cohere API, MongoDB.",
         impact: "Secure, human‑like conversations with persistence."
       },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "Cohere API"],
