@@ -5,7 +5,6 @@ const AboutMe = () => {
       <section id="about" className="relative py-20 text-gray-200">
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]"></div>
-
         {/* Overlay Glow */}
         <div className="absolute inset-0 bg-black/60"></div>
 
@@ -13,17 +12,19 @@ const AboutMe = () => {
         <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/Ranjith.jpeg"
-              alt="Portrait of Ranjith Michael"
-              loading="lazy"
-              className="w-48 h-64 md:w-56 md:h-72 lg:w-64 lg:h-80 rounded-xl shadow-[0_0_25px_rgba(6,182,212,0.6)] border-4 border-cyan-400 hover:scale-105 transition-transform"
-            />
+            <div className="relative w-56 h-56 rounded-full p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-[0_0_25px_rgba(124,58,237,0.6)] hover:scale-105 transition-transform">
+              <img
+                src="/Ranjith.jpeg"
+                alt="Portrait of Ranjith Michael"
+                loading="lazy"
+                className="w-full h-full rounded-full object-cover border-4 border-[#0F172A]"
+              />
+            </div>
           </div>
 
           {/* Text Content */}
           <div className="text-center md:text-left space-y-6">
-            <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+            <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-[length:200%_200%] animate-shimmer">
               Hi, I’m Ranjith Michael 👋
             </h2>
             <p className="text-lg leading-relaxed max-w-xl mx-auto md:mx-0 text-gray-300">
@@ -45,7 +46,7 @@ const AboutMe = () => {
             <div className="flex gap-4 flex-wrap justify-center md:justify-start">
               <a
                 href="/Ranjith_Michael_B_Resume.pdf"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-[0_0_20px_rgba(124,58,237,0.6)] transition font-semibold"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-[0_0_20px_rgba(124,58,237,0.6)] transition font-semibold animate-glow"
                 download
               >
                 ⬇️ Download Resume
@@ -66,7 +67,7 @@ const AboutMe = () => {
       {/* Why Me Section */}
       <section id="whyme" className="py-20 bg-[#0F172A] text-gray-200">
         <div className="max-w-6xl mx-auto px-6 text-center space-y-6">
-          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-[length:200%_200%] animate-shimmer">
             🌟 Why Work With Me?
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
@@ -83,4 +84,5 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+
 
