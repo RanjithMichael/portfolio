@@ -34,7 +34,7 @@ const Certifications = () => {
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="flex flex-col h-full bg-white/10 backdrop-blur-md rounded-xl shadow-lg hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-transform hover:-translate-y-2 hover:scale-[1.02]"
+              className="flex flex-col bg-white/10 backdrop-blur-md rounded-xl shadow-lg hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-transform hover:-translate-y-2 hover:scale-[1.02]"
             >
               {/* Certificate Image */}
               {cert.image ? (
