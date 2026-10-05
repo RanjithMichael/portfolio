@@ -92,11 +92,11 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="block px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(124,58,237,0.6)] transition font-semibold"
-              onClick={() => setIsOpen(false)}
+              className="px-4 py-2 bg-gradient-to-r from-neon-cyan to-neon-purple text-white rounded-lg shadow-lg hover:scale-105 transition font-semibold animate-glow"
             >
               Hire Me
             </a>
+
           </li>
         </ul>
       )}
