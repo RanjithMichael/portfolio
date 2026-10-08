@@ -32,7 +32,7 @@ const Navbar = () => {
           href="#hero"
           className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 tracking-wide hover:scale-105 transition-transform"
         >
-          Ranjith Michael
+          MERN Stack Developer
         </a>
 
         {/* Desktop Nav Links */}
