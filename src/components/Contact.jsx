@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [status, setStatus] = useState("");
@@ -28,26 +29,38 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-20 text-gray-200">
+    <section id="contact" className="relative py-20 text-gray-200 overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]"></div>
-
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]" />
       {/* Overlay Glow */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
       <div className="relative max-w-5xl mx-auto px-6 text-center space-y-8">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-shimmer"
+        >
           📬 Get In Touch
-        </h2>
-        <p className="text-lg leading-relaxed max-w-2xl mx-auto text-gray-300">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-lg leading-relaxed max-w-2xl mx-auto text-gray-300"
+        >
           Have a project idea or just want to say hi? Fill out the form below or
           connect with me directly through my social links.
-        </p>
+        </motion.p>
 
         {/* Contact Form */}
-        <form
+        <motion.form
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           onSubmit={handleSubmit}
           action="https://formspree.io/f/mojgvgdd"
           method="POST"
@@ -89,11 +102,14 @@ const Contact = () => {
           >
             ✉️ Send Message
           </button>
-        </form>
+        </motion.form>
 
         {/* Status Message */}
         {status && (
-          <p
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             className={`font-medium ${
               status.startsWith("✅")
                 ? "text-green-400 bg-green-900/40 px-4 py-2 rounded-lg inline-block"
@@ -101,11 +117,16 @@ const Contact = () => {
             }`}
           >
             {status}
-          </p>
+          </motion.p>
         )}
 
         {/* Social Links */}
-        <div className="flex justify-center gap-8 mt-8 text-lg font-medium">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="flex justify-center gap-8 mt-8 text-lg font-medium"
+        >
           <a
             href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
             className="flex items-center gap-2 text-cyan-400 hover:text-purple-400 transition"
@@ -130,12 +151,13 @@ const Contact = () => {
           >
             <FaPhone /> Call Me
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default Contact;
+
 
 

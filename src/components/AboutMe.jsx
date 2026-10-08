@@ -1,17 +1,24 @@
+import { motion } from "framer-motion";
+
 const AboutMe = () => {
   return (
     <>
       {/* About Section */}
-      <section id="about" className="relative py-20 text-gray-200">
+      <section id="about" className="relative py-20 text-gray-200 overflow-hidden">
         {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]" />
         {/* Overlay Glow */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Content */}
         <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
-          <div className="flex justify-center md:justify-end">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center md:justify-end"
+          >
             <div className="relative w-56 h-56 rounded-full p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-[0_0_25px_rgba(124,58,237,0.6)] hover:scale-105 transition-transform">
               <img
                 src="/Ranjith.jpeg"
@@ -20,10 +27,15 @@ const AboutMe = () => {
                 className="w-full h-full rounded-full object-cover border-4 border-[#0F172A]"
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* Text Content */}
-          <div className="text-center md:text-left space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-center md:text-left space-y-6"
+          >
             <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-[length:200%_200%] animate-shimmer">
               Hi, I’m Ranjith Michael 👋
             </h2>
@@ -60,13 +72,18 @@ const AboutMe = () => {
                 👀 View Online
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Why Me Section */}
       <section id="whyme" className="py-20 bg-[#0F172A] text-gray-200">
-        <div className="max-w-6xl mx-auto px-6 text-center space-y-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="max-w-6xl mx-auto px-6 text-center space-y-6"
+        >
           <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-[length:200%_200%] animate-shimmer">
             🌟 Why Work With Me?
           </h2>
@@ -77,12 +94,13 @@ const AboutMe = () => {
             and practically valuable. This blend of organizational insight and full‑stack skills
             ensures I bring impact beyond development.
           </p>
-        </div>
+        </motion.div>
       </section>
     </>
   );
 };
 
 export default AboutMe;
+
 
 

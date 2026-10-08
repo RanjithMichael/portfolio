@@ -1,5 +1,6 @@
 import { FaReact, FaNodeJs, FaRobot } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss, SiCloudinary } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const techIcons = {
   React: <FaReact className="text-cyan-400 text-lg" />,
@@ -52,26 +53,36 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="relative py-20 text-gray-200">
+    <section id="projects" className="relative py-20 text-gray-200 overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]"></div>
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]" />
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
       <div className="relative max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-12">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 mb-12 animate-shimmer"
+        >
           🚀 Projects
-        </h2>
+        </motion.h2>
 
         {/* Grid Layout */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((proj, index) => (
-            <div
+            <motion.div
               key={index}
-              className="relative flex flex-col h-full rounded-xl bg-white/10 backdrop-blur-md shadow-lg hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-transform hover:-translate-y-2 hover:scale-[1.02] overflow-hidden"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="relative flex flex-col h-full rounded-xl bg-white/10 backdrop-blur-md shadow-lg hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-transform hover:-translate-y-2 hover:scale-[1.02] overflow-hidden group"
             >
-              
-            {/* Content Layer */}
+              {/* Overlay Hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+              {/* Content Layer */}
               <div className="relative p-6 flex flex-col flex-grow text-left space-y-4">
                 <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
                   {proj.title}
@@ -129,7 +140,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -138,6 +149,7 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
 
 
