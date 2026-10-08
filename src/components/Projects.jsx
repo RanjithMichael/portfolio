@@ -6,21 +6,21 @@ const Projects = () => {
     {
       title: "Blogging Platform",
       description: "Secure blogging platform with rich content editing and analytics.",
-      image: "/blogging.png", // replace with Cloudinary-hosted screenshot
+      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1791452319/New-Project-61.png",  
       github: "https://github.com/RanjithMichael/bp-client",
       demo: "https://bpclient.netlify.app/",
     },
     {
       title: "AI Chatbot",
       description: "Natural language chatbot with JWT auth and Cohere API integration.",
-      image: "/chatbot.png",
+      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1791452319/19e4594931d1b8ce6dc0dfef96af6585.webp",
       github: "https://github.com/RanjithMichael/cb-frontend",
       demo: "https://aicb1.netlify.app/",
     },
     {
       title: "Car Rental App",
       description: "Booking platform with admin dashboard, Cloudinary uploads, and JWT auth.",
-      image: "/carrental.png",
+      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1791452319/19e4594931d1b8ce6dc0dfef96af6585.webp",
       github: "https://github.com/RanjithMichael/cra-frontend",
       demo: "https://crenta.netlify.app/",
     },
