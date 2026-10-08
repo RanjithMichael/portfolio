@@ -57,7 +57,7 @@ const Contact = () => {
         {/* Right Side: Visual */}
         <div className="flex justify-center md:justify-end">
           <img
-            src="/contact-visual.png" 
+            src="https://res.cloudinary.com/naqamlzv/image/upload/v1791451593/contact-banner.jpg" 
             alt="Contact Visual"
             className="rounded-xl shadow-lg max-w-md"
           />
