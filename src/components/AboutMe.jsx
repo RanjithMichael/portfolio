@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
+import { FaCode, FaReact, FaServer, FaLaptopCode } from "react-icons/fa";
 
 const AboutMe = () => {
   return (
     <>
       {/* About Section */}
       <section id="about" className="relative py-20 text-gray-200 overflow-hidden">
-        {/* Background Gradient */}
+        {/* Background Gradient + Pattern */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]" />
-        {/* Overlay Glow */}
         <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-[url('/patterns/lines.svg')] opacity-10" />
 
         {/* Content */}
         <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -36,64 +37,52 @@ const AboutMe = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-center md:text-left space-y-6"
           >
-            <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-[length:200%_200%] animate-shimmer">
-              Hi, I’m Ranjith Michael 👋
-            </h2>
-            <p className="text-lg leading-relaxed max-w-xl mx-auto md:mx-0 text-gray-300">
-              Full‑Stack MERN Developer specializing in scalable web applications, 
-              clean UI with TailwindCSS, and workflow automation. 
-              My background in logistics and leadership adds organizational insight, 
-              enabling me to deliver solutions that are both technically strong and business‑focused.
-            </p>
+            
 
-            {/* Strengths */}
-            <ul className="space-y-3 text-lg text-gray-300">
-              <li>🚀 MERN Developer (MongoDB, Express, React, Node.js)</li>
-              <li>🎨 Clean UI with TailwindCSS</li>
-              <li>⚡ Workflow automation</li>
-              <li>📦 Logistics & leadership background</li>
-            </ul>
-
-            {/* CTA Buttons */}
-            <div className="flex gap-4 flex-wrap justify-center md:justify-start">
-              <a
-                href="/Ranjith_Michael_B_Resume.pdf"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-[0_0_20px_rgba(124,58,237,0.6)] transition font-semibold animate-glow"
-                download
-              >
-                ⬇️ Download Resume
-              </a>
-              <a
-                href="/Ranjith_Michael_B_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition font-semibold"
-              >
-                👀 View Online
-              </a>
-            </div>
+            
           </motion.div>
         </div>
       </section>
 
-      {/* Why Me Section */}
-      <section id="whyme" className="py-20 bg-[#0F172A] text-gray-200">
+      {/* Overview Section */}
+      <section id="overview" className="py-20 bg-[#0F172A] text-gray-200 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/patterns/lines.svg')] opacity-10" />
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-6xl mx-auto px-6 text-center space-y-6"
+          className="relative max-w-6xl mx-auto px-6 text-center space-y-8"
         >
-          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-[length:200%_200%] animate-shimmer">
-            🌟 Why Work With Me?
+          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-shimmer">
+            INTRODUCTION
           </h2>
+          <h3 className="text-3xl font-bold text-cyan-400">Overview</h3>
           <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            I don’t just write code — I solve business problems. My logistics and
-            leadership background means I understand workflows, efficiency, and scalability.
-            Combined with my MERN expertise, I deliver solutions that are technically strong
-            and practically valuable. This blend of organizational insight and full‑stack skills
-            ensures I bring impact beyond development.
+            I’m a skilled software developer with experience in JavaScript and expertise in frameworks like 
+            <span className="text-cyan-400 font-semibold"> React, Node.js, Express.js, and MongoDB</span>. 
+            I’m a quick learner and collaborate closely with clients to create efficient, scalable, and user‑friendly solutions 
+            that solve real‑world problems. Let’s work together to bring your ideas to life!
           </p>
+
+          {/* Role Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+            <motion.div whileHover={{ scale: 1.05 }} className="bg-white/10 p-6 rounded-xl shadow-lg">
+              <FaCode className="text-cyan-400 text-3xl mb-3 mx-auto" />
+              <h4 className="text-lg font-semibold">Web Developer</h4>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} className="bg-white/10 p-6 rounded-xl shadow-lg">
+              <FaReact className="text-purple-400 text-3xl mb-3 mx-auto" />
+              <h4 className="text-lg font-semibold">React Developer</h4>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} className="bg-white/10 p-6 rounded-xl shadow-lg">
+              <FaServer className="text-green-400 text-3xl mb-3 mx-auto" />
+              <h4 className="text-lg font-semibold">Backend Developer</h4>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} className="bg-white/10 p-6 rounded-xl shadow-lg">
+              <FaLaptopCode className="text-pink-400 text-3xl mb-3 mx-auto" />
+              <h4 className="text-lg font-semibold">Full Stack Developer</h4>
+            </motion.div>
+          </div>
         </motion.div>
       </section>
     </>
