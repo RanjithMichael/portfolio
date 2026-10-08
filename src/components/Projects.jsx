@@ -40,7 +40,7 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-shimmer"
         >
-          MY WORK 
+          MY WORK <br/>
           Projects
         </motion.h2>
         <p className="text-lg text-gray-300 max-w-3xl mx-auto">
