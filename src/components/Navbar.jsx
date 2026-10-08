@@ -30,7 +30,7 @@ const Navbar = () => {
         {/* Logo */}
         <a
           href="#hero"
-          className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 tracking-wide hover:scale-105 transition-transform"
+          className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink tracking-wide hover:scale-105 transition-transform animate-shimmer"
         >
           MERN Stack Developer
         </a>
@@ -41,22 +41,21 @@ const Navbar = () => {
             <li key={item}>
               <a
                 href={`#${item}`}
-                className={`relative after:content-[''] after:block after:h-[2px] after:bg-gradient-to-r from-cyan-400 to-purple-500 after:transition-all after:duration-300 ${
+                className={`relative after:content-[''] after:block after:h-[2px] after:bg-gradient-to-r from-neon-cyan to-neon-purple after:transition-all after:duration-300 ${
                   activeSection === item
-                    ? "text-cyan-400 after:w-full font-semibold"
-                    : "hover:text-purple-400 after:w-0 hover:after:w-full"
+                    ? "text-neon-cyan after:w-full font-semibold"
+                    : "hover:text-neon-pink after:w-0 hover:after:w-full"
                 }`}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </a>
             </li>
           ))}
-          
         </ul>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-cyan-400 text-2xl focus:outline-none"
+          className="md:hidden text-neon-cyan text-2xl focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✕" : "☰"}
@@ -65,15 +64,15 @@ const Navbar = () => {
 
       {/* Mobile Nav Links */}
       {isOpen && (
-        <ul className="md:hidden bg-[#0F172A] text-gray-200 px-6 py-4 space-y-4 shadow-lg">
+        <ul className="md:hidden bg-[#0F172A]/95 text-gray-200 px-6 py-4 space-y-4 shadow-lg rounded-b-xl">
           {navItems.map((item) => (
             <li key={item}>
               <a
                 href={`#${item}`}
                 className={`block ${
                   activeSection === item
-                    ? "text-cyan-400 font-semibold"
-                    : "hover:text-purple-400"
+                    ? "text-neon-cyan font-semibold"
+                    : "hover:text-neon-pink"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -81,7 +80,6 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          
         </ul>
       )}
     </nav>
