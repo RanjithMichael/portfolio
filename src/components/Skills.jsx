@@ -15,7 +15,7 @@ import {
   SiMongodb,
   SiPostman,
   SiGooglechrome,
-  SiVisualstudiocode,
+  SiVisualstudio,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -42,7 +42,7 @@ const Skills = () => {
     {
       title: "Tools & Software",
       items: [
-        { name: "VS Code", icon: <SiVisualstudiocode className="text-blue-500 text-3xl" /> },
+        { name: "VS Code", icon: <SiVisualstudio className="text-blue-500 text-3xl" /> },
         { name: "Chrome", icon: <SiGooglechrome className="text-red-400 text-3xl" /> },
         { name: "MongoDB Compass", icon: <SiMongodb className="text-green-500 text-3xl" /> },
         { name: "Postman", icon: <SiPostman className="text-orange-500 text-3xl" /> },
