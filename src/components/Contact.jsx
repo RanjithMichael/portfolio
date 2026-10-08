@@ -26,29 +26,29 @@ const Contact = () => {
             </h2>
             <p className="text-lg text-gray-300">Contact.</p>
 
-            {/* Smaller Buttons */}
+            {/* Compact Gradient Buttons */}
             <div className="flex flex-col gap-3">
               <a
                 href="mailto:branjithmichael@gmail.com"
-                className="flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+                className="flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
               >
-                <FaEnvelope /> Email
+                <FaEnvelope className="text-base" /> Email
               </a>
               <a
-                href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+                className="flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
               >
-                <FaLinkedin /> LinkedIn
+                <FaLinkedin className="text-base" /> LinkedIn
               </a>
               <a
                 href="https://github.com/RanjithMichael"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-neon-cyan to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+                className="flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
               >
-                <FaGithub /> GitHub
+                <FaGithub className="text-base" /> GitHub
               </a>
             </div>
           </div>
@@ -60,7 +60,7 @@ const Contact = () => {
               href="/Ranjith_Michael_B_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-neon-pink to-neon-purple text-white font-semibold shadow-lg hover:scale-105 transition-transform animate-glow"
+              className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-neon-pink to-neon-purple text-white font-semibold shadow-lg hover:scale-105 transition-transform animate-glow"
             >
               📄 Resume ➜
             </a>
@@ -84,4 +84,5 @@ const Contact = () => {
     </section>
   );
 };
+
 export default Contact;
