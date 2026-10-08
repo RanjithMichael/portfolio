@@ -25,12 +25,13 @@ const BackToTop = () => {
       onClick={scrollToTop}
       className={`
         fixed bottom-6 right-6 w-12 h-12
-        rounded-full bg-gradient-to-r from-blue-600 to-teal-500
+        rounded-full bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink
         text-white shadow-lg flex items-center justify-center
         transition-all duration-300 ease-in-out
-        hover:scale-110 hover:shadow-xl
-        focus:outline-none focus:ring-2 focus:ring-blue-400
+        hover:scale-110 hover:shadow-[0_0_20px_rgba(236,72,153,0.6)]
+        focus:outline-none focus:ring-2 focus:ring-neon-cyan
         ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}
+        animate-glow-cycle
       `}
       aria-label="Back to Top"
     >
@@ -40,3 +41,4 @@ const BackToTop = () => {
 };
 
 export default BackToTop;
+
