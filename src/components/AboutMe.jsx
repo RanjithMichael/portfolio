@@ -66,7 +66,7 @@ const AboutMe = () => {
     <div className="absolute -inset-8 rounded-lg bg-geometric blur-sm animate-pattern-move" />
 
     {/* Profile Image with glow */}
-    <div className="relative w-full h-full rounded-lg p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg hover:scale-105 transition-transform animate-glow-cycle">
+    <div className="relative w-full h-full rounded-lg p-1 bg-gradient-to-r from-neon-cyan to-neon-purple shadow-lg hover:scale-105 transition-transform animate-glow-cycle">
       <img
         src="/Ranjith.jpeg"
         alt="Portrait of Ranjith Michael"
@@ -76,10 +76,8 @@ const AboutMe = () => {
     </div>
   </div>
 </motion.div>
-
-
-        </div>
-      </section>
+ </div>
+</section>
     </>
   );
 };

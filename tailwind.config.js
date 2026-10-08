@@ -42,19 +42,18 @@ module.exports = {
       },
       backgroundImage: {
         geometric: `
-          radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
-          radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)
+          radial-gradient(theme('colors.neon.cyan') 1px, transparent 1px),
+          radial-gradient(theme('colors.neon.purple') 1px, transparent 1px),
+          radial-gradient(theme('colors.neon.pink') 1px, transparent 1px)
         `,
       },
       backgroundSize: {
-        geometric: '40px 40px, 20px 20px',
+        geometric: '40px 40px, 30px 30px, 20px 20px',
       },
       backgroundPosition: {
-        geometric: '0 0, 20px 20px',
+        geometric: '0 0, 20px 20px, 10px 10px',
       },
     },
   },
   plugins: [],
 };
-
-
