@@ -1,53 +1,27 @@
-import { FaReact, FaNodeJs, FaRobot } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss, SiCloudinary } from "react-icons/si";
+import { FaGithub, FaLink } from "react-icons/fa";
 import { motion } from "framer-motion";
-
-const techIcons = {
-  React: <FaReact className="text-cyan-400 text-lg" />,
-  "Node.js": <FaNodeJs className="text-green-400 text-lg" />,
-  MongoDB: <SiMongodb className="text-green-500 text-lg" />,
-  Express: <SiExpress className="text-gray-400 text-lg" />,
-  TailwindCSS: <SiTailwindcss className="text-cyan-500 text-lg" />,
-  "Cohere API": <FaRobot className="text-purple-400 text-lg" />,
-  Cloudinary: <SiCloudinary className="text-blue-400 text-lg" />,
-};
 
 const Projects = () => {
   const projects = [
     {
       title: "Blogging Platform",
-      caseStudy: {
-        problem: "Needed a secure blogging platform with rich content editing and analytics.",
-        solution: "MERN app with JWT auth, role‑based access, rich text editor, image upload.",
-        impact: "Safe multi‑role publishing and engagement tracking"
-      },
-      tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS"],
-      frontend: "https://github.com/RanjithMichael/bp-client",
-      backend: "https://github.com/RanjithMichael/bp-server",
+      description: "Secure blogging platform with rich content editing and analytics.",
+      image: "/blogging.png", // replace with Cloudinary-hosted screenshot
+      github: "https://github.com/RanjithMichael/bp-client",
       demo: "https://bpclient.netlify.app/",
     },
     {
       title: "AI Chatbot",
-      caseStudy: {
-        problem: "Required natural language chat with history.",
-        solution: "MERN chatbot with JWT auth, protected routes, Cohere API, MongoDB.",
-        impact: "Secure, human‑like conversations with persistence."
-      },
-      tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "Cohere API"],
-      frontend: "https://github.com/RanjithMichael/cb-frontend",
-      backend: "https://github.com/RanjithMichael/cb-backend",
+      description: "Natural language chatbot with JWT auth and Cohere API integration.",
+      image: "/chatbot.png",
+      github: "https://github.com/RanjithMichael/cb-frontend",
       demo: "https://aicb1.netlify.app/",
     },
     {
       title: "Car Rental App",
-      caseStudy: {
-        problem: "Customers needed easy bookings; admins needed inventory control.",
-        solution: "MERN app with JWT auth, role‑based access, Cloudinary uploads, responsive UI.",
-        impact: "Smooth bookings, real‑time listings, efficient admin workflows."
-      },
-      tech: ["MongoDB", "React", "Node.js", "TailwindCSS", "Cloudinary"],
-      frontend: "https://github.com/RanjithMichael/cra-frontend",
-      backend: "https://github.com/RanjithMichael/cra-backend",
+      description: "Booking platform with admin dashboard, Cloudinary uploads, and JWT auth.",
+      image: "/carrental.png",
+      github: "https://github.com/RanjithMichael/cra-frontend",
       demo: "https://crenta.netlify.app/",
     },
   ];
@@ -59,15 +33,20 @@ const Projects = () => {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
-      <div className="relative max-w-6xl mx-auto px-6 text-center">
+      <div className="relative max-w-6xl mx-auto px-6 text-center space-y-8">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 mb-12 animate-shimmer"
+          className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-shimmer"
         >
-          🚀 Projects
+          MY WORK Projects
         </motion.h2>
+        <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          Following projects showcase my skills and experience through real-world examples. 
+          Each project includes links to code repositories and live demos, reflecting my ability 
+          to solve complex problems and manage projects effectively.
+        </p>
 
         {/* Grid Layout */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -77,68 +56,45 @@ const Projects = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="relative flex flex-col h-full rounded-xl bg-white/10 backdrop-blur-md shadow-lg hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-transform hover:-translate-y-2 hover:scale-[1.02] overflow-hidden group"
+              className="relative bg-white/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-transform hover:-translate-y-2"
             >
-              {/* Overlay Hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* Project Image */}
+              <img
+                src={proj.image}
+                alt={proj.title}
+                className="w-full h-48 object-cover"
+              />
 
-              {/* Content Layer */}
-              <div className="relative p-6 flex flex-col flex-grow text-left space-y-4">
-                <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
-                  {proj.title}
-                </h3>
-
-                {/* Case Study */}
-                <div className="text-sm leading-relaxed space-y-2 text-gray-300">
-                  <p><span className="font-semibold text-cyan-400">Problem:</span> {proj.caseStudy.problem}</p>
-                  <p><span className="font-semibold text-purple-400">Solution:</span> {proj.caseStudy.solution}</p>
-                  <p><span className="font-semibold text-blue-400">Impact:</span> {proj.caseStudy.impact}</p>
-                </div>
-
-                {/* Tech Stack Icons */}
-                <div className="flex flex-wrap gap-3">
-                  {proj.tech.map((tech, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-lg hover:bg-white/20 transition-colors shadow-[0_0_10px_rgba(6,182,212,0.6)]"
-                    >
-                      {techIcons[tech]}
-                      <span className="text-xs font-medium text-gray-200">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Project Links */}
-                <div className="flex gap-3 mt-auto">
-                  {proj.frontend && (
-                    <a
-                      href={proj.frontend}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-md text-sm font-medium shadow-lg hover:shadow-[0_0_15px_rgba(124,58,237,0.6)] transition"
-                    >
-                      💻 Frontend
-                    </a>
-                  )}
-                  {proj.backend && (
-                    <a
-                      href={proj.backend}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-md text-sm font-medium shadow-lg hover:shadow-[0_0_15px_rgba(6,182,212,0.6)] transition"
-                    >
-                      ⚙️ Backend
-                    </a>
-                  )}
+              {/* Floating Icons */}
+              <div className="absolute top-4 right-4 flex gap-3">
+                {proj.demo && (
                   <a
                     href={proj.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black rounded-md text-sm font-medium shadow-lg hover:shadow-[0_0_15px_rgba(234,179,8,0.6)] transition"
+                    className="p-2 bg-cyan-500 rounded-full text-white hover:scale-110 transition"
                   >
-                    🔗 Live Demo
+                    <FaLink />
                   </a>
-                </div>
+                )}
+                {proj.github && (
+                  <a
+                    href={proj.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-gray-800 rounded-full text-white hover:scale-110 transition"
+                  >
+                    <FaGithub />
+                  </a>
+                )}
+              </div>
+
+              {/* Content */}
+              <div className="p-6 text-left space-y-3">
+                <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+                  {proj.title}
+                </h3>
+                <p className="text-sm text-gray-300">{proj.description}</p>
               </div>
             </motion.div>
           ))}
@@ -149,6 +105,7 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
 
 
