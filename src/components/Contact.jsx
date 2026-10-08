@@ -17,7 +17,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col justify-between bg-white/5 rounded-xl p-8 shadow-lg"
+          className="flex flex-row justify-between bg-white/5 rounded-xl p-8 shadow-lg"
         >
           {/* Top Section */}
           <div className="space-y-6">
