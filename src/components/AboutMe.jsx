@@ -26,7 +26,7 @@ const AboutMe = () => {
               I develop Full Stack web Applications using the MERN Stack.
             </p>
 
-            <h3 className="text-3xl font-bold text-cyan-400">Overview</h3>
+            <h3 className="text-3xl font-bold text-cyan-400">Overview.</h3>
             <p className="text-lg text-gray-300 max-w-xl leading-relaxed">
               I am a passionate web developer with expertise in creating dynamic and responsive web applications. 
               With a strong foundation in both frontend and backend technologies, I strive to deliver high-quality 
