@@ -44,7 +44,7 @@ const TechStack = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-shimmer"
         >
-          ⚡ Tech Stack
+          ⚡ TechStack
         </motion.h2>
 
         {/* Tech Stack Row */}
