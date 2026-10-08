@@ -3,7 +3,7 @@ import {
 } from "react-icons/fa";
 import {
   SiTailwindcss, SiExpress, SiMongodb, 
-   SiPostman, SiGooglechrome,
+  SiPostman, SiGooglechrome,
 } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
 import { motion } from "framer-motion";
@@ -20,7 +20,6 @@ const Skills = () => {
     { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-4xl" /> },
     { name: "Mongoose", icon: <SiMongodb className="text-green-400 text-4xl" /> },
     { name: "GitHub", icon: <FaGithub className="text-gray-200 text-4xl" /> },
-    
   ];
 
   const tools = [
@@ -28,7 +27,6 @@ const Skills = () => {
     { name: "Chrome", icon: <SiGooglechrome className="text-red-400 text-4xl" /> },
     { name: "MongoDB Compass", icon: <SiMongodb className="text-green-500 text-4xl" /> },
     { name: "Postman", icon: <SiPostman className="text-orange-500 text-4xl" /> },
-    
   ];
 
   return (
@@ -54,12 +52,12 @@ const Skills = () => {
           <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-8">
             Skills
           </h3>
-          <div className="flex flex-wrap justify-center gap-10">
+          <div className="flex flex-wrap justify-center gap-12">
             {skills.map((skill, i) => (
               <motion.div
                 key={i}
-                whileHover={{ scale: 1.1, rotate: 3 }}
-                className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-4 hover:shadow-[0_0_20px_rgba(124,58,237,0.6)] transition-transform"
+                whileHover={{ scale: 1.1 }}
+                className="flex flex-col items-center gap-2 transition-transform"
               >
                 {skill.icon}
                 <span className="text-sm font-medium text-gray-300">{skill.name}</span>
@@ -73,12 +71,12 @@ const Skills = () => {
           <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-8">
             Tools & Software
           </h3>
-          <div className="flex flex-wrap justify-center gap-10">
+          <div className="flex flex-wrap justify-center gap-12">
             {tools.map((tool, i) => (
               <motion.div
                 key={i}
-                whileHover={{ scale: 1.1, rotate: 3 }}
-                className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-4 hover:shadow-[0_0_20px_rgba(124,58,237,0.6)] transition-transform"
+                whileHover={{ scale: 1.1 }}
+                className="flex flex-col items-center gap-2 transition-transform"
               >
                 {tool.icon}
                 <span className="text-sm font-medium text-gray-300">{tool.name}</span>
@@ -92,5 +90,6 @@ const Skills = () => {
 };
 
 export default Skills;
+
 
 
