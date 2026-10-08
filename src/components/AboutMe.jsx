@@ -20,13 +20,14 @@ const AboutMe = () => {
             className="text-left space-y-6"
           >
             <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-shimmer">
-              INTRODUCTION
+              Hi, I’m Ranjith Michael 👋
             </h2>
-            <p> Hi I'm Ranjith Michael,<br />
-            I develop Full Stack web Applications using the Mern Stack.
+            <p className="text-lg text-gray-300 max-w-xl leading-relaxed">
+              I develop Full Stack web Applications using the MERN Stack.
             </p>
+
             <h3 className="text-3xl font-bold text-cyan-400">Overview</h3>
-            <p className="text-lg text-gray-300 max-w-xl">
+            <p className="text-lg text-gray-300 max-w-xl leading-relaxed">
               I am a passionate web developer with expertise in creating dynamic and responsive web applications. 
               With a strong foundation in both frontend and backend technologies, I strive to deliver high-quality 
               solutions that meet client needs and provide exceptional user experiences.
@@ -76,4 +77,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
