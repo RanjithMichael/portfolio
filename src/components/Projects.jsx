@@ -21,7 +21,6 @@ const Projects = () => {
         impact: "Safe multi‑role publishing and engagement tracking"
       },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS"],
-      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1790332122/Screenshot_2026-09-25_155816.png",
       frontend: "https://github.com/RanjithMichael/bp-client",
       backend: "https://github.com/RanjithMichael/bp-server",
       demo: "https://bpclient.netlify.app/",
@@ -34,7 +33,6 @@ const Projects = () => {
         impact: "Secure, human‑like conversations with persistence."
       },
       tech: ["MongoDB", "Express", "React", "Node.js", "TailwindCSS", "Cohere API"],
-      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1790331856/Screenshot_2026-09-25_155330.png",
       frontend: "https://github.com/RanjithMichael/cb-frontend",
       backend: "https://github.com/RanjithMichael/cb-backend",
       demo: "https://aicb1.netlify.app/",
@@ -47,7 +45,6 @@ const Projects = () => {
         impact: "Smooth bookings, real‑time listings, efficient admin workflows."
       },
       tech: ["MongoDB", "React", "Node.js", "TailwindCSS", "Cloudinary"],
-      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1790331256/Screenshot_2026-09-25_154214.png",
       frontend: "https://github.com/RanjithMichael/cra-frontend",
       backend: "https://github.com/RanjithMichael/cra-backend",
       demo: "https://crenta.netlify.app/",
