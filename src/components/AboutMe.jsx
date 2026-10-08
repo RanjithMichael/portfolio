@@ -6,11 +6,9 @@ const AboutMe = () => {
     <>
       {/* About Section */}
       <section id="about" className="relative py-20 text-gray-200 overflow-hidden">
-        {/* Background Gradient + Pattern */}
+        {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]" />
         <div className="absolute inset-0 bg-black/60" />
-        {/* Remove or replace if you don’t have lines.svg */}
-        {/* <div className="absolute inset-0 bg-[url('/patterns/lines.svg')] opacity-10" /> */}
 
         {/* Content */}
         <div className="relative max-w-6xl mx-auto px-6 flex justify-center">
@@ -34,7 +32,6 @@ const AboutMe = () => {
 
       {/* Overview Section */}
       <section id="overview" className="py-20 bg-[#0F172A] text-gray-200 relative overflow-hidden">
-        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,7 +72,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-
-
-
