@@ -19,6 +19,7 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col justify-between bg-white/5 rounded-xl p-8 shadow-lg"
         >
+          {/* Top Section */}
           <div className="space-y-6">
             <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink animate-shimmer">
               📬 GET IN TOUCH
@@ -28,13 +29,13 @@ const Contact = () => {
             {/* Buttons */}
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:ranjithmichael49@gmail.com"
+                href="mailto:branjithmichael@gmail.com"
                 className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-lg hover:scale-105 transition-transform animate-glow-cycle"
               >
                 <FaEnvelope /> Email
               </a>
               <a
-                href="https://www.linkedin.com/in/ranjithmichael"
+                href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-lg hover:scale-105 transition-transform animate-glow-cycle"
@@ -56,7 +57,7 @@ const Contact = () => {
           <div className="mt-8 space-y-4 text-center md:text-left">
             <p className="text-gray-400">Thanks for scrolling.</p>
             <a
-              href="/Resume.pdf"
+              href="/Ranjith_Michael_B_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-neon-pink to-neon-purple text-white font-semibold shadow-lg hover:scale-105 transition-transform animate-glow"
@@ -83,12 +84,5 @@ const Contact = () => {
     </section>
   );
 };
-
 export default Contact;
-
-
-
-
-
-
 
