@@ -37,7 +37,7 @@ const Skills = () => {
       ],
     },
     {
-      title: "Tools",
+      title: "Tools & Software",
       icon: "🛠️",
       skills: [
         { name: "Git/GitHub", icon: <FaGithub className="text-gray-200 text-3xl" /> },
@@ -55,13 +55,13 @@ const Skills = () => {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
-      <div className="relative max-w-6xl mx-auto px-6 text-center">
+      <div className="relative max-w-6xl mx-auto px-6 text-center space-y-12">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 mb-12 animate-shimmer"
+          className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-shimmer"
         >
           💡 Skills
         </motion.h2>
@@ -82,7 +82,7 @@ const Skills = () => {
               </h3>
 
               {/* Skills List */}
-              <ul className="space-y-5 text-lg flex-grow">
+              <ul className="grid grid-cols-2 gap-6 text-lg flex-grow">
                 {group.skills.map((skill, i) => (
                   <li
                     key={i}
@@ -107,4 +107,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
