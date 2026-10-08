@@ -26,11 +26,11 @@ const Contact = () => {
             </h2>
             <p className="text-lg text-gray-300">Contact.</p>
 
-            {/* Buttons */}
-            <div className="flex flex-col gap-4">
+            {/* Smaller Buttons */}
+            <div className="flex flex-col gap-3">
               <a
                 href="mailto:branjithmichael@gmail.com"
-                className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-lg hover:scale-105 transition-transform animate-glow-cycle"
+                className="flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
               >
                 <FaEnvelope /> Email
               </a>
@@ -38,7 +38,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-lg hover:scale-105 transition-transform animate-glow-cycle"
+                className="flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
               >
                 <FaLinkedin /> LinkedIn
               </a>
@@ -46,7 +46,7 @@ const Contact = () => {
                 href="https://github.com/RanjithMichael"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-neon-cyan to-neon-pink text-white font-medium shadow-lg hover:scale-105 transition-transform animate-glow-cycle"
+                className="flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-neon-cyan to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
               >
                 <FaGithub /> GitHub
               </a>
@@ -75,7 +75,7 @@ const Contact = () => {
           className="bg-white/5 rounded-xl p-8 shadow-lg flex items-center justify-center"
         >
           <img
-            src="https://res.cloudinary.com/naqamlzv/image/upload/v1791451593/contact-banner.jpg" 
+            src="https://res.cloudinary.com/naqamlzv/image/upload/v1791451593/contact-banner.jpg"
             alt="Contact Visual"
             className="rounded-lg shadow-lg max-w-full h-auto"
           />
@@ -85,4 +85,3 @@ const Contact = () => {
   );
 };
 export default Contact;
-
