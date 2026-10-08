@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <>
       {/* About Section */}
-      <section id="about" className="relative py-20 text-gray-200 overflow-hidden">
+      <section id="about" className="relative py-12 bg-sectionDark text-gray-200 overflow-hidden">
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]" />
         <div className="absolute inset-0 bg-black/60" />
