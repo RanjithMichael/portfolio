@@ -56,20 +56,21 @@ const AboutMe = () => {
 
           {/* Right Side - Profile Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex justify-center md:justify-end"
-          >
-            <div className="relative w-64 h-64 rounded-lg p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-[0_0_25px_rgba(124,58,237,0.6)] hover:scale-105 transition-transform">
-              <img
-                src="/Ranjith.jpeg"
-                alt="Portrait of Ranjith Michael"
-                loading="lazy"
-                className="w-full h-full rounded-lg object-cover border-4 border-[#0F172A]"
-              />
-            </div>
+           initial={{ opacity: 0, scale: 0.9 }}
+           animate={{ opacity: 1, scale: 1 }}
+           transition={{ duration: 0.8, delay: 0.3 }}
+          className="flex justify-center md:justify-end"
+         >
+        <div className="relative w-64 h-64 rounded-lg p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg hover:scale-105 transition-transform animate-glow-pulse">
+         <img
+           src="/Ranjith.jpeg"
+           alt="Portrait of Ranjith Michael"
+           loading="lazy"
+           className="w-full h-full rounded-lg object-cover border-4 border-[#0F172A]"
+         />
+         </div>
           </motion.div>
+
         </div>
       </section>
     </>

@@ -1,3 +1,4 @@
+// tailwind.config.js
 module.exports = {
   darkMode: 'class',
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -16,15 +17,27 @@ module.exports = {
           '100%': { backgroundPosition: '100% 50%' },
         },
         glow: {
-          '0%, 100%': { boxShadow: '0 0 10px rgba(124,58,237,0.8)' },
-          '50%': { boxShadow: '0 0 20px rgba(6,182,212,0.8)' },
+          '0%, 100%': {
+            boxShadow: '0 0 20px rgba(6,182,212,0.8), 0 0 40px rgba(124,58,237,0.6)',
+          },
+          '50%': {
+            boxShadow: '0 0 40px rgba(236,72,153,0.9), 0 0 60px rgba(124,58,237,0.9)',
+          },
+        },
+        glowCycle: {
+          '0%': { boxShadow: '0 0 20px rgba(6,182,212,0.8)' },   // cyan
+          '33%': { boxShadow: '0 0 30px rgba(124,58,237,0.8)' }, // purple
+          '66%': { boxShadow: '0 0 30px rgba(236,72,153,0.8)' }, // pink
+          '100%': { boxShadow: '0 0 20px rgba(6,182,212,0.8)' }, // back to cyan
         },
       },
       animation: {
         shimmer: 'shimmer 6s linear infinite',
         glow: 'glow 2s ease-in-out infinite',
+        'glow-cycle': 'glowCycle 6s ease-in-out infinite',
       },
     },
   },
   plugins: [],
 };
+
