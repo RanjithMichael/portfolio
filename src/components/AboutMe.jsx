@@ -34,8 +34,7 @@ const AboutMe = () => {
 
       {/* Overview Section */}
       <section id="overview" className="py-20 bg-[#0F172A] text-gray-200 relative overflow-hidden">
-        {/* Remove or replace if you don’t have lines.svg */}
-        {/* <div className="absolute inset-0 bg-[url('/patterns/lines.svg')] opacity-10" /> */}
+        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,6 +45,9 @@ const AboutMe = () => {
             INTRODUCTION
           </h2>
           <h3 className="text-3xl font-bold text-cyan-400">Overview</h3>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            I am a passionate web developer with expertise in creating dynamic and responsive web applications. With a strong foundation in both frontend and backend technologies, I strive to deliver high-quality solutions that meet client needs and provide exceptional user experiences.
+          </p>
 
           {/* Role Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
