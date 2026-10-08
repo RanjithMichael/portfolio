@@ -70,15 +70,8 @@ const Projects = () => {
               key={index}
               className="relative flex flex-col h-full rounded-xl bg-white/10 backdrop-blur-md shadow-lg hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-transform hover:-translate-y-2 hover:scale-[1.02] overflow-hidden"
             >
-              {/* Background Screenshot */}
-              <img
-                src={proj.image}
-                alt={`${proj.title} Screenshot`}
-                className="absolute inset-0 w-full h-full object-cover opacity-30"
-                loading="lazy"
-              />
-
-              {/* Content Layer */}
+              
+            {/* Content Layer */}
               <div className="relative p-6 flex flex-col flex-grow text-left space-y-4">
                 <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
                   {proj.title}
