@@ -7,7 +7,6 @@ const AboutMe = () => {
       id="about"
       className="relative py-12 bg-dark text-gray-200 overflow-hidden"
     >
-      {/* Content Grid */}
       <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         
         {/* Left Side - Intro */}
@@ -53,40 +52,33 @@ const AboutMe = () => {
         </motion.div>
 
         {/* Right Side - Profile Image */}
-<motion.div
-  initial={{ opacity: 0, scale: 0.9 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.8, delay: 0.3 }}
-  viewport={{ once: true }}
-  className="flex justify-center md:justify-end"
->
-  <div className="relative w-72 h-72">
-    {/* Abstract brush stroke background */}
-    <div className="absolute -top-6 -left-6 w-40 h-40 bg-purple-500/30 rounded-full blur-2xl rotate-12" />
-    <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-pink-500/30 rounded-full blur-2xl rotate-45" />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="flex justify-center md:justify-end"
+        >
+          <div className="relative w-72 h-72 flex items-center justify-center">
+            {/* Outer glowing circles */}
+            <div className="absolute w-96 h-96 rounded-full border-4 border-cyan-400 opacity-40 animate-pulse" />
+            <div className="absolute w-80 h-80 rounded-full border-4 border-purple-500 opacity-40 animate-pulse delay-200" />
 
-    {/* Dotted pattern overlay */}
-    <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(124,58,237,0.4)_1px,transparent_1px)] 
-      bg-[length:20px_20px] opacity-40 rounded-lg" />
+            {/* Neon square frame */}
+            <div className="absolute inset-0 rounded-lg p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg animate-glow-cycle" />
 
-    {/* Circular neon accent */}
-    <div className="absolute -inset-10 rounded-full border-4 border-cyan-400 animate-pulse opacity-50" />
-
-    {/* Profile Image with glow */}
-    <div className="relative w-full h-full rounded-lg p-1 bg-gradient-to-r 
-      from-neon-cyan to-neon-purple shadow-lg hover:scale-105 transition-transform animate-glow-cycle">
-      <img
-        src="/Ranjith.jpeg"
-        alt="Portrait of Ranjith Michael"
-        loading="lazy"
-        className="w-full h-full rounded-lg object-cover border-4 border-dark"
-      />
-    </div>
-  </div>
-</motion.div>
-
+            {/* Profile image */}
+            <img
+              src="/Ranjith.jpeg"
+              alt="Portrait of Ranjith Michael"
+              loading="lazy"
+              className="relative w-full h-full rounded-lg object-cover border-4 border-dark"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 export default AboutMe;
+
