@@ -35,7 +35,6 @@ const Skills = () => {
         { name: "JWT", icon: <FaLock className="text-yellow-400 text-3xl" /> },
         { name: "bcrypt", icon: <FaShieldAlt className="text-purple-400 text-3xl" /> },
         { name: "GitHub", icon: <FaGithub className="text-gray-200 text-3xl" /> },
-        
       ],
     },
     {
@@ -48,6 +47,9 @@ const Skills = () => {
       ],
     },
   ];
+
+  // Flatten all skills for marquee row
+  const allSkills = sections.flatMap((section) => section.items);
 
   return (
     <section id="skills" className="relative py-20 text-gray-200 overflow-hidden">
@@ -67,18 +69,18 @@ const Skills = () => {
           💡 Skills
         </motion.h2>
 
-        {/* Unified Grid with Dividers */}
+        {/* Grid Sections */}
         {sections.map((section, idx) => (
           <div key={idx} className="space-y-8">
             <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 border-b border-cyan-400 pb-2">
               {section.title}
             </h3>
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {section.items.map((skill, i) => (
                 <motion.div
                   key={i}
                   whileHover={{ scale: 1.1, rotate: 3 }}
-                  className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-4 hover:shadow-[0_0_20px_rgba(124,58,237,0.6)] transition-transform"
+                  className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-transform"
                 >
                   <div className="p-3 rounded-full bg-white/10 shadow-[0_0_10px_rgba(6,182,212,0.6)]">
                     {skill.icon}
@@ -89,9 +91,29 @@ const Skills = () => {
             </div>
           </div>
         ))}
+
+        {/* Moving Marquee Row */}
+        <div className="overflow-hidden mt-12">
+          <div className="flex gap-12 animate-marquee whitespace-nowrap">
+            {allSkills.map((skill, i) => (
+              <div key={i} className="flex flex-col items-center min-w-[100px]">
+                {skill.icon}
+                <span className="mt-2 text-xs text-gray-400">{skill.name}</span>
+              </div>
+            ))}
+            {/* Duplicate for seamless loop */}
+            {allSkills.map((skill, i) => (
+              <div key={`dup-${i}`} className="flex flex-col items-center min-w-[100px]">
+                {skill.icon}
+                <span className="mt-2 text-xs text-gray-400">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Skills;
+
