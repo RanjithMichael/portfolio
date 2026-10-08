@@ -21,7 +21,7 @@ const Navbar = () => {
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
-  const navItems = ["about", "skills", "projects", "certifications", "contact"];
+  const navItems = ["about", "TechStack", "projects", "certifications", "contact"];
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-[#0F172A]/80 backdrop-blur-md shadow-lg z-50 transition-colors duration-300">

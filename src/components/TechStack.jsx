@@ -8,8 +8,8 @@ import {
 import { VscCode } from "react-icons/vsc";
 import { motion } from "framer-motion";
 
-const Skills = () => {
-  const skills = [
+const TechStack = () => {
+  const stack = [
     { name: "HTML5", icon: <FaHtml5 className="text-orange-500 text-6xl" /> },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-500 text-6xl" /> },
     { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-6xl" /> },
@@ -30,7 +30,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="relative py-20 text-gray-200 overflow-hidden">
+    <section id="techstack" className="relative py-20 text-gray-200 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]" />
       <div className="absolute inset-0 bg-black/60" />
@@ -44,23 +44,23 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-shimmer"
         >
-          ⚡ Skills
+          ⚡ Tech Stack
         </motion.h2>
 
-        {/* Skills Row */}
+        {/* Tech Stack Row */}
         <div>
           <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-8">
-            Skills
+            Technologies
           </h3>
           <div className="flex flex-wrap justify-center gap-12">
-            {skills.map((skill, i) => (
+            {stack.map((item, i) => (
               <motion.div
                 key={i}
                 whileHover={{ scale: 1.1 }}
                 className="flex flex-col items-center gap-2 transition-transform"
               >
-                {skill.icon}
-                <span className="text-sm font-medium text-gray-300">{skill.name}</span>
+                {item.icon}
+                <span className="text-base font-medium text-gray-300">{item.name}</span>
               </motion.div>
             ))}
           </div>
@@ -79,7 +79,7 @@ const Skills = () => {
                 className="flex flex-col items-center gap-2 transition-transform"
               >
                 {tool.icon}
-                <span className="text-sm font-medium text-gray-300">{tool.name}</span>
+                <span className="text-base font-medium text-gray-300">{tool.name}</span>
               </motion.div>
             ))}
           </div>
@@ -89,7 +89,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
-
-
-
+export default TechStack;
