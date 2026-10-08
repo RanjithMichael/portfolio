@@ -17,7 +17,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-row justify-between bg-white/5 rounded-xl p-8 shadow-lg"
+          className="flex flex-col justify-between bg-white/5 rounded-xl p-8 shadow-lg"
         >
           {/* Top Section */}
           <div className="space-y-6">
@@ -26,11 +26,11 @@ const Contact = () => {
             </h2>
             <p className="text-lg text-gray-300">Contact.</p>
 
-            {/* Compact Gradient Buttons */}
-            <div className="flex flex-col gap-3">
+            {/* Buttons in one line */}
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <a
                 href="mailto:branjithmichael@gmail.com"
-                className="flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+                className="flex items-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
               >
                 <FaEnvelope className="text-base" /> Email
               </a>
@@ -38,7 +38,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+                className="flex items-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
               >
                 <FaLinkedin className="text-base" /> LinkedIn
               </a>
@@ -46,7 +46,7 @@ const Contact = () => {
                 href="https://github.com/RanjithMichael"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+                className="flex items-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
               >
                 <FaGithub className="text-base" /> GitHub
               </a>
