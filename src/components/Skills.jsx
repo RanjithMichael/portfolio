@@ -15,13 +15,13 @@ import {
   SiPostman,
   SiGooglechrome,
 } from "react-icons/si";
-import { VscCode } from "react-icons/vsc"; 
+import { VscCode } from "react-icons/vsc";
 import { motion } from "framer-motion";
 
 const Skills = () => {
-  const skillGroups = [
+  const sections = [
     {
-      title: "Skills",
+      title: "Core Skills",
       items: [
         { name: "HTML5", icon: <FaHtml5 className="text-orange-500 text-3xl" /> },
         { name: "CSS3", icon: <FaCss3Alt className="text-blue-500 text-3xl" /> },
@@ -67,44 +67,31 @@ const Skills = () => {
           💡 Skills
         </motion.h2>
 
-        {/* Two Panels */}
-        <div className="grid md:grid-cols-2 gap-10">
-          {skillGroups.map((group, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-8 hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] transition-transform hover:-translate-y-2"
-            >
-              <h3 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 border-b border-cyan-400 pb-3">
-                {group.title}
-              </h3>
-              <ul className="grid grid-cols-2 gap-6 text-left">
-                {group.items.map((skill, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-4 text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <motion.div
-                      whileHover={{ scale: 1.2, rotate: 5 }}
-                      className="p-2 rounded-full bg-white/10 shadow-[0_0_10px_rgba(6,182,212,0.6)]"
-                    >
-                      {skill.icon}
-                    </motion.div>
-                    <span className="font-medium">{skill.name}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
+        {/* Unified Grid with Dividers */}
+        {sections.map((section, idx) => (
+          <div key={idx} className="space-y-8">
+            <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 border-b border-cyan-400 pb-2">
+              {section.title}
+            </h3>
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {section.items.map((skill, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ scale: 1.1, rotate: 3 }}
+                  className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-4 hover:shadow-[0_0_20px_rgba(124,58,237,0.6)] transition-transform"
+                >
+                  <div className="p-3 rounded-full bg-white/10 shadow-[0_0_10px_rgba(6,182,212,0.6)]">
+                    {skill.icon}
+                  </div>
+                  <span className="text-sm font-medium text-gray-300">{skill.name}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
 export default Skills;
-
-
-
