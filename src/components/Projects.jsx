@@ -27,6 +27,8 @@ const Projects = () => {
   ];
 
   return (
+
+    <>
     <section id="projects" className="relative py-12 bg-sectionDark text-gray-200 overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]" />
@@ -101,6 +103,9 @@ const Projects = () => {
         </div>
       </div>
     </section>
+     {/* Neon Divider */}
+      <div className="w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 shadow-lg animate-pulse" />
+    </>
   );
 };
 
