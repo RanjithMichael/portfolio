@@ -5,7 +5,6 @@ import {
   FaReact,
   FaNodeJs,
   FaGithub,
-  FaGitAlt,
   FaLock,
   FaShieldAlt,
 } from "react-icons/fa";
@@ -16,7 +15,7 @@ import {
   SiPostman,
   SiGooglechrome,
 } from "react-icons/si";
-import { VscCode } from "react-icons/vsc";
+import { VscCode } from "react-icons/vsc"; 
 import { motion } from "framer-motion";
 
 const Skills = () => {
@@ -35,8 +34,8 @@ const Skills = () => {
         { name: "Mongoose", icon: <SiMongodb className="text-green-400 text-3xl" /> },
         { name: "JWT", icon: <FaLock className="text-yellow-400 text-3xl" /> },
         { name: "bcrypt", icon: <FaShieldAlt className="text-purple-400 text-3xl" /> },
-        { name: "Git", icon: <FaGitAlt className="text-red-500 text-3xl" /> },
         { name: "GitHub", icon: <FaGithub className="text-gray-200 text-3xl" /> },
+        
       ],
     },
     {
@@ -68,7 +67,7 @@ const Skills = () => {
           💡 Skills
         </motion.h2>
 
-        {/* Grid Layout */}
+        {/* Two Panels */}
         <div className="grid md:grid-cols-2 gap-10">
           {skillGroups.map((group, index) => (
             <motion.div
@@ -106,5 +105,6 @@ const Skills = () => {
 };
 
 export default Skills;
+
 
 
