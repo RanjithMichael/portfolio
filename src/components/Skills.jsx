@@ -10,23 +10,23 @@ import { motion } from "framer-motion";
 
 const Skills = () => {
   const skills = [
-    { name: "HTML5", icon: <FaHtml5 className="text-orange-500 text-4xl" /> },
-    { name: "CSS3", icon: <FaCss3Alt className="text-blue-500 text-4xl" /> },
-    { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-4xl" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 text-4xl" /> },
-    { name: "React JS", icon: <FaReact className="text-cyan-500 text-4xl" /> },
-    { name: "Node JS", icon: <FaNodeJs className="text-green-500 text-4xl" /> },
-    { name: "Express JS", icon: <SiExpress className="text-gray-400 text-4xl" /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-4xl" /> },
-    { name: "Mongoose", icon: <SiMongodb className="text-green-400 text-4xl" /> },
-    { name: "GitHub", icon: <FaGithub className="text-gray-200 text-4xl" /> },
+    { name: "HTML5", icon: <FaHtml5 className="text-orange-500 text-6xl" /> },
+    { name: "CSS3", icon: <FaCss3Alt className="text-blue-500 text-6xl" /> },
+    { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-6xl" /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 text-6xl" /> },
+    { name: "React JS", icon: <FaReact className="text-cyan-500 text-6xl" /> },
+    { name: "Node JS", icon: <FaNodeJs className="text-green-500 text-6xl" /> },
+    { name: "Express JS", icon: <SiExpress className="text-gray-400 text-6xl" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-6xl" /> },
+    { name: "Mongoose", icon: <SiMongodb className="text-green-400 text-6xl" /> },
+    { name: "GitHub", icon: <FaGithub className="text-gray-200 text-6xl" /> },
   ];
 
   const tools = [
-    { name: "VS Code", icon: <VscCode className="text-blue-500 text-4xl" /> },
-    { name: "Chrome", icon: <SiGooglechrome className="text-red-400 text-4xl" /> },
-    { name: "MongoDB Compass", icon: <SiMongodb className="text-green-500 text-4xl" /> },
-    { name: "Postman", icon: <SiPostman className="text-orange-500 text-4xl" /> },
+    { name: "VS Code", icon: <VscCode className="text-blue-500 text-6xl" /> },
+    { name: "Chrome", icon: <SiGooglechrome className="text-red-400 text-6xl" /> },
+    { name: "MongoDB Compass", icon: <SiMongodb className="text-green-500 text-6xl" /> },
+    { name: "Postman", icon: <SiPostman className="text-orange-500 text-6xl" /> },
   ];
 
   return (
