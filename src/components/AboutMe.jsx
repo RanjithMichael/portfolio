@@ -38,7 +38,7 @@ const AboutMe = () => {
               { icon: <FaCode className="text-cyan-400 text-2xl" />, title: "Web Developer" },
               { icon: <FaReact className="text-purple-400 text-2xl" />, title: "React Developer" },
               { icon: <FaServer className="text-green-400 text-2xl" />, title: "Backend Developer" },
-              { icon: <FaLaptopCode className="text-pink-400 text-2xl" />, title: "Full Stack Developer" },
+              { icon: <FaLaptopCode className="text-pink-400 text-2xl" />, title: "FullStack Developer" },
             ].map((role, i) => (
               <motion.div
                 key={i}
