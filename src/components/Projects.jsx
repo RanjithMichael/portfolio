@@ -20,7 +20,7 @@ const Projects = () => {
     {
       title: "Car Rental App",
       description: "Booking platform with admin dashboard, Cloudinary uploads, and JWT auth.",
-      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1791452319/19e4594931d1b8ce6dc0dfef96af6585.webp",
+      image: "https://res.cloudinary.com/naqamlzv/image/upload/v1791452319/df3c1f237722757.6906609d9fe46.webp",
       github: "https://github.com/RanjithMichael/cra-frontend",
       demo: "https://crenta.netlify.app/",
     },
