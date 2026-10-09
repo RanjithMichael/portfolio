@@ -70,7 +70,7 @@ const AboutMe = () => {
 
               {/* Profile image */}
               <img
-                src="/Ranjith.jpeg"
+                src="/Ranjith.png"
                 alt="Portrait of Ranjith Michael"
                 loading="lazy"
                 className="relative w-full h-full rounded-lg object-cover border-4 border-dark"
