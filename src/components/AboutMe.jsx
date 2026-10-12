@@ -19,9 +19,9 @@ const AboutMe = () => {
   className="flex flex-col items-center md:items-start"
 >
   {/* Profile image with concentric circles */}
-  <div className="relative w-72 h-72 flex items-center justify-center">
-    <div className="absolute w-96 h-96 rounded-full border-4 border-cyan-400 opacity-40 animate-pulse" />
-    <div className="absolute w-80 h-80 rounded-full border-4 border-purple-500 opacity-40 animate-pulse delay-200" />
+  <div className="relative w-56 h-56 flex items-center justify-center">
+    <div className="absolute w-80 h-80 rounded-full border-4 border-cyan-400 opacity-40 animate-pulse" />
+    <div className="absolute w-64 h-64 rounded-full border-4 border-purple-500 opacity-40 animate-pulse delay-200" />
     <div className="absolute inset-0 rounded-lg p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg animate-glow-cycle" />
 
     <img
