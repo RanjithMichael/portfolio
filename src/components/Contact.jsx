@@ -73,7 +73,7 @@ const Contact = () => {
           className="bg-white/5 rounded-xl p-8 shadow-lg"
         >
           <form
-            action="https://formspree.io/f/mnqkzxyz"
+            action="https://formspree.io/f/maeqbvgn"
             method="POST"
             className="space-y-4"
           >
