@@ -33,7 +33,7 @@ const AboutMe = () => {
   </div>
 
   {/* Resume Buttons BELOW the profile picture */}
-  <div className="flex gap-4 mt-6">
+  <div className="flex gap-4 mt-8">
     <a
       href="/Ranjith_Michael_B_Resume.pdf"
       download
@@ -76,7 +76,7 @@ const AboutMe = () => {
             </p>
 
             {/* Compact Role Cards */}
-            <div className="flex flex-wrap gap-4 mt-6">
+            <div className="flex flex-wrap gap-4 mt-8">
               {[
                 { icon: <FaCode className="text-cyan-400 text-2xl" />, title: "Web Developer" },
                 { icon: <FaReact className="text-purple-400 text-2xl" />, title: "React Developer" },
