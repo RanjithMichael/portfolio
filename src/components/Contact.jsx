@@ -7,62 +7,26 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="relative py-12 bg-sectionDark text-gray-200 overflow-hidden">
+      <section id="contact" className="relative py-16 bg-sectionDark text-gray-200 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] to-[#1E293B]" />
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-geometric blur-sm animate-pattern-move" />
 
+        {/* Section Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative text-4xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-shimmer"
+        >
+          ✨ Contact Me
+        </motion.h2>
+
         {/* Content Grid */}
         <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
           
-          {/* Left Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col justify-between bg-white/5 rounded-xl p-8 shadow-lg"
-          >
-            <div className="space-y-6">
-              <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink animate-shimmer">
-                📬 GET IN TOUCH
-              </h2>
-              <p className="text-lg text-gray-300">Contact.</p>
-
-              {/* Social Links */}
-              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                <a
-                  href="mailto:branjithmichael@gmail.com"
-                  className="flex items-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
-                >
-                  <FaEnvelope className="text-base" /> Email
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
-                >
-                  <FaLinkedin className="text-base" /> LinkedIn
-                </a>
-                <a
-                  href="https://github.com/RanjithMichael"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
-                >
-                  <FaGithub className="text-base" /> GitHub
-                </a>
-              </div>
-            </div>
-
-            <div className="mt-8 space-y-4 text-center md:text-left">
-              <p className="text-gray-400">Thanks for scrolling.</p>
-              <p className="text-gray-400">Feel free to reach out!</p>
-            </div>
-          </motion.div>
-
-          {/* Right Card - Formspree Form */}
+          {/* Left Card - Formspree Form */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -110,6 +74,52 @@ const Contact = () => {
               </form>
             )}
           </motion.div>
+
+          {/* Right Card - Social Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col justify-between bg-white/5 rounded-xl p-8 shadow-lg"
+          >
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink">
+                📬 Get in Touch
+              </h3>
+              <p className="text-lg text-gray-300">You can also reach me here:</p>
+
+              {/* Social Links */}
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                <a
+                  href="mailto:branjithmichael@gmail.com"
+                  className="flex items-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+                >
+                  <FaEnvelope className="text-base" /> Email
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+                >
+                  <FaLinkedin className="text-base" /> LinkedIn
+                </a>
+                <a
+                  href="https://github.com/RanjithMichael"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+                >
+                  <FaGithub className="text-base" /> GitHub
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-8 space-y-4 text-center md:text-left">
+              <p className="text-gray-400">Thanks for scrolling.</p>
+              <p className="text-gray-400">Feel free to reach out!</p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -120,4 +130,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
