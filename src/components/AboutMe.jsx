@@ -33,7 +33,7 @@ const AboutMe = () => {
   </div>
 
   {/* Resume Buttons BELOW the profile picture */}
-  <div className="flex gap-4 mt-8">
+  <div className="flex gap-4 mt-10">
     <a
       href="/Ranjith_Michael_B_Resume.pdf"
       download
