@@ -29,6 +29,15 @@ const TechStack = () => {
     { name: "Postman", icon: <SiPostman className="text-orange-500 text-6xl" /> },
   ];
 
+  const softSkills = [
+    "Problem-Solving",
+    "Team Leadership",
+    "Communication",
+    "Collaboration",
+    "Adaptability",
+    "Time Management",
+  ];
+
   return (
     <>
     <section id="techstack" className="relative py-12 bg-sectionDark text-gray-200 overflow-hidden">
@@ -45,7 +54,7 @@ const TechStack = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-shimmer"
         >
-          ⚡ TechStack
+          ⚡ Skills & TechStack
         </motion.h2>
 
         {/* Tech Stack Row */}
@@ -82,6 +91,24 @@ const TechStack = () => {
                 {tool.icon}
                 <span className="text-base font-medium text-gray-300">{tool.name}</span>
               </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Soft Skills Row */}
+        <div>
+          <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500 mb-8">
+            Soft Skills
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {softSkills.map((skill, i) => (
+              <motion.span
+                key={i}
+                whileHover={{ scale: 1.1 }}
+                className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-medium shadow-md transition-transform"
+              >
+                {skill}
+              </motion.span>
             ))}
           </div>
         </div>
