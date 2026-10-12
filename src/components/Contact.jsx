@@ -89,36 +89,40 @@ const Contact = () => {
               <p className="text-lg text-gray-300">You can also reach me here:</p>
 
               {/* Social Links */}
+             <div className="flex gap-3 justify-center md:justify-start max-w-xl mx-auto w-full">
               <a
-               href="https://mail.google.com/mail/?view=cm&fs=1&to=backiarajranjithmichael@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Ranjith,"
-               target="_blank"
-               rel="noopener noreferrer"
-               className="flex-1 flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=backiarajranjithmichael@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Ranjith,"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
               >
-              <FaEnvelope className="text-base" /> Email
+               <FaEnvelope className="text-base" /> Email
               </a>
 
-                <a
-                  href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
-                >
-                  <FaLinkedin className="text-base" /> LinkedIn
-                </a>
-                <a
-                  href="https://github.com/RanjithMichael"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
-                >
-                  <FaGithub className="text-base" /> GitHub
-                </a>
+              <a
+                href="https://www.linkedin.com/in/ranjithmichael-backiaraj-592920296"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-purple to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+              >
+               <FaLinkedin className="text-base" /> LinkedIn
+              </a>
+
+              <a
+                href="https://github.com/RanjithMichael"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-2 text-sm rounded-full bg-gradient-to-r from-neon-cyan to-neon-pink text-white font-medium shadow-md hover:scale-105 transition-transform animate-glow-cycle"
+              >
+              <FaGithub className="text-base" /> GitHub
+              </a>
               </div>
+
 
             <div className="mt-8 space-y-4 text-center md:text-left">
               <p className="text-gray-400">Thanks for scrolling.</p>
               <p className="text-gray-400">Feel free to reach out!</p>
+            </div>
             </div>
           </motion.div>
         </div>
