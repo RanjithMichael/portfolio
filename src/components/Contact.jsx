@@ -115,7 +115,6 @@ const Contact = () => {
                   <FaGithub className="text-base" /> GitHub
                 </a>
               </div>
-            </div>
 
             <div className="mt-8 space-y-4 text-center md:text-left">
               <p className="text-gray-400">Thanks for scrolling.</p>
