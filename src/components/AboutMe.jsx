@@ -10,7 +10,7 @@ const AboutMe = () => {
       >
         <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
           
-          {/* Left Side - Profile Image */}
+         {/* Left Side - Profile Image */}
 <motion.div
   initial={{ opacity: 0, scale: 0.9 }}
   whileInView={{ opacity: 1, scale: 1 }}
@@ -32,8 +32,8 @@ const AboutMe = () => {
     />
   </div>
 
-  {/* Resume Buttons BELOW the profile picture */}
-  <div className="flex gap-4 mt-10">
+  {/* Separate container for Resume buttons */}
+  <div className="flex gap-4 mt-8">
     <a
       href="/Ranjith_Michael_B_Resume.pdf"
       download
@@ -51,6 +51,7 @@ const AboutMe = () => {
     </a>
   </div>
 </motion.div>
+
 
 
           {/* Right Side - Intro */}
