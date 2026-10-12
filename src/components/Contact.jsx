@@ -98,6 +98,13 @@ const Contact = () => {
               rows="5"
               className="w-full p-3 rounded-lg bg-black/40 border border-gray-600 text-gray-200 focus:outline-none focus:ring-2 focus:ring-neon-pink"
             ></textarea>
+            {/* Success/Error Feedback */}
+            <p className="text-sm text-green-400 hidden" id="successMsg">
+               ✅ Message sent successfully!
+            </p>
+            <p className="text-sm text-red-400 hidden" id="errorMsg">
+               ❌ Something went wrong. Please try again.
+            </p>
             <button
               type="submit"
               className="w-full py-3 rounded-lg bg-gradient-to-r from-neon-cyan to-neon-purple text-white font-semibold shadow-lg hover:scale-105 transition-transform animate-glow-cycle"
