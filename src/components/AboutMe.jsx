@@ -16,17 +16,14 @@ const AboutMe = () => {
   whileInView={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.8, delay: 0.3 }}
   viewport={{ once: true }}
-  className="flex flex-col items-center md:items-start gap-4"
+  className="flex flex-col items-center md:items-start"
 >
+  {/* Profile image with concentric circles */}
   <div className="relative w-72 h-72 flex items-center justify-center">
-    {/* Outer glowing circles */}
     <div className="absolute w-96 h-96 rounded-full border-4 border-cyan-400 opacity-40 animate-pulse" />
     <div className="absolute w-80 h-80 rounded-full border-4 border-purple-500 opacity-40 animate-pulse delay-200" />
-
-    {/* Neon square frame */}
     <div className="absolute inset-0 rounded-lg p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg animate-glow-cycle" />
 
-    {/* Profile image */}
     <img
       src="/Ranjith.png"
       alt="Portrait of Ranjith Michael"
@@ -35,8 +32,8 @@ const AboutMe = () => {
     />
   </div>
 
-  {/* Resume Buttons directly below profile picture */}
-  <div className="flex gap-4 mt-4">
+  {/* Resume Buttons BELOW the profile picture */}
+  <div className="flex gap-4 mt-6">
     <a
       href="/Ranjith_Michael_B_Resume.pdf"
       download
