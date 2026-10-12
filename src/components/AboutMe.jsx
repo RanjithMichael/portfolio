@@ -34,6 +34,24 @@ const AboutMe = () => {
                 className="relative w-full h-full rounded-lg object-cover border-4 border-dark"
               />
             </div>
+            {/* Resume Buttons */}
+            <div className="flex gap-4 mt-4">
+            <a
+              href="/Ranjith_Michael_B_Resume.pdf"
+              download
+              className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold shadow-md hover:scale-105 transition-transform"
+         >
+             ⬇️ Download Resume
+         </a>
+         <a
+          href="/Ranjith_Michael_B_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow-md hover:scale-105 transition-transform"
+        >
+          👀 View Online
+        </a>
+        </div>
           </motion.div>
 
           {/* Right Side - Intro */}
