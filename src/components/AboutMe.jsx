@@ -11,48 +11,50 @@ const AboutMe = () => {
         <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
           
           {/* Left Side - Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="flex justify-center md:justify-start"
-          >
-            <div className="relative w-72 h-72 flex items-center justify-center">
-              {/* Outer glowing circles */}
-              <div className="absolute w-96 h-96 rounded-full border-4 border-cyan-400 opacity-40 animate-pulse" />
-              <div className="absolute w-80 h-80 rounded-full border-4 border-purple-500 opacity-40 animate-pulse delay-200" />
+<motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+  viewport={{ once: true }}
+  className="flex flex-col items-center md:items-start gap-4"
+>
+  <div className="relative w-72 h-72 flex items-center justify-center">
+    {/* Outer glowing circles */}
+    <div className="absolute w-96 h-96 rounded-full border-4 border-cyan-400 opacity-40 animate-pulse" />
+    <div className="absolute w-80 h-80 rounded-full border-4 border-purple-500 opacity-40 animate-pulse delay-200" />
 
-              {/* Neon square frame */}
-              <div className="absolute inset-0 rounded-lg p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg animate-glow-cycle" />
+    {/* Neon square frame */}
+    <div className="absolute inset-0 rounded-lg p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg animate-glow-cycle" />
 
-              {/* Profile image */}
-              <img
-                src="/Ranjith.png"
-                alt="Portrait of Ranjith Michael"
-                loading="lazy"
-                className="relative w-full h-full rounded-lg object-cover border-4 border-dark"
-              />
-            </div>
-            {/* Resume Buttons */}
-            <div className="flex gap-4 mt-4">
-            <a
-              href="/Ranjith_Michael_B_Resume.pdf"
-              download
-              className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold shadow-md hover:scale-105 transition-transform"
-         >
-             ⬇️ Download Resume
-         </a>
-         <a
-          href="/Ranjith_Michael_B_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow-md hover:scale-105 transition-transform"
-        >
-          👀 View Online
-        </a>
-        </div>
-          </motion.div>
+    {/* Profile image */}
+    <img
+      src="/Ranjith.png"
+      alt="Portrait of Ranjith Michael"
+      loading="lazy"
+      className="relative w-full h-full rounded-lg object-cover border-4 border-dark"
+    />
+  </div>
+
+  {/* Resume Buttons directly below profile picture */}
+  <div className="flex gap-4 mt-4">
+    <a
+      href="/Ranjith_Michael_B_Resume.pdf"
+      download
+      className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold shadow-md hover:scale-105 transition-transform"
+    >
+      ⬇️ Download Resume
+    </a>
+    <a
+      href="/Ranjith_Michael_B_Resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow-md hover:scale-105 transition-transform"
+    >
+      👀 View Online
+    </a>
+  </div>
+</motion.div>
+
 
           {/* Right Side - Intro */}
           <motion.div
