@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaCode, FaReact, FaServer, FaLaptopCode } from "react-icons/fa";
 
-const AboutMe = () => {
+const AboutMe = () => {  
   return (
     <>
       <section
@@ -11,50 +11,46 @@ const AboutMe = () => {
         <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
           
          {/* Left Side - Profile Image */}
-<motion.div
-  initial={{ opacity: 0, scale: 0.9 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.8, delay: 0.3 }}
-  viewport={{ once: true }}
-  className="flex flex-col items-center md:items-start"
->
-  {/* Profile image with concentric circles */}
-  <div className="relative w-56 h-56 flex items-center justify-center">
-    <div className="absolute w-80 h-80 rounded-full border-4 border-cyan-400 opacity-40 animate-pulse" />
-    <div className="absolute w-64 h-64 rounded-full border-4 border-purple-500 opacity-40 animate-pulse delay-200" />
-    <div className="absolute inset-0 rounded-lg p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg animate-glow-cycle" />
+         <motion.div
+           initial={{ opacity: 0, scale: 0.9 }}
+           whileInView={{ opacity: 1, scale: 1 }}
+           transition={{ duration: 0.8, delay: 0.3 }}
+           viewport={{ once: true }}
+           className="flex flex-col items-center md:items-start"
+          >
+          {/* Profile image only */}
+          <div className="relative w-72 h-72 flex items-center justify-center">
+          <div className="absolute inset-0 rounded-lg p-1 bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg animate-glow-cycle" />
 
-    <img
-      src="/Ranjith.png"
-      alt="Portrait of Ranjith Michael"
-      loading="lazy"
-      className="relative w-full h-full rounded-lg object-cover border-4 border-dark"
-    />
-  </div>
+             <img
+                src="/Ranjith.png"
+                alt="Portrait of Ranjith Michael"
+                loading="lazy"
+                className="relative w-full h-full rounded-lg object-cover border-4 border-dark"
+              />
+          </div>
 
-  {/* Separate container for Resume buttons */}
-  <div className="flex gap-4 mt-8">
-    <a
-      href="/Ranjith_Michael_B_Resume.pdf"
-      download
-      className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold shadow-md hover:scale-105 transition-transform"
-    >
-      ⬇️ Download Resume
-    </a>
-    <a
-      href="/Ranjith_Michael_B_Resume.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow-md hover:scale-105 transition-transform"
-    >
-      👀 View Online
-    </a>
-  </div>
-</motion.div>
+        {/* Resume Buttons in separate container */}
+         <div className="flex gap-4 mt-6">
+          <a
+           href="/Ranjith_Michael_B_Resume.pdf"
+           download
+           className="px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold shadow-md hover:scale-105 transition-transform"
+          >
+          ⬇️ Download Resume
+          </a>
+        <a
+         href="/Ranjith_Michael_B_Resume.pdf"
+         target="_blank"
+         rel="noopener noreferrer"
+         className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow-md hover:scale-105 transition-transform"
+        >
+         👀 View Online
+        </a>
+      </div>
+    </motion.div>
 
-
-
-          {/* Right Side - Intro */}
+    {/* Right Side - Intro */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
